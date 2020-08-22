@@ -1,0 +1,122 @@
+# Change shell to zsh
+chsh -s $(which zsh)
+
+# Pacman repositories
+/etc/pacman.conf
+[archlinuxcn]
+Server = http://repo.archlinuxcn.org/$arch
+
+sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
+
+# Update all installed packages
+pamac upgrade -a
+
+### Create folders
+# Custom built pacman packages with read, write, and execute permissins
+sudo mkdir /var/cache/pacman/custom -m 777
+
+# Shared folder
+sudo mkdir /home/sharedFolder/
+sudo chgrp users /home/sharedFolder/
+sudo chmod 770 /home/sharedFolder/
+sudo chmod +s /home/sharedFolder/
+
+# Storing backups of all installed packages
+mkdir /home/sharedFolder/package_lists/
+
+
+# compression
+# pigz and pbzip2 
+
+# pug för att synka program
+
+
+
+
+# Chromium (archlinuxcn install)
+pamac install --no-confirm chromium-vaapi
+# or pamac install --no-confirm $(cat install.txt)
+
+# Install. 
+tela-icon-theme
+kvantum-qt5
+otf-fira-code
+ttf-roboto
+ttf-roboto-mono
+
+# Build:
+kvantum-theme-chromeos-git
+chromeos-gtk-theme-git
+chromeos-kde-git
+
+
+# Theme:
+kvantummanager --set ChromeOS-dark
+lookandfeeltool -a 'com.github.vinceliuice.ChromeOS-dark'
+# /home/test/.config/gtk-3.0/settings.ini
+gtk-theme-name=ChromeOS-dark
+
+
+# VSCode
+code --install-extension shan.code-settings-sync
+
+
+# Install from install.txt:
+pamac install -d $(cat install.txt)
+# Build from build.txt
+pamac build -d $(cat build.txt)
+
+# Uninstall from uninstall.txt
+pamac remove -d $(cat uninstall.txt)
+
+
+
+
+
+
+
+
+
+
+
+keycode 232 (keysym 0x1008ff03, XF86MonBrightnessDown)
+keycode 233 (keysym 0x1008ff02, XF86MonBrightnessUp)
+
+
+
+
+# KDE 
+~/.config/.config/kdeconnect
+[KDE]
+SingleClick=false
+
+
+#Screen lock
+~/.config/kscreenlockerrc
+[Daemon]
+Autolock=false
+LockOnResume=false
+
+# KDE Globals
+~/.config/kdeglobals
+[General]
+ColorScheme=ChromeOSDark
+Name=ChromeOSDark
+XftHintStyle=hintslight
+XftSubPixel=rgb
+dbfile=/home/test/.mozilla/firefox/rtke7iyy.default/places.sqlite
+fixed=Roboto Mono,10,-1,5,50,0,0,0,0,0
+font=Roboto,10,-1,5,50,0,0,0,0,0
+menuFont=Roboto,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Roboto,8,-1,5,50,0,0,0,0,0
+toolBarFont=Roboto,10,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=Tela-dark
+
+[KDE]
+LookAndFeelPackage=com.github.vinceliuice.ChromeOS-dark
+SingleClick=false
+contrast=4
+widgetStyle=kvantum

@@ -1,0 +1,22 @@
+// based on a type definition from an 'xkb/types/extra' file
+
+default partial xkb_types "default" {
+
+    // Defines a type with a four-level shift, similar to the three-level
+    // type used for iso9995, but it lets the Shift key behave "normally".
+
+    virtual_modifiers LevelThree;
+
+  type "FOUR_LEVEL_CUSTOM" {
+	modifiers = Shift+Alt+LevelThree;
+	map[None] = Level1;
+	map[Shift] = Level2;
+	map[Shift+Alt] = Level3;
+	map[LevelThree] = Level3;
+	map[Shift+LevelThree] = Level4;
+	level_name[Level1] = "Base";
+	level_name[Level2] = "Shift";
+	level_name[Level3] = "Alt Base";
+	level_name[Level4] = "Shift Alt";
+    };
+};

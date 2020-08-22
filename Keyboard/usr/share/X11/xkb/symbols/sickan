@@ -1,0 +1,64 @@
+// based on a keyboard map from an 'xkb/symbols/se' file
+
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "latin(type2)"
+    include "se(basic)"
+    include "sickan(mods)"
+    include "sickan(shift_alt)"
+    include "sickan(shift_caps)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "mods" {
+
+    name[Group1]="Modifiers";
+
+    key <LALT> {
+        // type = "PC_CONTROL_LEVEL2",
+        // symbols = [ Alt_L, ISO_Level3_Latch ]
+        type="TWO_LEVEL",
+        symbols = [ Alt_L, ISO_Group_Shift ]
+        // symbols = [ Alt_L, Alt_L ],
+        // actions = [ NoAction(), SetGroup(group=2) ]
+        // symbols = [ Alt_L, ISO_Level3_Shift ]
+        // actions[Group1]=[ NoAction(), RedirectKey(key=<LVL3>,clearmods=Shift) ]
+        // actions[Group1]=[ NoAction(), RedirectKey(key=<LVL3>) ]
+        // actions[Group1]=[ NoAction(), SetMods(modifiers=LevelThree) ]
+    };
+
+    key <CAPS> {
+      type = "TWO_LEVEL",
+      symbols = [ Escape, NoSymbol ],
+      actions[Group1] = [ NoAction(), LockGroup(group=3) ],
+      actions[Group3] = [ NoAction(), LockGroup(group=1) ]
+    };
+};
+
+partial alphanumeric_keys
+xkb_symbols "shift_alt" {
+
+
+    name[Group2]="Shift + Alt as LevelThree";
+    key.type[Group2] = "ONE_LEVEL";
+
+    key <AE02> { [], [ at ] };
+
+    key <AE07>	{ [], [ braceleft ]	};
+    key <AE08>	{ [], [ bracketleft ] };
+    key <AE09>	{ [], [ bracketright ] };
+    key <AE10>	{ [], [ braceright ] };
+
+};
+
+
+partial alphanumeric_keys
+xkb_symbols "shift_caps" {
+
+    name[Group3] = "Shift + Caps as group three";
+    key.type[Group3] = "TWO_LEVEL";
+
+    key <AD11>	{ [], [], [ bracketleft , braceleft ]	};
+    key <AD12>  { [], [], [ bracketright, braceright ] };
+    key <TLDE>	{ [], [], [ grave ]};
+};

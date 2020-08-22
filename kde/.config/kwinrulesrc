@@ -1,0 +1,47 @@
+[1]
+Description=Chromium
+clientmachine=localhost
+clientmachinematch=0
+noborder=true
+noborderrule=2
+wmclass=chromium chromium
+wmclasscomplete=true
+wmclassmatch=1
+
+[Directories]
+dir_pixmap[$d]
+
+[General]
+BrowserApplication[$d]
+ColorScheme[$d]
+Name[$d]
+count=1
+fixed[$d]
+font[$d]
+menuFont[$d]
+shadeSortColumn[$d]
+smallestReadableFont[$d]
+toolBarFont[$d]
+
+[Icons]
+Theme[$d]
+
+[KDE]
+ChangeCursor[$d]
+ColorScheme[$d]
+LookAndFeelPackage[$d]
+SingleClick[$d]
+contrast[$d]
+widgetStyle[$d]
+
+[KFileDialog Settings]
+Breadcrumb Navigation[$d]
+
+[Paths]
+Trash[$d]
+
+[PreviewSettings]
+MaximumSize[$d]
+camera[$d]
+file[$d]
+fonts[$d]

@@ -1,0 +1,12 @@
+# Kensington Slimblade Settings
+
+Section "InputClass"
+	Identifier "Kensington Slimblade Trackball"
+	MatchProduct "Kensington Slimblade Trackball"
+	MatchIsPointer "on"
+	MatchDevicePath "/dev/input/event*"
+	Driver "evdev"
+	Option "ConstantDeceleration" "4"
+	Option "AdaptiveDeceleration" "10"
+	Option "AccelerationThreshold" "8"
+EndSection

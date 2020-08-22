@@ -1,0 +1,13 @@
+[$Version]
+update_info=spectacle_newConfig.upd:spectacle-new-config
+
+[General]
+copyImageToClipboard=true
+
+[GuiConfig]
+captureMode=5
+cropRegion=401,318,1407,407
+window-position=6,0
+
+[Save]
+lastSaveLocation=file:///home/test/Pictures/Screenshot_20200610_152012.png

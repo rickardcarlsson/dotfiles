@@ -1,0 +1,9 @@
+@import "ShadowFox.css";
+@import "addons.css";
+@import "custom.css";
+
+
+
+/*
+White flash fix: about:config -> browser.display.background_color
+*/
