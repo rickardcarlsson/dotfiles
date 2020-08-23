@@ -3,7 +3,7 @@
 default partial alphanumeric_keys
 xkb_symbols "basic" {
     include "latin(type2)"
-    include "se(basic)"
+    include "se(nodeadkeys)"
     include "sickan(mods)"
     include "sickan(shift_alt)"
     include "sickan(shift_caps)"
@@ -28,10 +28,10 @@ xkb_symbols "mods" {
     };
 
     key <CAPS> {
-      type = "TWO_LEVEL",
-      symbols = [ Escape, NoSymbol ],
-      actions[Group1] = [ NoAction(), LockGroup(group=3) ],
-      actions[Group3] = [ NoAction(), LockGroup(group=1) ]
+        type = "TWO_LEVEL",
+        symbols = [ Escape, NoSymbol ],
+        actions[Group1] = [ NoAction(), LockGroup(group=3) ],
+        actions[Group3] = [ NoAction(), LockGroup(group=1) ]
     };
 };
 
