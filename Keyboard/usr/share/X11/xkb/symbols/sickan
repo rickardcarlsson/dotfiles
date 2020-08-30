@@ -29,7 +29,8 @@ xkb_symbols "mods" {
 
     key <CAPS> {
         type = "TWO_LEVEL",
-        symbols = [ Escape, NoSymbol ],
+        symbols[Group1] = [ Escape, NoSymbol ],
+        symbols[Group3] = [ Escape, NoSymbol ],
         actions[Group1] = [ NoAction(), LockGroup(group=3) ],
         actions[Group3] = [ NoAction(), LockGroup(group=1) ]
     };

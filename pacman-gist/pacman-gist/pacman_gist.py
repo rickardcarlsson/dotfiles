@@ -17,7 +17,7 @@ Dela upp i två .py
 En för att försäkra bitwarden-auth
 En för gist-processing
 Importera bitwarden-auth i gist-processing
-
+! Gör GUI-prompt om inloggning behövs?
 ! Nä förlita inte på bw/keyring främst. Testa tokens i secrets först, om de inte funkar fixa nya.
 ? Lazy imports
 
