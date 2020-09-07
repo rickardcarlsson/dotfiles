@@ -49,6 +49,7 @@ xkb_symbols "shift_alt" {
     key <AE08>	{ [], [ bracketleft ] };
     key <AE09>	{ [], [ bracketright ] };
     key <AE10>	{ [], [ braceright ] };
+    key <AE11>	{ [], [ backslash ]	};
 
 };
 
@@ -62,4 +63,5 @@ xkb_symbols "shift_caps" {
     key <AD11>	{ [], [], [ bracketleft , braceleft ]	};
     key <AD12>  { [], [], [ bracketright, braceright ] };
     key <TLDE>	{ [], [], [ grave ]};
+
 };

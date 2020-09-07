@@ -181,7 +181,7 @@ Om hostname-gist-id finns: uppdatera den, annars skapa ny.
 
 # %%
 def read_gist(gist_id):
-    '''    
+    '''
     gist = g.get_gist(gist_id)
     gist_file, *_ = gist.files.values()
     gist_content = gist_file.content
