@@ -1,11 +1,39 @@
+# this alias removes leading dollar sign (useful when copying code from Stackoverflow)
+alias '$'=''
+
 alias ranger="source ranger"
-alias grep=rg
-alias ls="exa"
-alias la="exa -la"
+alias ls="exa --color-scale --icons"
+alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
+alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
+#alias sshfs="sshfs -o reconnect,nosuid,nodev,allow_other,uid=1000,gid=100"
+
 alias ..="cd .."
-alias cp "cp -iv"
-alias ogrep="/bin/grep"
+
+alias mv="mv -iv"
+alias cp="cp -iv"
+alias mkdir="mkdir -vp"
+alias rm="rm -iv"
+
+alias chmod="chmod -v"
+alias chown="chown -v"
+alias addx="chmod u+x"
+
+alias dud="du -d 1 -h"
+alias duf="du -sh"
+
+alias fd="find . -type d -name"
+alias ff="find . -type f -name"
+
+alias p="ps -f"
+
+alias zshrc="${=EDITOR} $ZDOTDIR/.zshrc"
+alias reload="source $ZDOTDIR/.zshrc"
+
+alias secrets="source ~/.secrets"
+alias Max='WINEPREFIX="/home/test/.wine" LC_NUMERIC=en_US.UTF-8 wine "/home/test/.wine/drive_c/Program Files/Cycling 74/Max 8/Max.exe"'
+alias dl="cd ~/Downloads"
+alias dot="cd ~/.dotfiles"
 
 function code() {
   # reference to the original `code` command
