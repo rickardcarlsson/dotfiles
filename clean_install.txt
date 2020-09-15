@@ -1,0 +1,3 @@
+chsh -s $(which zsh)
+sudo mkdir /var/cache/pacman/custom -m 777
+pamac upgrade -a
