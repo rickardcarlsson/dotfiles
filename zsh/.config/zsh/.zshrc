@@ -5,6 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+# Applications/environment variables
+export BROWSER=/usr/bin/firefox
+export EDITOR=/usr/bin/code
+export TERMINFO=/usr/lib/terminfo
+export TMPDIR=/tmp
+export ADOTDIR=$ZDOTDIR/.antigen
+# export PATH="$HOME/bin:$PATH"
+
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
@@ -29,13 +38,6 @@ antigen bundle djui/alias-tips # Help remembering shell aliases
 antigen theme romkatv/powerlevel10k  
 
 antigen apply
-
-# Applications/environment variables
-export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/code
-export TERMINFO=/usr/lib/terminfo
-export TMPDIR=/tmp
-# export PATH="$HOME/bin:$PATH"
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history

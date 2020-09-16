@@ -6,11 +6,11 @@
 	"vibrancy": "none",
 	"zoomFactor": 1,
 	"lastWindowState": {
-		"x": 1361,
-		"y": 30,
-		"width": 555,
-		"height": 1001,
-		"isMaximized": true
+		"x": 964,
+		"y": 62,
+		"width": 952,
+		"height": 974,
+		"isMaximized": false
 	},
 	"menuBarMode": false,
 	"showDockIcon": true,
@@ -19,7 +19,7 @@
 	"showUnreadBadge": true,
 	"showMessageButtons": true,
 	"launchMinimized": false,
-	"flashWindowOnMessage": true,
+	"flashWindowOnMessage": false,
 	"notificationMessagePreview": true,
 	"block": {
 		"chatSeen": true,
@@ -29,7 +29,7 @@
 	"emojiStyle": "facebook-3-0",
 	"useWorkChat": false,
 	"sidebar": "default",
-	"autoHideMenuBar": false,
+	"autoHideMenuBar": true,
 	"notificationsMuted": false,
 	"callRingtoneMuted": true,
 	"hardwareAcceleration": true,
