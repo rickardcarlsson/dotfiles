@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
@@ -18,7 +25,8 @@ antigen bundle rickardcarlsson/colorize # Colorize the output of various program
 antigen bundle djui/alias-tips # Help remembering shell aliases
 # antigen bundle softmoth/zsh-vim-mode # Vim mode
 
-antigen theme geometry-zsh/geometry
+# antigen theme geometry-zsh/geometry
+antigen theme romkatv/powerlevel10k  
 
 antigen apply
 
@@ -150,3 +158,6 @@ zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX
 
 # zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
