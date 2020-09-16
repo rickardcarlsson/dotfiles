@@ -1447,3 +1447,106 @@ antigen
 [LOG][1600257531.0391087532] Return from hook antigen-apply with 0
 [LOG][1600257531.0392990112] /usr/share/zsh/share/antigen.zsh:1519
 [LOG][1600257531.0392990112] Return from hook antigen with 0
+[WRN][1600258682.6330060959] /usr/share/zsh/share/antigen.zsh:266
+[WRN][1600258682.6330060959] -antigen-interactive-mode: toplevel:filecode:file:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[TRA][1600258682.6331896782] /usr/share/zsh/share/antigen.zsh:478
+[TRA][1600258682.6331896782] Gonna create compdump file @ env-setup COMPDUMP
+[TRA][1600258682.6331896782] TRACE
+-antigen-env-setup
+/usr/share/zsh/share/antigen.zsh
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6769838333] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6769838333] Called antigen-bundle with --loc=lib BUNDLE
+[TRA][1600258682.6769838333] TRACE
+antigen-bundle
+-antigen-use-oh-my-zsh
+antigen-use
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6779644489] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6779644489] Called antigen-bundle with zsh-users/zsh-completions BUNDLE
+[TRA][1600258682.6779644489] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6787445545] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6787445545] Called antigen-bundle with zsh-users/zsh-syntax-highlighting BUNDLE
+[TRA][1600258682.6787445545] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6794805527] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6794805527] Called antigen-bundle with zsh-users/zsh-autosuggestions BUNDLE
+[TRA][1600258682.6794805527] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6801810265] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6801810265] Called antigen-bundle with command-not-found BUNDLE
+[TRA][1600258682.6801810265] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6808786392] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6808786392] Called antigen-bundle with extract BUNDLE
+[TRA][1600258682.6808786392] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6815631390] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6815631390] Called antigen-bundle with npm BUNDLE
+[TRA][1600258682.6815631390] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6822454929] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6822454929] Called antigen-bundle with pip BUNDLE
+[TRA][1600258682.6822454929] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6829166412] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6829166412] Called antigen-bundle with marlonrichert/zsh-autocomplete BUNDLE
+[TRA][1600258682.6829166412] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6836652756] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6836652756] Called antigen-bundle with chrissicool/zsh-256color BUNDLE
+[TRA][1600258682.6836652756] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6843614578] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6843614578] Called antigen-bundle with RobSis/zsh-completion-generator BUNDLE
+[TRA][1600258682.6843614578] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6850469112] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6850469112] Called antigen-bundle with rickardcarlsson/colorize BUNDLE
+[TRA][1600258682.6850469112] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6857297421] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6857297421] Called antigen-bundle with djui/alias-tips BUNDLE
+[TRA][1600258682.6857297421] TRACE
+antigen-bundle
+antigen
+/home/sickan/.config/zsh/.zshrc
+[TRA][1600258682.6899225712] /usr/share/zsh/share/antigen.zsh:811
+[TRA][1600258682.6899225712] Called antigen-bundle with romkatv/powerlevel10k --btype=theme BUNDLE
+[TRA][1600258682.6899225712] TRACE
+antigen-bundle
+antigen-theme
+antigen
+/home/sickan/.config/zsh/.zshrc
+[LOG][1600258682.6910157204] /usr/share/zsh/share/antigen.zsh:788
+[LOG][1600258682.6910157204] Called antigen-apply
+[TRA][1600258682.6911103725] /usr/share/zsh/share/antigen.zsh:792
+[TRA][1600258682.6911103725] Gonna create compdump file @ apply COMPDUMP
+[TRA][1600258682.6911103725] TRACE
+antigen-apply
+antigen
+/home/sickan/.config/zsh/.zshrc
