@@ -6,6 +6,7 @@
 # this alias removes leading dollar sign (useful when copying code from Stackoverflow)
 alias '$'=''
 
+alias vim="nvim -u \$GIT/SpaceVim/vimrc"
 alias ranger="source ranger"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
@@ -34,6 +35,11 @@ alias p="ps -f"
 
 alias zshrc="${=EDITOR} $ZDOTDIR/.zshrc"
 alias reload="source $ZDOTDIR/.zshrc"
+
+alias pas="pamac search"
+alias par="pamac remove"
+alias pai="pamac install"
+alias pab="pamac build"
 
 alias secrets="source ~/.secrets"
 alias Max='WINEPREFIX="/home/test/.wine" LC_NUMERIC=en_US.UTF-8 wine "/home/test/.wine/drive_c/Program Files/Cycling 74/Max 8/Max.exe"'

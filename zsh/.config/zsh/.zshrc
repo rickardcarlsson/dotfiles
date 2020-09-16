@@ -12,6 +12,8 @@ export EDITOR=/usr/bin/code
 export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen
+export GIT="$HOME"/git
+export SPACEVIMDIR="$XDG_CONFIG_HOME"/SpaceVim
 # export PATH="$HOME/bin:$PATH"
 
 # Plugins
