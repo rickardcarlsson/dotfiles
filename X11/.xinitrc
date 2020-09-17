@@ -4,8 +4,11 @@
 #
 # Executed by startx (run your window manager from here)
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
+[[ -f ~/Documents/.secrets ]] && . ~/Documents/.secrets
+[[ -f $ZDOTDIR/exports ]] && . $ZDOTDIR/exports
+
+userresources=$XDG_CONFIG_HOME/X11/.Xresources
+usermodmap=$XDG_CONFIG_HOME/X11/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
@@ -65,9 +68,5 @@ get_session(){
 
 xset r rate 200 50
 setxkbmap -layout sickan -v 10
-
-if [ -f ~/.secrets ]; then
-    source ~/.secrets
-fi
 
 exec $(get_session)

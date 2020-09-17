@@ -7,14 +7,10 @@ fi
 
 
 # Applications/environment variables
-export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/code
-export TERMINFO=/usr/lib/terminfo
-export TMPDIR=/tmp
-export ADOTDIR=$ZDOTDIR/.antigen
-export GIT="$HOME"/git
-export SPACEVIMDIR="$XDG_CONFIG_HOME"/SpaceVim
-# export PATH="$HOME/bin:$PATH"
+[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
+
+# Import secrets if they exist
+[[ -s $DOCS/.secrets ]] && . $DOCS/.secrets 
 
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
@@ -45,7 +41,7 @@ antigen apply
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
-# bindkey -e                     # emacs keymap
+
 bindkey -v                       # vim keymap
 
 # Activate fuzzy finder
@@ -56,7 +52,6 @@ bindkey -v                       # vim keymap
 [ -f "$ZDOTDIR/aliasrc" ] && source "$ZDOTDIR/aliasrc"
 [ -f "$ZDOTDIR/shortcutrc" ] && source "$ZDOTDIR/shortcutrc"
 
-# Import secrets if they exist
 [ -s ~/.secrets ] && source ~/.secrets
 
 # Conda
