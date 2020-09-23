@@ -32,3 +32,16 @@ key[ShiftTab]="${terminfo[kcbt]}"
 [[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"    beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"  end-of-buffer-or-history
 [[ -n "${key[ShiftTab]}"  ]] && bindkey -- "${key[ShiftTab]}"  reverse-menu-complete
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Insert mode bindings
+# bindkey -M viins '^E' autosuggest-accept # Ctrl-E to accept autosuggestion
+bindkey -M viins '^[4' autosuggest-accept # Ctrl-E to accept autosuggestion
+# bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu
+bindkey -M viins '^[j' down-line-or-select
+bindkey -M viins '^[k' up-line-or-search

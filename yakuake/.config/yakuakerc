@@ -2,12 +2,15 @@
 Skin=materia-dark
 SkinInstalledWithKns=true
 
+[Desktop Entry]
+DefaultProfile=Sickan.profile
+
 [DownloadDialog Settings]
-Height 1080=478
+Height 1080=482
 Width 1920=700
 
 [Favorite Profiles]
-Favorites=
+Favorites=Sickan.profile
 
 [KFileDialog Settings]
 detailViewIconSize=0

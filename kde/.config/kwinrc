@@ -2,8 +2,12 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed
 
 [Compositing]
-OpenGLIsUnsafe=false
+Enabled=false
+GLCore=true
+GLTextureFilter=1
+LatencyControl=0
 MaxRefresh=75
+OpenGLIsUnsafe=false
 RefreshRate=75
 
 [Desktops]
@@ -11,7 +15,36 @@ Id_1=af9da414-ff35-44f9-b870-a0cf3dc5a380
 Id_2=ec04a79c-402b-425c-8140-dbfe71e2f913
 Rows=2
 
+[Effect-PresentWindows]
+BorderActivateAll=9
+
+[ElectricBorders]
+TopLeft=None
+
+[NightColor]
+Active=true
+LatitudeAuto=57.7072
+LongitudeAuto=11.9668
+
+[Plugins]
+blurEnabled=true
+kwin4_effect_fadeEnabled=false
+kwin4_effect_fadingpopupsEnabled=false
+kwin4_effect_loginEnabled=false
+kwin4_effect_logoutEnabled=false
+kwin4_effect_maximizeEnabled=false
+kwin4_effect_morphingpopupsEnabled=false
+kwin4_effect_squashEnabled=false
+kwin4_effect_translucencyEnabled=false
+kwin4_effect_windowapertureEnabled=false
+screenedgeEnabled=false
+showfpsEnabled=true
+slideEnabled=false
+slidingpopupsEnabled=false
+zoomEnabled=false
+
 [TabBox]
+BorderActivate=9
 DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 LayoutName=org.kde.breeze.desktop

@@ -6,11 +6,11 @@
 	"vibrancy": "none",
 	"zoomFactor": 1,
 	"lastWindowState": {
-		"x": 0,
-		"y": 0,
-		"width": 952,
-		"height": 976,
-		"isMaximized": true
+		"x": 962,
+		"y": 30,
+		"width": 956,
+		"height": 1007,
+		"isMaximized": false
 	},
 	"menuBarMode": false,
 	"showDockIcon": true,
@@ -30,7 +30,7 @@
 	"useWorkChat": false,
 	"sidebar": "default",
 	"autoHideMenuBar": true,
-	"notificationsMuted": false,
+	"notificationsMuted": true,
 	"callRingtoneMuted": true,
 	"hardwareAcceleration": true,
 	"quitOnWindowClose": false,

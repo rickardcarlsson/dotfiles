@@ -12,6 +12,9 @@ alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
+
+alias brg="batgrep"
+alias bman="batman"
 #alias sshfs="sshfs -o reconnect,nosuid,nodev,allow_other,uid=1000,gid=100"
 
 alias ..="cd .."
@@ -34,17 +37,18 @@ alias ff="find . -type f -name"
 alias p="ps -f"
 
 alias zshrc="${=EDITOR} $ZDOTDIR/.zshrc"
-alias reload="source $ZDOTDIR/.zshrc"
+alias reload="exec zsh"
 
 alias pas="pamac search"
 alias par="pamac remove"
 alias pai="pamac install"
 alias pab="pamac build"
 
-alias secrets="source ~/.secrets"
+alias secrets="source $DOCS/.secrets"
 alias Max='WINEPREFIX="/home/test/.wine" LC_NUMERIC=en_US.UTF-8 wine "/home/test/.wine/drive_c/Program Files/Cycling 74/Max 8/Max.exe"'
 alias dl="cd ~/Downloads"
 alias dot="cd ~/.dotfiles"
+alias config="cd $XDG_CONFIG_HOME"
 
 function code() {
   # reference to the original `code` command
