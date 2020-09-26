@@ -7,26 +7,30 @@ xkb_symbols "basic" {
     include "sickan(mods)"
     include "sickan(shift_alt)"
     include "sickan(shift_caps)"
+//    include "sickan(vim_navigation)"
 };
 
-partial alphanumeric_keys
+//partial alphanumeric_keys
+partial modifier_keys
 xkb_symbols "mods" {
 
     name[Group1]="Modifiers";
 
     key <LALT> {
-        // type = "PC_CONTROL_LEVEL2",
-        // symbols = [ Alt_L, ISO_Level3_Latch ]
-        type="TWO_LEVEL",
-        symbols = [ Alt_L, ISO_Group_Shift ]
-        // symbols = [ Alt_L, Alt_L ],
-        // actions = [ NoAction(), SetGroup(group=2) ]
-        // symbols = [ Alt_L, ISO_Level3_Shift ]
-        // actions[Group1]=[ NoAction(), RedirectKey(key=<LVL3>,clearmods=Shift) ]
-        // actions[Group1]=[ NoAction(), RedirectKey(key=<LVL3>) ]
-        // actions[Group1]=[ NoAction(), SetMods(modifiers=LevelThree) ]
+        //type = "PC_CONTROL_LEVEL2",
+        type[Group1] = "TWO_LEVEL",
+        //symbols[Group1] = [ Alt_L, ISO_Group_Shift ]
+        //symbols[Group1] = [ Alt_L, ISO_Level3_Shift ]
+        symbols[Group1] = [ Alt_L , NoSymbol ]
+        //symbols[Group1] = [ Alt_L, Mode_switch ]
+        //, actions = [ SetMods(modifiers=Mod1), SetMods(modifiers=Mod4) ]
+        //, actions = [ SetMods(modifiers=Mod1), SetGroup(group=2, clearMods=Shift) ]
+        //, actions = [ SetMods(modifiers=Mod1),  RedirectKey(keycode=<RALT>, clearmodifiers=Shift, modifiers=Mod5) ]
+        , actions = [ SetMods(modifiers=Mod1), SetGroup(group=2) ]
+       //actions = [ SetGroup(group=4), SetGroup(group=2) ]
     };
-
+    //modifier_map Mod5 { <LVL3>, <MDSW>, ISO_Level3_Shift };
+    //modifier_map Mod1 { Alt_L, Meta_L };
     key <CAPS> {
         type = "TWO_LEVEL",
         symbols[Group1] = [ Escape, NoSymbol ],
@@ -63,5 +67,18 @@ xkb_symbols "shift_caps" {
     key <AD11>	{ [], [], [ bracketleft , braceleft ]	};
     key <AD12>  { [], [], [ bracketright, braceright ] };
     key <TLDE>	{ [], [], [ grave ]};
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "vim_navigation" {
+
+    name[Group4] = "Vim navigation";
+    key.type[Group4] = "ONE_LEVEL";
+ 
+    key <AC06>	{  [], [], [], [ Left ]	};
+    key <AC07>	{  [], [], [], [ Down ] };
+    key <AC08>	{  [], [], [], [ Up ]	};
+    key <AC09>	{  [], [], [], [ Right ]	};
 
 };

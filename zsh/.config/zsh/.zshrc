@@ -12,17 +12,16 @@ fi
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
 
-antigen bundle zdharma/fast-syntax-highlighting 
+# antigen bundle zdharma/fast-syntax-highlighting 
 antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle marlonrichert/zsh-autocomplete # Find-as-you-type completion
 
 antigen bundle command-not-found
 antigen bundle extract
 antigen bundle npm                # support for NodeJS package manager
 antigen bundle pip                # support for Python Package Manager
 
-antigen bundle marlonrichert/zsh-autocomplete # Find-as-you-type completion
-# antigen bundle Aloxaf/fzf-tab # fzf completion
 antigen bundle chrissicool/zsh-256color # Enhance the terminal environment with 256 colors
 antigen bundle RobSis/zsh-completion-generator # Generate completions with: gencomp program
 antigen bundle rickardcarlsson/colorize # Colorize the output of various programs (including man), requires grc

@@ -1,4 +1,4 @@
-#files: 800	version: 5.8
+#files: 797	version: 5.8
 
 _comps=(
 '-' '_precommand'
@@ -321,7 +321,6 @@ _comps=(
 'extractres' '_psutils'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
-'fast-theme' '_fast-theme'
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
@@ -1799,8 +1798,8 @@ autoload -Uz _autocomplete.alias_expansions _autocomplete.explanation _autocompl
             _wait _which _widgets _zargs _zattr \
             _zcalc _zcalc_line _zcompile _zed _zftp \
             _zle _zmodload _zmv _zparseopts _zpty \
-            _zsh-mime-handler _zsocket _zstyle _ztodo _fast-theme \
-            _extract _pip _groff _nl
+            _zsh-mime-handler _zsocket _zstyle _ztodo _extract \
+            _pip
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

@@ -63,11 +63,7 @@ get_session(){
     echo "dbus-launch ${dbus_args[*]}"
 }
 
-xset r rate 200 50
-setxkbmap -layout sickan -v 10
-
-if [ -f ~/.secrets ]; then
-    source ~/.secrets
-fi
+xset r rate 200 50 &
+setxkbmap -layout sickan &
 
 exec $(get_session)
