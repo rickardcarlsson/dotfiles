@@ -10,6 +10,7 @@ alias vim="nvim"
 alias ranger="source ranger"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
+alias lam="exa -laF --color-scale --icons -s modified"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 

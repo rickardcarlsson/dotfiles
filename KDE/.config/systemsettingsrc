@@ -1,9 +1,18 @@
+[KFileDialog Settings]
+Recent Files[$e]=light,file:///bin/light
+Recent URLs[$e]=file:///bin/
+detailViewIconSize=0
+
 [MainWindow]
-Height 1080=1047
+Height 1080=1007
 Height 2160=700
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAABAAAAAQXAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABAAAAAK8AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1920=1024
+Width 1920=1485
 Width 3840=1024
 Window-Maximized 2160x3840=true
+
+[Open-with settings]
+CompletionMode=1
+History=/bin/light

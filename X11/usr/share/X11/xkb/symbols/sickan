@@ -82,3 +82,4 @@ xkb_symbols "vim_navigation" {
     key <AC09>	{  [], [], [], [ Right ]	};
 
 };
+
