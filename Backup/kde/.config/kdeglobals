@@ -1,14 +1,12 @@
 [$Version]
-update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,kwin.upd:animation-speed,icons_remove_effects.upd:IconsRemoveEffects
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,kwin.upd:animation-speed,icons_remove_effects.upd:IconsRemoveEffects,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
 
 [ColorEffects:Disabled]
-ChangeSelectionColor=
 Color=56,56,56
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.65
 ContrastEffect=1
-Enable=
 IntensityAmount=0.1
 IntensityEffect=2
 
@@ -108,37 +106,34 @@ ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
 [DirSelect Dialog]
-DirSelectDialog Size=842,568
-History Items[$e]=file:$HOME/.config/Kvantum/,file:$HOME/Documents
+DirSelectDialog Size=860,586
+History Items[$e]=file:$HOME/Documents/Calibre
 
 [General]
-BrowserApplication=
 ColorScheme=ChromeOSDark
 Name=ChromeOSDark
 XftHintStyle=hintslight
 XftSubPixel=rgb
-dbfile=/home/test/.mozilla/firefox/rtke7iyy.default/places.sqlite
-fixed=Roboto Mono,10,-1,5,50,0,0,0,0,0
-font=Roboto,10,-1,5,50,0,0,0,0,0
-menuFont=Roboto,10,-1,5,50,0,0,0,0,0
+fixed=Noto Mono,10,-1,5,50,0,0,0,0,0,Regular
+font=Noto Sans,10,-1,5,50,0,0,0,0,0,Regular
+menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0,Regular
 shadeSortColumn=true
-smallestReadableFont=Roboto,8,-1,5,50,0,0,0,0,0
-toolBarFont=Roboto,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0,Regular
+toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0,Regular
 
 [Icons]
 Theme=Tela-dark
 
 [KDE]
 AnimationDurationFactor=0
-LookAndFeelPackage=com.github.rickardcarlsson.ChromeOS
-SingleClick=false
+LookAndFeelPackage=com.github.vinceliuice.ChromeOS-dark
 contrast=4
 widgetStyle=kvantum
 
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
@@ -154,13 +149,18 @@ Sort reversed=false
 Speedbar Width=152
 View Style=DetailTree
 
+[KScreen]
+ScaleFactor=2
+ScreenScaleFactors=eDP-1=2;DP-1=2;DP-2=2;HDMI-1=2;
+
 [KShortcutsDialog Settings]
 Dialog Size=600,480
 
 [WM]
+FakeEntryToKeepThisGroup=true
 activeBackground=40,40,40
 activeBlend=40,40,40
-activeFont=Roboto,10,-1,5,50,0,0,0,0,0
+activeFont=Noto Sans,10,-1,5,50,0,0,0,0,0,Regular
 activeForeground=223,223,223
 inactiveBackground=40,40,40
 inactiveBlend=40,40,40

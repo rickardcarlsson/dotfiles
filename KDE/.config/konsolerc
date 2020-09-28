@@ -1,0 +1,16 @@
+[Desktop Entry]
+DefaultProfile=Sickan.profile
+
+[Favorite Profiles]
+Favorites=Sickan.profile
+
+[MainWindow]
+Height 1080=1007
+Height 2160=1491
+State=AAAA/wAAAAD9AAAAAAAAA7wAAAPRAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=956
+Width 3840=3422
+
+[Notification Messages]
+CloseAllTabs=true

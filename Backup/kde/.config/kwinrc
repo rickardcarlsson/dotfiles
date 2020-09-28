@@ -2,37 +2,36 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed
 
 [Compositing]
+AnimationCurve=4
+Backend=XRender
+Enabled=false
+GLPreferBufferSwap=n
+LatencyControl=0
+MaxRefresh=75
 OpenGLIsUnsafe=false
+RefreshRate=75
+XRenderSmoothScale=true
 
 [Desktops]
-Id_1=f31ce850-24b0-4249-8a58-1284cc99f7f3
-Id_2=189ad7a1-8ec5-4242-84b0-28eca77e44dd
+Id_1=af9da414-ff35-44f9-b870-a0cf3dc5a380
+Id_2=ec04a79c-402b-425c-8140-dbfe71e2f913
 Rows=2
 
-[Effect-Blur]
-BlurStrength=7
-NoiseStrength=0
+[Effect-PresentWindows]
+BorderActivateAll=9
 
-[Effect-CoverSwitch]
-TabBox=false
-TabBoxAlternative=false
-
-[Effect-FlipSwitch]
-TabBox=false
-TabBoxAlternative=false
+[ElectricBorders]
+TopLeft=None
 
 [NightColor]
 Active=true
-LatitudeAuto=57.7066
-LongitudeAuto=11.9672
-NightTemperature=4000
+LatitudeAuto=57.7072
+LongitudeAuto=11.9668
 
 [Plugins]
 blurEnabled=true
-highlightwindowEnabled=true
 kwin4_effect_fadeEnabled=false
 kwin4_effect_fadingpopupsEnabled=false
-kwin4_effect_frozenappEnabled=false
 kwin4_effect_loginEnabled=false
 kwin4_effect_logoutEnabled=false
 kwin4_effect_maximizeEnabled=false
@@ -40,37 +39,17 @@ kwin4_effect_morphingpopupsEnabled=false
 kwin4_effect_squashEnabled=false
 kwin4_effect_translucencyEnabled=false
 kwin4_effect_windowapertureEnabled=false
-presentwindowsEnabled=false
 screenedgeEnabled=false
+showfpsEnabled=true
 slideEnabled=false
 slidingpopupsEnabled=false
 zoomEnabled=false
 
 [TabBox]
-ActivitiesMode=1
-ApplicationsMode=0
+BorderActivate=9
 DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
-DesktopMode=1
-HighlightWindows=true
-LayoutName=thumbnails
-MinimizedMode=0
-MultiScreenMode=0
-ShowDesktopMode=0
-ShowTabBox=true
-SwitchingMode=0
-
-[TabBoxAlternative]
-ActivitiesMode=1
-ApplicationsMode=0
-DesktopMode=1
-HighlightWindows=true
 LayoutName=org.kde.breeze.desktop
-MinimizedMode=0
-MultiScreenMode=0
-ShowDesktopMode=0
-ShowTabBox=true
-SwitchingMode=0
 
 [org.kde.kdecoration2]
 library=org.kde.kwin.aurorae

@@ -53,8 +53,8 @@ chromeos-kde-git
 # Theme:
 kvantummanager --set ChromeOS-dark
 lookandfeeltool -a 'com.github.vinceliuice.ChromeOS-dark'
-# /home/test/.config/gtk-3.0/settings.ini
 gtk-theme-name=ChromeOS-dark
+# /home/test/.config/gtk-3.0/settings.ini
 
 
 # VSCode
