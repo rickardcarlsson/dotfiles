@@ -10,7 +10,7 @@
 		"y": 30,
 		"width": 1920,
 		"height": 1010,
-		"isMaximized": true
+		"isMaximized": false
 	},
 	"menuBarMode": false,
 	"showDockIcon": true,
