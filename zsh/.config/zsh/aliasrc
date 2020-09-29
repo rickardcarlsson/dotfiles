@@ -7,6 +7,7 @@
 alias '$'=''
 
 alias vim="nvim"
+alias svim="sudo nvim"
 alias ranger="source ranger"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?

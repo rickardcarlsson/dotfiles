@@ -4,13 +4,16 @@ DefaultProfile=Sickan.profile
 [Favorite Profiles]
 Favorites=Sickan.profile
 
+[KonsoleWindow]
+ShowWindowTitleOnTitleBar=true
+
 [MainWindow]
 Height 1080=1007
-Height 2160=2014
+Height 2160=1040
 State=AAAA/wAAAAD9AAAAAAAADwAAAAesAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=956
-Width 3840=1912
+Width 3840=1920
 Window-Maximized 2160x3840=true
 
 [Notification Messages]
