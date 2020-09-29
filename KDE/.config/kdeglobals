@@ -105,6 +105,12 @@ ForegroundNormal=223,223,223
 ForegroundPositive=1,162,153
 ForegroundVisited=0,188,212
 
+[DesktopIcons]
+Size=128
+
+[DialogIcons]
+Size=64
+
 [DirSelect Dialog]
 DirSelectDialog Size=858,598
 History Items[$e]=file:///data
@@ -112,6 +118,8 @@ History Items[$e]=file:///data
 [General]
 ColorScheme=ChromeOSDark
 Name=ChromeOSDark
+XftHintStyle=hintslight
+XftSubPixel=rgb
 shadeSortColumn=true
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 
@@ -120,7 +128,7 @@ Theme=Tela-dark
 
 [KDE]
 AnimationDurationFactor=0
-LookAndFeelPackage=org.kde.breezedark.desktop
+LookAndFeelPackage=com.github.vinceliuice.ChromeOS-dark
 contrast=4
 widgetStyle=kvantum
 
@@ -149,6 +157,18 @@ ScreenScaleFactors=eDP-1=2;DP-1=2;DP-2=2;HDMI-1=2;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480
+
+[MainToolbarIcons]
+Size=48
+
+[PanelIcons]
+Size=96
+
+[SmallIcons]
+Size=48
+
+[ToolbarIcons]
+Size=48
 
 [WM]
 activeBackground=40,40,40

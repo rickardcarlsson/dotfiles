@@ -1,12 +1,12 @@
 [Layout]
-DisplayNames=sic,
-LayoutList=sickan,se(nodeadkeys)
+DisplayNames=sic
+LayoutList=sickan
 LayoutLoopCount=-1
-Model=pc86
+Model=pc105
 ResetOldOptions=false
 ShowFlag=false
 ShowLabel=true
-ShowLayoutIndicator=true
+ShowLayoutIndicator=false
 ShowSingle=false
 SwitchMode=Global
 Use=true

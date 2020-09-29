@@ -6,8 +6,8 @@ SkinInstalledWithKns=true
 DefaultProfile=Sickan.profile
 
 [DownloadDialog Settings]
-Height 1080=482
-Width 1920=700
+Height 2160=1138
+Width 3840=1812
 
 [Favorite Profiles]
 Favorites=Sickan.profile
