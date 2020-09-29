@@ -7,10 +7,11 @@ Favorites=Sickan.profile
 [MainWindow]
 Height 1080=1007
 Height 2160=2014
-State=AAAA/wAAAAD9AAAAAAAAB3gAAAemAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAADwAAAAesAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=956
 Width 3840=1912
+Window-Maximized 2160x3840=true
 
 [Notification Messages]
 CloseAllTabs=true
