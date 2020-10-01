@@ -1,4 +1,5 @@
 /Backup
+/pacman/etc/pacman.d/gnupg
 /pacman/etc/pacman.d/mirrorlist
 /zsh/.config/zsh/.antigen
 /zsh/.config/zsh/.zsh_history
