@@ -1,0 +1,17 @@
+#!/bin/sh
+chsh -s $(which zsh)
+sudo mkdir /var/cache/pacman/custom -m 777
+pamac upgrade -a
+
+mkdir ~/.ssh/sockets
+
+# Shared folder
+sudo mkdir /home/sharedFolder/
+sudo chgrp users /home/sharedFolder/
+sudo chmod 770 /home/sharedFolder/
+sudo chmod +s /home/sharedFolder/
+
+# Storing backups of all installed packages
+mkdir /home/sharedFolder/package_lists/
+
+

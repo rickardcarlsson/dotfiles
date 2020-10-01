@@ -1,0 +1,12 @@
+#/etc/pacman.d/hooks/50-pacman-list.hook
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = *
+
+[Action]
+Description = Creating backup list of all installed packages...
+When = PreTransaction
+Exec = /bin/sh -c 'pacman -Qqen  > "/home/sharedFolder/package_lists/$(date +%Y-%m-%d_%H:%M)_native.log"; pacman -Qqem > "/home/sharedFolder/package_lists/$(date +%Y-%m-%d_%H:%M)_alien.txt" 2> /dev/null; exit' 
