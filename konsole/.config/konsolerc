@@ -1,0 +1,27 @@
+[Desktop Entry]
+DefaultProfile=Sickan.profile
+
+[DownloadDialog Settings]
+Height 1080=478
+Width 1920=700
+Window-Maximized 1080x1920=true
+
+[Favorite Profiles]
+Favorites=Sickan.profile
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080=974
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA7gAAAHWAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=952
+eDP1 Height 1080=470
+eDP1 Width 1920=952
+eDP1 XPosition=517
+eDP1 YPosition=311
+
+[Notification Messages]
+CloseAllTabs=true
