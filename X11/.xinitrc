@@ -63,7 +63,7 @@ get_session(){
     echo "dbus-launch ${dbus_args[*]}"
 }
 
-xset r rate 300 50
+xset r rate 300 50 &
 setxkbmap -layout sickan &
 
 exec $(get_session)

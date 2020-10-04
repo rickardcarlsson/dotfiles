@@ -26,6 +26,7 @@ export SPACEVIMDIR=$XDG_CONFIG_HOME/SpaceVim/
 export GIT=$HOME/git
 export DOCS=$HOME/Documents
 export DL=$HOME/Downloads
+export DOT=$HOME/.dotfiles
 
 # Paths
 # export PATH="$HOME/.emacs.d/bin:$PATH"

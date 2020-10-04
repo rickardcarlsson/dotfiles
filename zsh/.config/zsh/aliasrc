@@ -1,5 +1,5 @@
 # Git aliases
-[ -f "$ZDOTDIR/expand-alias.zsh" ] && source "$ZDOTDIR/expand-alias.zsh"
+# [ -f "$ZDOTDIR/expand-alias.zsh" ] && source "$ZDOTDIR/expand-alias.zsh"
 [ -f "$ZDOTDIR/alias-git.zsh" ] && source "$ZDOTDIR/alias-git.zsh"
 
 
@@ -11,7 +11,8 @@ alias svim="sudo nvim -u $HOME/git/SpaceVim/config/main.vim"
 alias ranger="source ranger"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
-alias lam="exa -laF --color-scale --icons -s modified"
+alias lam="la -s modified"
+alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 

@@ -15,13 +15,14 @@ ShowMenuBarByDefault=false
 [MainWindow]
 Height 1080=974
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA7gAAAHWAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA7gAAAPOAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=952
-eDP1 Height 1080=470
+eDP1 Height 1080=974
 eDP1 Width 1920=952
-eDP1 XPosition=517
-eDP1 YPosition=311
+eDP1 XPosition=964
+eDP1 YPosition=62
 
 [Notification Messages]
+CloseAllEmptyTabs=true
 CloseAllTabs=true

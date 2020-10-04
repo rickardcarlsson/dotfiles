@@ -16,7 +16,6 @@ fi
 #  tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
 #fi
 
-
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
@@ -111,6 +110,9 @@ unset _comp_path
 _comp_options+=(globdots)		# Include hidden files.
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5' 
+
+# Kitty specific settings
+[[ $TERM == "xterm-kitty" ]] && [ -f $ZDOTDIR/kitty ] && . $ZDOTDIR/kitty
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

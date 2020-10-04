@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=false
 ColorScheme=MateriaDark
-Font=Fira Code,10,-1,5,50,0,0,0,0,0
+Font=FiraCode Nerd Font,10,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [General]
