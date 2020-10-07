@@ -153,7 +153,7 @@ View Style=DetailTree
 
 [KScreen]
 ScaleFactor=2
-ScreenScaleFactors=eDP-1=2;DP-1=2;DP-2=2;HDMI-1=2;
+ScreenScaleFactors=DVI-D-0=2;HDMI-0=2;DP-0=2;DP-1=2;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480

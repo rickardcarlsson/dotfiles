@@ -32,3 +32,4 @@ export DOT=$HOME/.dotfiles
 # export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/code/bin:$PATH"
 
+[[ $HOST == "server" ]] && [[ -f $ZDOTDIR/ff_hwacc ]] && . $ZDOTDIR/ff_hwacc

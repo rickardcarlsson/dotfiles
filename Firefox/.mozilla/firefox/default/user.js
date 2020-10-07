@@ -26,6 +26,12 @@ user_pref('gfx.webrender.enabled', true);
 // force OpenGL acceleration to prevent tearing on 1080 60fps videos.
 user_pref("layers.acceleration.force-enabled", true); 
 
+// VA-API
+user_pref("media.ffmpeg.dmabuf-textures.enabled", true); // Can lead to rendering issues
+user_pref("media.ffmpeg.vaapi.enabled", true);
+user_pref("media.ffvpx.enabled", false);
+
+
 // disable alt key toggling the menu bar [RESTART]
 user_pref("ui.key.menuAccessKey", 0); 
 user_pref("ui.key.menuAccessKeyFocuses", false);
