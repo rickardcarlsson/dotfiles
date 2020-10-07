@@ -112,8 +112,8 @@ Size=128
 Size=64
 
 [DirSelect Dialog]
-DirSelectDialog Size=858,598
-History Items[$e]=file:///data
+DirSelectDialog Size=843,581
+History Items[$e]=file:$HOME/Documents/Carla Projects,file:///data
 
 [General]
 ColorScheme=ChromeOSDark
