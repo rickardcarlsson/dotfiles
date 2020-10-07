@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-99242c66-5fa2-41a4-bfe8-bbeac105fad5=none,none,Switch to activity "Default"
 switch-to-activity-99b2fcab-d330-46ce-aa10-2f6abf6bf8c3=none,none,Switch to activity "Default"
 switch-to-activity-9d5107c0-e9df-4c2f-aaf7-d5c052cfd18b=none,none,Switch to activity "Default"
 
@@ -26,12 +27,12 @@ _k_friendly_name=KDE Daemon
 display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
-_k_friendly_name=KDE Daemon
-{27cfc6ac-5421-4632-bacf-22807ebc8110}=,none,Capture entire desktop
-{4f172840-89fe-4bac-8706-2a84c6b62ab2}=,none,Capture region
-{740208c6-ec35-4b3e-910b-e9a468a6dc5a}=,none,Capture active window
+_k_friendly_name=System Settings
+{2aaa0b3c-b675-462b-999b-e64c3a04f4c7}=Shift+Volume Up,none,Increase
+{37fcda51-d0bc-4ed0-88b1-6a80e961ae17}=Shift+Volume Down,none,Decrease
+{b47f336b-bfec-4b6d-90b0-e8d29d0dc7a2}=none,none,Launch Kitty
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
-{f51d26c5-80c5-4481-afd3-ccad8cced5ba}=Meta+Ctrl+T,none,Launch Konsole
+{df4b4b08-9ecf-468a-b304-30f000c2313f}=Ctrl+Alt+T,none,Launch Kitty
 
 [kmix]
 _k_friendly_name=Audio Volume

@@ -1,16 +1,20 @@
 [Desktop Entry]
-DefaultProfile=Sickan.profile
+DefaultProfile=
 
 [Favorite Profiles]
-Favorites=Sickan.profile
+Favorites=
 
 [KonsoleWindow]
 ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
+DVI-D-0 Height 1080=1002
+DVI-D-0 Width 1920=956
+DVI-D-0 XPosition=4
+DVI-D-0 YPosition=29
 Height 1080=1007
 Height 2160=1040
-State=AAAA/wAAAAD9AAAAAAAADwAAAAesAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAA7wAAAPMAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=956
 Width 3840=1920
