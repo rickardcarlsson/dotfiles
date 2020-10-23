@@ -2,7 +2,6 @@
 # [ -f "$ZDOTDIR/expand-alias.zsh" ] && source "$ZDOTDIR/expand-alias.zsh"
 [ -f "$ZDOTDIR/alias-git.zsh" ] && source "$ZDOTDIR/alias-git.zsh"
 
-
 # this alias removes leading dollar sign (useful when copying code from Stackoverflow)
 alias '$'=''
 
@@ -56,6 +55,9 @@ alias CONFIG="cd $XDG_CONFIG_HOME"
 alias GIT="cd $GIT"
 alias CODE="cd ~/code"
 
+# Docker
+alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"
+
 function stowr() {
   sudo stow -v -S $1 -t /
 }
@@ -73,3 +75,5 @@ function code() {
     $_code "$@"
   fi
 }
+
+alias rymden="ssh -p 50000 sickan@rymden.space"

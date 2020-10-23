@@ -8,5 +8,5 @@ RepeatDelay=300
 RepeatRate=50
 
 [Mouse]
-cursorSize=30
+cursorSize=48
 cursorTheme=Vimix-cursors
