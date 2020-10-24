@@ -40,8 +40,8 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Insert mode bindings
-# bindkey -M viins '^E' autosuggest-accept # Ctrl-E to accept autosuggestion
+bindkey -M viins '^E' autosuggest-accept # Ctrl-E to accept autosuggestion
 # bindkey -M viins '^[l' autosuggest-accept # Ctrl-E to accept autosuggestion
-# bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu
+bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu
 # bindkey -M viins '^[j' down-line-or-select
 # bindkey -M viins '^[k' up-line-or-search
