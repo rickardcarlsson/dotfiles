@@ -1,5 +1,5 @@
-bindkey -s '^o' 'ranger\n'
-
+#bindkey -s "^o" "ranger\n"
+bindkey -s "^o" "ranger^M"
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
