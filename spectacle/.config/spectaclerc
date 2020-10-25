@@ -6,8 +6,8 @@ copyImageToClipboard=true
 
 [GuiConfig]
 captureMode=5
-cropRegion=147,238,3311,1375
-window-position=6,0
+cropRegion=2835,548,956,436
+window-position=2,0
 
 [Save]
 lastSaveLocation=file:///home/test/Pictures/Screenshot_20200610_152012.png

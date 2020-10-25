@@ -17,6 +17,9 @@ user_pref("materialFox.reduceTabOverflow", true);
 user_pref('browser.pocket.enabled', false);
 user_pref('extensions.pocket.enabled', false);
 
+// Enable site-specific browser
+user_pref('browser.ssb.enabled', true);
+
 /* Forcing webrender is way more performant, 
  will probably be enabled by default in the future 
 */
