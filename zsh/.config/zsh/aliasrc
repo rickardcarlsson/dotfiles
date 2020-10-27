@@ -57,6 +57,7 @@ alias GIT="cd $GIT"
 alias CODE="cd ~/code"
 alias HDD="cd /data"
 alias HDDr="cd /data && ranger"
+alias BIN="cd ~/code/bin"
 
 alias server="ssh sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
