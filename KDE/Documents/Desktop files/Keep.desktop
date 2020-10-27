@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Google Keep
+GenericName=Notes
+Icon=/home/sickan/Documents/Icons/icons8-google-keep.svg
+Type=Application
+Exec=firefox -ssb keep.google.com
+#StartupWMClass=keep
+Terminal=false
+
