@@ -16,3 +16,7 @@ Favorites=Sickan.profile
 
 [KFileDialog Settings]
 detailViewIconSize=0
+
+[Window]
+KeepOpen=false
+ShowTabBar=false
