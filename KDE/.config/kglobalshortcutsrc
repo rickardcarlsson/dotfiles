@@ -1,8 +1,10 @@
+[.desktop]
+_k_friendly_name=focus_caprine
+_launch=,,
+
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-99242c66-5fa2-41a4-bfe8-bbeac105fad5=none,none,Switch to activity "Default"
-switch-to-activity-99b2fcab-d330-46ce-aa10-2f6abf6bf8c3=none,none,Switch to activity "Default"
-switch-to-activity-9d5107c0-e9df-4c2f-aaf7-d5c052cfd18b=none,none,Switch to activity "Default"
+switch-to-activity-dcac9d22-5169-4425-a68d-064070ed1402=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to Sickan=none,none,Switch keyboard layout to Sickan
@@ -27,11 +29,11 @@ _k_friendly_name=KDE Daemon
 display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
-_k_friendly_name=KDE Daemon
+_k_friendly_name=Custom Shortcuts Service
 {2aaa0b3c-b675-462b-999b-e64c3a04f4c7}=Shift+Volume Up,none,Increase
 {37fcda51-d0bc-4ed0-88b1-6a80e961ae17}=Shift+Volume Down,none,Decrease
+{7ef73278-1749-432c-a3e4-743f9efb03a1}=Ctrl+Alt+T,none,Launch Kitty
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
-{df4b4b08-9ecf-468a-b304-30f000c2313f}=Ctrl+Alt+T,none,Launch Kitty
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -48,11 +50,11 @@ _k_friendly_name=KRunner
 _launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
 
 [ksmserver]
-Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,none,Halt Without Confirmation
+Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,Ctrl+Alt+Shift+PgDown,Halt Without Confirmation
 Lock Session=Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
-Log Out=Ctrl+Alt+Del,none,Log Out
-Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Log Out Without Confirmation
-Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Reboot Without Confirmation
+Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out
+Log Out Without Confirmation=Ctrl+Alt+Shift+Del,Ctrl+Alt+Shift+Del,Log Out Without Confirmation
+Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,Ctrl+Alt+Shift+PgUp,Reboot Without Confirmation
 _k_friendly_name=Session Management
 
 [kwin]
@@ -64,33 +66,6 @@ ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 Increase Opacity=none,none,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,none,Invert Screen Colors
 Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window
-Krohnkite: Cycle Layout=,none,
-Krohnkite: Decrease=,none,
-Krohnkite: Down/Next=Meta+J,none,
-Krohnkite: Float=Meta+F,none,
-Krohnkite: Float All=Meta+Shift+F,none,
-Krohnkite: Floating Layout=none,none,
-Krohnkite: Grow Height=Meta+Ctrl+J,none,
-Krohnkite: Grow Width=Meta+Ctrl+L,none,
-Krohnkite: Increase=Meta+I,none,
-Krohnkite: Left=Meta+H,none,
-Krohnkite: Monocle Layout=Meta+M,none,
-Krohnkite: Move Down/Next=Meta+Shift+J,none,
-Krohnkite: Move Left=Meta+Shift+H,none,
-Krohnkite: Move Right=Meta+Shift+L,none,
-Krohnkite: Move Up/Prev=Meta+Shift+K,none,
-Krohnkite: Next Layout=Meta+\\\\,none,
-Krohnkite: Previous Layout=Meta+|,none,
-Krohnkite: Quarter Layout=none,none,
-Krohnkite: Right=,none,
-Krohnkite: Set master=Meta+Return,none,
-Krohnkite: Shrink Height=Meta+Ctrl+K,none,
-Krohnkite: Shrink Width=Meta+Ctrl+H,none,
-Krohnkite: Spread Layout=none,none,
-Krohnkite: Stair Layout=none,none,
-Krohnkite: Three Column Layout=none,none,
-Krohnkite: Tile Layout=Meta+T,none,
-Krohnkite: Up/Prev=Meta+K,none,
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,none,Move Zoomed Area Downwards
@@ -105,10 +80,10 @@ Switch One Desktop Down=none,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=none,Meta+Ctrl+Up,Switch One Desktop Up
 Switch One Desktop to the Left=none,Meta+Ctrl+Left,Switch One Desktop to the Left
 Switch One Desktop to the Right=none,Meta+Ctrl+Right,Switch One Desktop to the Right
-Switch Window Down=Meta+Alt+Down,Meta+Alt+Down,Switch to Window Below
+Switch Window Down=,Meta+Alt+Down,Switch to Window Below
 Switch Window Left=Meta+Alt+Left,Meta+Alt+Left,Switch to Window to the Left
 Switch Window Right=Meta+Alt+Right,Meta+Alt+Right,Switch to Window to the Right
-Switch Window Up=Meta+Alt+Up,Meta+Alt+Up,Switch to Window Above
+Switch Window Up=,Meta+Alt+Up,Switch to Window Above
 Switch to Desktop 1=Ctrl+F1,Ctrl+F1,Switch to Desktop 1
 Switch to Desktop 10=none,none,Switch to Desktop 10
 Switch to Desktop 11=none,none,Switch to Desktop 11
@@ -279,16 +254,15 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 2=Alt+F1,none,Activate Application Launcher Widget
-activate widget 21=none,none,Activate Task Manager Widget
-activate widget 312=,none,Activate Application Launcher Widget
+activate widget 22=none,none,Activate Task Manager Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
 cyclePrevAction=none,none,Previous History Item
 edit_clipboard=none,none,Edit Contents...
-manage activities=Meta+Q,Meta+Q,Activities...
-next activity=Meta+Tab,Meta+Tab,Walk through activities
-previous activity=Meta+Shift+Tab,Meta+Shift+Tab,Walk through activities (Reverse)
+manage activities=Meta+Q,Meta+Q,Show Activity Switcher
+next activity=Meta+Tab,none,Walk through activities
+previous activity=Meta+Shift+Tab,none,Walk through activities (Reverse)
 repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,none,Show Barcode...
@@ -304,4 +278,4 @@ _launch=Tools,Tools,System Settings
 
 [yakuake]
 _k_friendly_name=Yakuake
-toggle-window-state=F12\tF4,F12,Open/Retract Yakuake
+toggle-window-state=F4,F12,Open/Retract Yakuake

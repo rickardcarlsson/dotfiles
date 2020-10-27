@@ -6,7 +6,6 @@ copyImageToClipboard=true
 
 [GuiConfig]
 captureMode=5
-cropRegion=2835,548,956,436
 window-position=2,0
 
 [Save]

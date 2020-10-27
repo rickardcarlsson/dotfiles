@@ -1,4 +1,4 @@
-/Backup
+/.backup
 /tmux/.config/tmux/plugins
 /pacman/etc/pacman.d/gnupg
 /pacman/etc/pacman.d/mirrorlist

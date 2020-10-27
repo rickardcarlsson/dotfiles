@@ -66,7 +66,7 @@ TriggersCount=1
 [Data_1_2Triggers0]
 Key=Ctrl+Alt+T
 Type=SHORTCUT
-Uuid={df4b4b08-9ecf-468a-b304-30f000c2313f}
+Uuid={7ef73278-1749-432c-a3e4-743f9efb03a1}
 
 [Data_2]
 Comment=Basic Konqueror gestures.
@@ -522,7 +522,7 @@ TriggersCount=1
 [Data_3_1Triggers0]
 Key=Ctrl+Alt+I
 Type=SHORTCUT
-Uuid={d414c3ac-95bd-40e0-a937-cdb96e67856c}
+Uuid={c3e8bf8b-fe58-443a-b8cb-6b48a2384953}
 
 [Data_3_2]
 Comment=After pressing Alt+Ctrl+H the input of 'Hello' will be simulated, as if you typed it.  This is especially useful if you have call to frequently type a word (for instance, 'unsigned').  Every keypress in the input is separated by a colon ':'. Note that the keypresses literally mean keypresses, so you have to write what you would press on the keyboard. In the table below, the left column shows the input and the right column shows what to type.\n\n"enter" (i.e. new line)                Enter or Return\na (i.e. small a)                          A\nA (i.e. capital a)                       Shift+A\n: (colon)                                  Shift+;\n' '  (space)                              Space
@@ -549,12 +549,12 @@ TriggersCount=1
 [Data_3_2Triggers0]
 Key=Ctrl+Alt+H
 Type=SHORTCUT
-Uuid={f86a288c-29c1-4055-9ead-2b325c3347a0}
+Uuid={e17b3df5-d66d-4a7a-a2f4-40adabf68437}
 
 [Data_3_3]
-Comment=This action runs Kitty, after pressing Ctrl+Alt+T.
-Enabled=true
-Name=Run Kitty
+Comment=This action runs Konsole, after pressing Ctrl+Alt+T.
+Enabled=false
+Name=Run Konsole
 Type=SIMPLE_ACTION_DATA
 
 [Data_3_3Actions]
@@ -575,7 +575,7 @@ TriggersCount=1
 [Data_3_3Triggers0]
 Key=Ctrl+Alt+T
 Type=SHORTCUT
-Uuid={ddb89fe2-3119-4b62-92b4-0dfa4c1aa361}
+Uuid={d8ecc9e7-5664-4a8a-aeb8-3e572f5b1990}
 
 [Data_3_4]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nQt Designer uses Ctrl+F4 for closing windows.  In KDE, however, Ctrl+F4 is the shortcut for going to virtual desktop 4, so this shortcut does not work in Qt Designer.  Further, Qt Designer does not use KDE's standard Ctrl+W for closing the window.\n\nThis problem can be solved by remapping Ctrl+W to Ctrl+F4 when the active window is Qt Designer. When Qt Designer is active, every time Ctrl+W is pressed, Ctrl+F4 will be sent to Qt Designer instead. In other applications, the effect of Ctrl+W is unchanged.\n\nWe now need to specify three things: A new shortcut trigger on 'Ctrl+W', a new keyboard input action sending Ctrl+F4, and a new condition that the active window is Qt Designer.\nQt Designer seems to always have title 'Qt Designer by Trolltech', so the condition will check for the active window having that title.
@@ -620,7 +620,7 @@ TriggersCount=1
 [Data_3_4Triggers0]
 Key=Ctrl+W
 Type=SHORTCUT
-Uuid={20769a91-fa7d-4e94-9936-9a3485a263fe}
+Uuid={9bd5cba8-f97b-4c08-a755-20ce7b776c92}
 
 [Data_3_5]
 Comment=By pressing Alt+Ctrl+W a D-Bus call will be performed that will show the minicli. You can use any kind of D-Bus call, just like using the command line 'qdbus' tool.
@@ -649,7 +649,7 @@ TriggersCount=1
 [Data_3_5Triggers0]
 Key=Ctrl+Alt+W
 Type=SHORTCUT
-Uuid={0017aa4f-dddf-41d7-84c5-cb4c79f8dfbb}
+Uuid={9ed67c4f-2b9b-4332-85c7-9484956a11b6}
 
 [Data_3_6]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nJust like the "Type 'Hello'" action, this one simulates keyboard input, specifically, after pressing Ctrl+Alt+B, it sends B to XMMS (B in XMMS jumps to the next song). The 'Send to specific window' checkbox is checked and a window with its class containing 'XMMS_Player' is specified; this will make the input always be sent to this window. This way, you can control XMMS even if, for instance, it is on a different virtual desktop.\n\n(Run 'xprop' and click on the XMMS window and search for WM_CLASS to see 'XMMS_Player').
@@ -691,7 +691,7 @@ TriggersCount=1
 [Data_3_6Triggers0]
 Key=Ctrl+Alt+B
 Type=SHORTCUT
-Uuid={4375f898-36b7-43b3-a13b-187ed0dfd7e1}
+Uuid={0804c075-a3e5-4a38-8f5f-4d86c93b9e76}
 
 [Data_3_7]
 Comment=Konqueror in KDE3.1 has tabs, and now you can also have gestures.\n\nJust press the middle mouse button and start drawing one of the gestures, and after you are finished, release the mouse button. If you only need to paste the selection, it still works, just click the middle mouse button. (You can change the mouse button to use in the global settings).\n\nRight now, there are the following gestures available:\nmove right and back left - Forward (Alt+Right)\nmove left and back right - Back (Alt+Left)\nmove up and back down  - Up (Alt+Up)\ncircle counterclockwise - Reload (F5)\n\nThe gesture shapes can be entered by performing them in the configuration dialog. You can also look at your numeric pad to help you: gestures are recognized like a 3x3 grid of fields, numbered 1 to 9.\n\nNote that you must perform exactly the gesture to trigger the action. Because of this, it is possible to enter more gestures for the action. You should try to avoid complicated gestures where you change the direction of mouse movement more than once.  For instance, 45654 or 74123 are simple to perform, but 1236987 may be already quite difficult.\n\nThe conditions for all gestures are defined in this group. All these gestures are active only if the active window is Konqueror (class contains 'konqueror').
@@ -883,7 +883,7 @@ TriggersCount=1
 [Data_3_8Triggers0]
 Key=Meta+E
 Type=SHORTCUT
-Uuid={e95bc492-0f86-47b0-960b-3d389cabeb78}
+Uuid={bcb045cb-846c-4992-92bf-36227672f79a}
 
 [Data_4]
 Comment=Increase/decrease backlight
@@ -907,7 +907,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_4_1Actions0]
-CommandURL=/home/sickan/code/bin/change_brightness add 100
+CommandURL=/home/sickan/code/bin/change_brightness add 1%
 Type=COMMAND_URL
 
 [Data_4_1Conditions]
@@ -933,7 +933,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_4_2Actions0]
-CommandURL=/home/sickan/code/bin/change_brightness subtract 100
+CommandURL=/home/sickan/code/bin/change_brightness subtract 1%
 Type=COMMAND_URL
 
 [Data_4_2Conditions]
@@ -987,7 +987,7 @@ widgetStyle[$d]
 Breadcrumb Navigation[$d]
 
 [Main]
-AlreadyImported=defaults,konsole,konqueror_gestures_kde321,kde32b1
+AlreadyImported=defaults,konqueror_gestures_kde321,konsole,kde32b1
 Disabled=false
 Version=2
 
