@@ -1,6 +1,6 @@
 /* You can find an updated version here: https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme */
 /* Made by Izheil */
-/* Last updated: 18/08/2020 */
+/* Last updated: 01/10/2020 */
 
 /*------ HOW TO MAKE THE ADDON THEMES WORK ------*/
 /* To use this part of the code, you will have to find the dynamic UUID of your extensions, and replace it where the 
@@ -428,7 +428,7 @@ select:hover {
 }
 
 /*------ HTTPS EVERYWHERE ADDON ------*/
-@-moz-document url-prefix(moz-extension://00e08e41-2d7a-497f-982f-9b23f184344d/) {
+@-moz-document url-prefix(moz-extension://9e6aed1b-95b8-4dd5-b82c-1934a935543a/) {
 html, body {background: #444 !important; color: #ccc !important}
 
 h1, h2, h3 {color: #fff !important}
@@ -779,7 +779,7 @@ button:hover {
 }
 
 /*------ ONETAB ADDON ------*/
-@-moz-document url-prefix(moz-extension://181fdb4d-526f-4fe0-a80e-228a4efbb908/),
+@-moz-document url-prefix(moz-extension://6ddeff5f-c24c-463c-a163-d785f0fbddf4/),
 url-prefix(https://www.one-tab.com/page/) {
 html, body {background: #303030 !important}
 
@@ -1069,7 +1069,7 @@ label::before, .ui.popup {filter: invert(75%)}
 }
 
 /*------ UBLOCK ORIGIN BLOCKING PAGE ------*/
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/document-blocked.html){
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/document-blocked.html){
 
 html, body, .code {background-color: #222 !important}
 
@@ -1096,7 +1096,7 @@ button:hover {
 }
 
 /*------ UBLOCK ORIGIN CONTROL PANEL TOP BUTTONS ------*/
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/dashboard.html) {
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/dashboard.html) {
 
 #dashboard-nav {background: #222 !important; border-bottom: 1px solid black !important}
 
@@ -1109,8 +1109,8 @@ button:hover {
 }
 
 /*------ UBLOCK ORIGIN CONTROL PANEL CONTENT PAGES ------*/
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/) {
-body, html, #actions {
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/) {
+html:not(#ublock0-epicker) > body, html:not(#ublock0-epicker), #actions {
   background: #333 !important;
   color: #ccc !important;
 }
@@ -1138,6 +1138,17 @@ a:active {color: #0050aa !important}
 .listEntry .fa-icon.support:hover,
 .listEntry .fa-icon.status.cache:hover
  {fill: #fff !important}
+
+#ruleFilter .fa-icon svg {fill: #ccc !important}
+
+.resultsetModifier > span > span:nth-of-type(1),
+.resultsetModifier > span > span:nth-of-type(2) {
+  background-color: #07c !important;
+}
+
+.resultsetModifier > span {
+  border-color: #999 !important;
+}
 
 #diff {border-color: #555 !important}
 
@@ -1177,6 +1188,7 @@ button[disabled] {opacity: 0.7 !important}
 .cm-keyword {color: rgb(250, 40, 100) !important}
 .cm-value {color: #d90 !important}
 .cm-def {color: #0cd !important}
+.cm-searching {background-color: #000 !important}
 
 .CodeMirror-selected, .CodeMirror-line *::selection {background: #055 !important}
 
@@ -1184,6 +1196,9 @@ button[disabled] {opacity: 0.7 !important}
 .CodeMirror-cursor {border-left-color: #aaa !important}
 .cm-staticnetBlock {color: #f62 !important}
 .cm-staticOpt {background-color: #111 !important}
+.cm-sortkey {color: #f6a !important}
+.cm-nooprule {color: #47a8a8 !important}
+.cm-allowrule {color: #1fa61f !important}
 
 textarea, input[type="text"], input[type="search"] {
   -moz-appearance: none !important; 
@@ -1226,18 +1241,18 @@ select {
   -moz-appearance: none !important;
   background: #555 url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M434.574 488L430.5 492.147 426.428 488 425 489.399 430.5 494.999 436 489.399z' transform='translate(-425 -488)' fill='%23cccccc' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat calc(100% - 5px) 50% !important;
   border: none !important;
-  padding: 3px 20px 3px 3px;
+  padding: 3px 30px 3px 3px !important;
   color: #ccc !important}
 
 select:hover {
-  background: #333 url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M434.574 488L430.5 492.147 426.428 488 425 489.399 430.5 494.999 436 489.399z' transform='translate(-425 -488)' fill='%23cccccc' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat calc(100% - 5px) 50% !important;
+  background: #222 url("data:image/svg+xml;charset=utf-8,%3Csvg width='11' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M434.574 488L430.5 492.147 426.428 488 425 489.399 430.5 494.999 436 489.399z' transform='translate(-425 -488)' fill='%23cccccc' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat calc(100% - 5px) 50% !important;
   color: #fff !important}
 
 select .menulist-dropmarker {display: none}
 }
 
 /*------ UBLOCK ORIGIN MENU POPUP ------*/
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/popup.html) {
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/popup.html) {
 
 #appinfo {background: #111 !important}
 
@@ -1294,7 +1309,8 @@ span[data-i18n-tip="popupTipRevertRules"], span[data-i18n-tip="popupTipSaveRules
 #firewallContainer > div {border: none !important}
 }
 
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/popup-fenix.html) {
+/* The new Ublock Origin popup layout */
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/popup-fenix.html) {
 #sticky {
   background: #333 !important}
 
@@ -1343,7 +1359,7 @@ body.off #switch .fa-icon {fill: #222}
   background-color: #444 !important}
 }
 /*------ UBLOCK ORIGIN UI LOGGER ------*/
-@-moz-document url-prefix(moz-extension://0ade5a2b-cf87-4c47-955d-7a2140debacd/logger-ui.html) {
+@-moz-document url-prefix(moz-extension://cc93dd4c-8a90-4cd4-a0df-9a4f1c7dd340/logger-ui.html) {
 
 body, .permatoolbar, .vscrollable, table, html {background: #222 !important}
 

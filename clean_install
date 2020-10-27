@@ -1,7 +1,12 @@
 #!/bin/sh
 chsh -s $(which zsh)
 sudo mkdir /var/cache/pacman/custom -m 777
-pamac upgrade -a
+sudo pacman-mirrors --api --set-branch testing
+sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
+#pamac upgrade -a
+
+sudo usermod -a -G video $USER # Needed for light
+sudo usermod -a -G input $USER # Needed for libinput-gestures/fusuma
 
 mkdir ~/.ssh/sockets
 

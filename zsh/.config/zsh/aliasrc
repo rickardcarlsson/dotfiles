@@ -58,7 +58,7 @@ alias HDD="cd /data"
 
 alias server="ssh sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
-alias SHDD="cd ~/server-fs/0"
+alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
 
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"

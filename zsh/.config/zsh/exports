@@ -18,7 +18,7 @@ export HISTFILE="$XDG_CACHE_HOME/bash_history"
 # Applications/environment variables
 export BROWSER=/usr/bin/firefox
 export VISUAL=/usr/bin/code
-export EDITOR=nvim
+export EDITOR=/usr/bin/nvim
 export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen

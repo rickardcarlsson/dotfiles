@@ -1,5 +1,5 @@
 [Appearance]
-Skin=default
+Skin=materia-dark
 SkinInstalledWithKns=true
 
 [Desktop Entry]
@@ -8,6 +8,8 @@ DefaultProfile=Sickan.profile
 [DownloadDialog Settings]
 Height 2160=1138
 Width 3840=1812
+eDP-1-1 Height 2160=999
+eDP-1-1 Width 3840=1265
 
 [Favorite Profiles]
 Favorites=Sickan.profile
