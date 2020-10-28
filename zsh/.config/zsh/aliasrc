@@ -71,10 +71,6 @@ alias SHDDr="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0 && ranger"
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"
 
-function stowr() {
-  sudo stow -v -S $1 -t /
-}
-
 function code() {
   # reference to the original `code` command
   local _code=$(whence -p code)
