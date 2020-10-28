@@ -4,6 +4,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # Tell various programs to respect the XDG Base Directory specification
+# Removes ~/.kde4
+export KDEHOME=$XDG_CONFIG_HOME/KDE
 # Removes ~/.Xauthority
 # export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
 # Removes ~/.xinitrc

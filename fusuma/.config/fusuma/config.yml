@@ -5,9 +5,9 @@ swipe:
     right:
       command: 'xdotool key ctrl+Page_Down'
     up:
-      command: 'xdotool key ctrl+t'
+      command: 'xdotool key Home'
     down:
-      command: 'xdotool key ctrl+w'
+      command: 'xdotool key End'
   4:
     left:
       command: 'xdotool key XF86AudioLowerVolume'
@@ -43,12 +43,12 @@ pinch:
       command: ''
 
 threshold:
-  swipe: 0.3
-  pinch: 0.1
+  swipe: 0.5
+  pinch: 0.5
 
 interval:
   swipe: 1
-  pinch: 0.5
+  pinch: 1
 
 plugin:
   inputs:
