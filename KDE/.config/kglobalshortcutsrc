@@ -32,6 +32,7 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 _k_friendly_name=Custom Shortcuts Service
 {2aaa0b3c-b675-462b-999b-e64c3a04f4c7}=Shift+Volume Up,none,Increase
 {37fcda51-d0bc-4ed0-88b1-6a80e961ae17}=Shift+Volume Down,none,Decrease
+{5525fb3a-b350-48d4-85a7-13a247a537cb}=Meta+J,none,Down
 {7ef73278-1749-432c-a3e4-743f9efb03a1}=Ctrl+Alt+T,none,Launch Kitty
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
 

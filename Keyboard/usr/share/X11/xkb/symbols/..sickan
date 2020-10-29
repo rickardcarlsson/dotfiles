@@ -27,10 +27,20 @@ xkb_symbols "mods" {
     name[Group1]="Modifiers";
 
     key <LALT> {
+        //type = "PC_CONTROL_LEVEL2",
         type[Group1] = "TWO_LEVEL",
+        //symbols[Group1] = [ Alt_L, ISO_Group_Shift ]
+        //symbols[Group1] = [ Alt_L, ISO_Level3_Shift ]
         symbols[Group1] = [ Alt_L , NoSymbol ]
+        //symbols[Group1] = [ Alt_L, Mode_switch ]
+        //, actions = [ SetMods(modifiers=Mod1), SetMods(modifiers=Mod4) ]
+        //, actions = [ SetMods(modifiers=Mod1), SetGroup(group=2, clearMods=Shift) ]
+        //, actions = [ SetMods(modifiers=Mod1),  RedirectKey(keycode=<RALT>, clearmodifiers=Shift, modifiers=Mod5) ]
         , actions = [ SetMods(modifiers=Mod1), SetGroup(group=2) ]
+       //actions = [ SetGroup(group=4), SetGroup(group=2) ]
     };
+    //modifier_map Mod5 { <LVL3>, <MDSW>, ISO_Level3_Shift };
+    //modifier_map Mod1 { Alt_L, Meta_L };
     key <CAPS> {
         type = "TWO_LEVEL",
         symbols[Group1] = [ Escape, NoSymbol ],
@@ -77,36 +87,24 @@ xkb_symbols "vim_navigation" {
     key.type[Group2] = "ONE_LEVEL";
 
 
-    key <AC06>  { // H
+    key <AC06>  { 
         symbols[Group2] = [ Left ],
-        actions[Group2] = [ RedirectKey(key=<LEFT>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<LEFT>, clearMods=Shift) ]
+    };
 
-    key <AC07>  { // J
+    key <AC07>  { 
         symbols[Group2] = [ Down ],
-        actions[Group2] = [ RedirectKey(key=<DOWN>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<DOWN>, clearMods=Shift) ]
+    };
 
-    key <AC08>  { // K
+    key <AC08>  { 
         symbols[Group2] = [ Up ],
-        actions[Group2] = [ RedirectKey(key=<UP>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<UP>, clearMods=Shift) ]
+    };
 
-    key <AC09>  { // L
+    key <AC09>  { 
         symbols[Group2] = [ Right ],
-        actions[Group2] = [ RedirectKey(key=<RGHT>, clearMods=All) ] };
-
-    key <AD07>  { // U
-        symbols[Group2] = [ Next ],
-        actions[Group2] = [ RedirectKey(key=<PGDN>, clearMods=All) ] };
-
-    key <AD08>  { // I
-        symbols[Group2] = [ Prior ],
-        actions[Group2] = [ RedirectKey(key=<PGUP>, clearMods=All) ] };
-
-    key <AB07>  { // M
-        symbols[Group2] = [ End ],
-        actions[Group2] = [ RedirectKey(key=<END>, clearMods=All) ] };
-
-    key <AB08>  { // ,
-        symbols[Group2] = [ Home ],
-        actions[Group2] = [ RedirectKey(key=<HOME>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<RGHT>, clearMods=Shift) ]
+    };
 
 };
