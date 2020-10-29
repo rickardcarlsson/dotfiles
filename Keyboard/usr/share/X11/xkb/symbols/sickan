@@ -11,9 +11,8 @@ xkb_symbols "basic" {
     include "sickan(vim_navigation)"
 };
 
- 
- partial alphanumeric_keys
- xkb_symbols "rebinds" {
+partial alphanumeric_keys
+xkb_symbols "rebinds" {
  
      name[Group1]="Rebound keys";
      key.type[Group1]="FOUR_LEVEL";
@@ -42,7 +41,6 @@ xkb_symbols "mods" {
 
 partial alphanumeric_keys
 xkb_symbols "shift_alt" {
-
 
     name[Group2]="Shift + Alt as LevelThree";
     key.type[Group2] = "ONE_LEVEL";
