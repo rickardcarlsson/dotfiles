@@ -69,13 +69,13 @@ plugin=org.kde.plasma.icon
 localPath=/home/sickan/.local/share/plasma_icons/Organizr.desktop
 url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Organizr.desktop
 
-[Containments][1][Applets][32]
+[Containments][1][Applets][33]
 immutability=1
 plugin=org.kde.plasma.icon
 
-[Containments][1][Applets][32][Configuration]
-localPath=/home/sickan/.local/share/plasma_icons/Keep (1).desktop
-url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Keep.desktop
+[Containments][1][Applets][33][Configuration]
+localPath=/home/sickan/.local/share/plasma_icons/Keep.desktop
+url=file:///home/sickan/Documents/Desktop files/Keep.desktop
 
 [Containments][1][Applets][7]
 immutability=1
@@ -109,7 +109,7 @@ DialogHeight=129
 DialogWidth=3840
 
 [Containments][1][General]
-AppletOrder=2;27;32;31;22;7;3;8
+AppletOrder=2;27;33;31;22;7;3;8
 
 [Containments][17]
 ItemGeometriesHorizontal=

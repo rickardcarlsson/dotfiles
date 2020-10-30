@@ -3,7 +3,8 @@ Name=Google Keep
 GenericName=Notes
 Icon=/home/sickan/Documents/Icons/Keep.svg
 Type=Application
-Exec=firefox -ssb keep.google.com
+# Exec=firefox -ssb keep.google.com
+Exec=~/code/bin/ssb keep.google.com Keep
 #StartupWMClass=keep
 Terminal=false
 
