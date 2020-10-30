@@ -16,7 +16,9 @@ xkb_symbols "rebinds" {
  
      name[Group1]="Rebound keys";
      key.type[Group1]="FOUR_LEVEL";
-     key <TLDE> { [ asciitilde, onehalf, paragraph, threequarters ] }; // ~
+
+     // key <TLDE> { [ asciitilde, onehalf, paragraph, threequarters ] }; // ~
+     key <TLDE> { [ asciitilde, F13, F14, F15 ] }; // ~
 
      key <AE12> { [ grave, acute, plusminus, notsign ] }; // Acute & grave switched
 

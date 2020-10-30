@@ -40,6 +40,7 @@ alias p="ps -f"
 
 alias zshrc="${=EDITOR} $ZDOTDIR/.zshrc"
 alias aliasrc="${=EDITOR} $ZDOTDIR/aliasrc"
+alias shortcutrc="${=EDITOR} $ZDOTDIR/shortcutrc"
 alias reload="exec zsh"
 
 alias pas="pamac search"
