@@ -82,7 +82,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][7][Configuration]
-PreloadWeight=95
+PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][1][Applets][7][Configuration][Containments][8]
@@ -149,6 +149,9 @@ plugin=org.kde.plasma.clipboard
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
+[Containments][8][Applets][11][Configuration]
+PreloadWeight=55
+
 [Containments][8][Applets][12]
 immutability=1
 plugin=org.kde.kdeconnect
@@ -156,6 +159,9 @@ plugin=org.kde.kdeconnect
 [Containments][8][Applets][13]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
+
+[Containments][8][Applets][13][Configuration]
+PreloadWeight=55
 
 [Containments][8][Applets][14]
 immutability=1

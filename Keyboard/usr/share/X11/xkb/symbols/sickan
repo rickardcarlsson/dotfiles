@@ -27,7 +27,7 @@ xkb_symbols "mods" {
 
     key <LALT> {
         type[Group1] = "TWO_LEVEL",
-        symbols[Group1] = [ Alt_L , NoSymbol ]
+        symbols[Group1] = [ Alt_L , Alt_L ]
         , actions = [ SetMods(modifiers=Mod1), SetGroup(group=2) ]
     };
     key <CAPS> {
