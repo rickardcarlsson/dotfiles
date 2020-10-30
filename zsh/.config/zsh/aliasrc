@@ -1,5 +1,5 @@
 # Git aliases
-# [ -f "$ZDOTDIR/expand-alias.zsh" ] && source "$ZDOTDIR/expand-alias.zsh"
+[ -f "$ZDOTDIR/expand-alias.zsh" ] && source "$ZDOTDIR/expand-alias.zsh"
 [ -f "$ZDOTDIR/alias-git.zsh" ] && source "$ZDOTDIR/alias-git.zsh"
 
 # this alias removes leading dollar sign (useful when copying code from Stackoverflow)
