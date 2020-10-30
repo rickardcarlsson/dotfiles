@@ -29,7 +29,7 @@ key[ShiftTab]="${terminfo[kcbt]}"
 [[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"      down-line-or-history
 [[ -n "${key[Left]}"      ]] && bindkey -- "${key[Left]}"      backward-char
 [[ -n "${key[Right]}"     ]] && bindkey -- "${key[Right]}"     forward-char
-[[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"    beginning-of-buffer-or-history
+[[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"    beginning-of-buffer-or-history 
 [[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"  end-of-buffer-or-history
 [[ -n "${key[ShiftTab]}"  ]] && bindkey -- "${key[ShiftTab]}"  reverse-menu-complete
 
@@ -39,9 +39,17 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
+bindkey -M menuselect '^h' vi-backward-char
+bindkey -M menuselect '^k' vi-up-line-or-history
+bindkey -M menuselect '^l' vi-forward-char
+bindkey -M menuselect '^j' vi-down-line-or-history
+
 # Insert mode bindings
 bindkey -M viins '^E' autosuggest-accept # Ctrl-E to accept autosuggestion
-# bindkey -M viins '^[l' autosuggest-accept # Ctrl-E to accept autosuggestion
-bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu
-# bindkey -M viins '^[j' down-line-or-select
-# bindkey -M viins '^[k' up-line-or-search
+bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu 
+
+bindkey -M viins '^[[1;2D' vi-backward-char # Shoft+Alt-H - Backwards
+bindkey -M viins '^[[1;2B' menu-select # Shift+Alt-J to open completion menu
+bindkey -M viins '^[[1;2A' vi-up-line-or-history # Shift+Alt-K 
+bindkey -M viins '^[[1;2C' vi-forward-char # Shift+Alt-L
+

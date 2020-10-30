@@ -17,8 +17,8 @@ xkb_symbols "rebinds" {
      name[Group1]="Rebound keys";
      key.type[Group1]="FOUR_LEVEL";
      key <TLDE> { [ asciitilde, onehalf, paragraph, threequarters ] }; // ~
- };
 
+ };
 
 partial modifier_keys
 xkb_symbols "mods" {
@@ -108,3 +108,4 @@ xkb_symbols "vim_navigation" {
         actions[Group2] = [ RedirectKey(key=<HOME>, clearMods=All) ] };
 
 };
+
