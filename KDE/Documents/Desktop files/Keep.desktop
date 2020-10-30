@@ -1,10 +1,19 @@
 [Desktop Entry]
-Name=Google Keep
+Comment[en_US]=
+Comment=
+Exec=~/code/bin/firefox_ssb keep.google.com Keep
+GenericName[en_US]=Notes
 GenericName=Notes
 Icon=/home/sickan/Documents/Icons/Keep.svg
-Type=Application
-# Exec=firefox -ssb keep.google.com
-Exec=~/code/bin/ssb keep.google.com Keep
-#StartupWMClass=keep
+MimeType=
+Name[en_US]=Google Keep
+Name=Google Keep
+Path=
+StartupNotify=true
 Terminal=false
-
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
