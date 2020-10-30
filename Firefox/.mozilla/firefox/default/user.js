@@ -43,6 +43,9 @@ user_pref("ui.key.menuAccessKeyFocuses", false);
  * [1] https://www.ghacks.net/2016/11/14/firefox-51-blocks-automatic-audio-playback-in-non-active-tabs/ ***/
 user_pref("media.block-autoplay-until-in-foreground", true);
 
+// Disable fullscreen warning
+user_pref("full-screen-api.warning.timeout", 0);
+
 // Sidebar position right.
 user_pref("sidebar.position_start", false);
 
