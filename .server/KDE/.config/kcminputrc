@@ -1,0 +1,12 @@
+[$Version]
+update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize
+
+[Keyboard]
+KeyboardRepeating=0
+NumLock=0
+RepeatDelay=300
+RepeatRate=45
+
+[Mouse]
+cursorSize=48
+cursorTheme=vimix-cursors

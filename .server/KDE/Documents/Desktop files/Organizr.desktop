@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Organizr
+GenericName=Dashboard
+Icon=/home/sickan/Documents/Icons/Organizr.png
+Type=Application
+Exec=firefox --new-tab http://server:9983/
+#StartupWMClass=keep
+Terminal=false
+
