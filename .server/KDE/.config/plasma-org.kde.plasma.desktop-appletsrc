@@ -49,33 +49,9 @@ onlyGroupWhenFull=false
 separateLaunchers=false
 sortingStrategy=4
 
-[Containments][1][Applets][27]
-immutability=1
-plugin=org.kde.plasma.icon
-
-[Containments][1][Applets][27][Configuration]
-localPath=/home/sickan/.local/share/plasma_icons/caprine.desktop
-url=file:///usr/share/applications/caprine.desktop
-
 [Containments][1][Applets][3]
 immutability=1
 plugin=org.kde.plasma.pager
-
-[Containments][1][Applets][31]
-immutability=1
-plugin=org.kde.plasma.icon
-
-[Containments][1][Applets][31][Configuration]
-localPath=/home/sickan/.local/share/plasma_icons/Organizr.desktop
-url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Organizr.desktop
-
-[Containments][1][Applets][35]
-immutability=1
-plugin=org.kde.plasma.icon
-
-[Containments][1][Applets][35][Configuration]
-localPath=/home/sickan/.local/share/plasma_icons/Keep (1).desktop
-url=file:///home/sickan/Documents/Desktop files/Keep.desktop
 
 [Containments][1][Applets][7]
 immutability=1
@@ -105,15 +81,14 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][1][ConfigDialog]
-DialogHeight=129
-DialogWidth=3840
+DialogHeight=74
+DialogWidth=1920
 
 [Containments][1][General]
-AppletOrder=2;27;35;31;22;7;3;8
+AppletOrder=2;22;7;3;8
 
-[Containments][17]
-ItemGeometriesHorizontal=
-activityId=dcac9d22-5169-4425-a68d-064070ed1402
+[Containments][36]
+activityId=99242c66-5fa2-41a4-bfe8-bbeac105fad5
 formfactor=0
 immutability=1
 lastScreen=0
@@ -121,16 +96,9 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][17][ConfigDialog]
-DialogHeight=2020
-DialogWidth=3840
-
-[Containments][17][General]
+[Containments][36][General]
 ToolBoxButtonState=topcenter
-ToolBoxButtonX=1299
-
-[Containments][17][Wallpaper][org.kde.image][General]
-Image=file:///home/sickan/.dotfiles/KDE/Documents/bg.png
+ToolBoxButtonX=741
 
 [Containments][8]
 activityId=
