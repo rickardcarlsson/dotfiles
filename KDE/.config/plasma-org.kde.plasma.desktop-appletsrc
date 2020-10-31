@@ -69,11 +69,11 @@ plugin=org.kde.plasma.icon
 localPath=/home/sickan/.local/share/plasma_icons/Organizr.desktop
 url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Organizr.desktop
 
-[Containments][1][Applets][34]
+[Containments][1][Applets][35]
 immutability=1
 plugin=org.kde.plasma.icon
 
-[Containments][1][Applets][34][Configuration]
+[Containments][1][Applets][35][Configuration]
 localPath=/home/sickan/.local/share/plasma_icons/Keep (1).desktop
 url=file:///home/sickan/Documents/Desktop files/Keep.desktop
 
@@ -109,7 +109,7 @@ DialogHeight=129
 DialogWidth=3840
 
 [Containments][1][General]
-AppletOrder=2;27;34;31;22;7;3;8
+AppletOrder=2;27;35;31;22;7;3;8
 
 [Containments][17]
 ItemGeometriesHorizontal=
@@ -161,7 +161,7 @@ immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
 [Containments][8][Applets][13][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][8][Applets][14]
 immutability=1
@@ -219,10 +219,9 @@ DialogHeight=1907
 DialogWidth=2785
 
 [Containments][8][General]
-extraItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect,KDE Daemon,Yakuake,org.kde.plasma.diskquota,org.kde.plasma.volume
-hiddenItems=KDE Daemon,org.kde.plasma.keyboardindicator,Yakuake,org.kde.plasma.clipboard,org.kde.plasma.bluetooth
+extraItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect,KDE Daemon,Yakuake,org.kde.plasma.diskquota,org.kde.plasma.volume,Caprine1,MSM Notifier for Plasma5
+hiddenItems=KDE Daemon,Yakuake,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,Caprine1,MSM Notifier for Plasma5,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.nightcolorcontrol,org.kde.plasma.diskquota,org.kde.plasma.volume
 knownItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect
-shownItems=org.kde.plasma.volume
 
 [ScreenMapping]
 itemsOnDisabledScreens=

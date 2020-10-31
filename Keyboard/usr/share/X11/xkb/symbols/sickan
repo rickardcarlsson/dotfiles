@@ -81,35 +81,36 @@ xkb_symbols "vim_navigation" {
 
     key <AC06>  { // H
         symbols[Group2] = [ Left ],
-        actions[Group2] = [ RedirectKey(key=<LEFT>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<LEFT>, clearMods=Shift) ] };
 
     key <AC07>  { // J
         symbols[Group2] = [ Down ],
-        actions[Group2] = [ RedirectKey(key=<DOWN>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<DOWN>, clearMods=Shift) ] };
 
     key <AC08>  { // K
         symbols[Group2] = [ Up ],
-        actions[Group2] = [ RedirectKey(key=<UP>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<UP>, clearMods=Shift) ] };
 
     key <AC09>  { // L
         symbols[Group2] = [ Right ],
-        actions[Group2] = [ RedirectKey(key=<RGHT>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<RGHT>, clearMods=Shift) ] };
 
     key <AD07>  { // U
         symbols[Group2] = [ Next ],
-        actions[Group2] = [ RedirectKey(key=<PGDN>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<PGDN>, clearMods=Shift) ] };
 
     key <AD08>  { // I
         symbols[Group2] = [ Prior ],
-        actions[Group2] = [ RedirectKey(key=<PGUP>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<PGUP>, clearMods=Shift) ] };
 
     key <AB07>  { // M
         symbols[Group2] = [ End ],
-        actions[Group2] = [ RedirectKey(key=<END>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<END>, clearMods=Shift) ] };
 
     key <AB08>  { // ,
         symbols[Group2] = [ Home ],
-        actions[Group2] = [ RedirectKey(key=<HOME>, clearMods=All) ] };
+        actions[Group2] = [ RedirectKey(key=<HOME>, clearMods=Shift) ] };
 
 };
 
+// vim: syntax=xkb

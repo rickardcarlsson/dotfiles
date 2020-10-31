@@ -25,10 +25,12 @@ export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen
 export SPACEVIMDIR=$XDG_CONFIG_HOME/SpaceVim/
+
 export GIT=$HOME/git
 export DOCS=$HOME/Documents
 export DL=$HOME/Downloads
 export DOT=$HOME/.dotfiles
+export CODE=$HOME/code
 
 # Paths
 # export PATH="$HOME/.emacs.d/bin:$PATH"

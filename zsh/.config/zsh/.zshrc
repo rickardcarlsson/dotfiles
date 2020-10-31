@@ -47,6 +47,9 @@ bindkey -v                       # vim keymap
 # Activate fuzzy finder
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+# fzf material darker theme
+[ -f $ZDOTDIR/fzf-material-darker-theme.config ] && source $ZDOTDIR/fzf-material-darker-theme.config 
+
 
 # Load aliases and shortcuts if existent.
 [ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc

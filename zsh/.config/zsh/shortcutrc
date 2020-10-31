@@ -53,6 +53,10 @@ bindkey -M viins '^[[1;2B' menu-select # Shift+Alt-J to open completion menu
 bindkey -M viins '^[[1;2A' vi-up-line-or-history # Shift+Alt-K 
 bindkey -M viins '^[[1;2C' vi-forward-char # Shift+Alt-L
 
-bindkey -s '^[[1;2Q' 'cd^M' # AltGr-Tilde - Home
-bindkey -s '^[[1;2R' 'DOT^M' # Shift+AltGr+Tilde - Dotfiles
+bindkey -s '^[[1;2Q' 'la^M' # AltGr-Tilde - List all
+bindkey -s '^[OP'    'cd $HOME^M' # F1 - Home
+bindkey -s '^[OQ'    'cd $DOT^M' # F2 - Dotfiles
+bindkey -s '^[OR'    'cd $CODE^M' # F3 - ~/code
+# bindkey -s '^[OS'    'cd $GIT^M' # F4 - ~/git
+bindkey -s '^[[15~'    'cd $GIT^M' # F4 - ~/git
 
