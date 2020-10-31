@@ -20,6 +20,8 @@ alias gm='git merge'
 ealias gr='git reset'
 # alias gr='git reset'
 
+alias gpu='git pull'
+
 # branch
 # ealias gb='git branch'
 alias gb='git branch'
