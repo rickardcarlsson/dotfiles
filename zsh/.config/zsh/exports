@@ -32,6 +32,9 @@ export DL=$HOME/Downloads
 export DOT=$HOME/.dotfiles
 export CODE=$HOME/code
 
+PYGMENTIZE_THEME="base16-material-darker"
+PYGMENTIZE_STYLE="base16-material-darker"
+
 # Paths
 # export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/code/bin:$PATH"
