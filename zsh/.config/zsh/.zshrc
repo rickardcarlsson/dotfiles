@@ -114,10 +114,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # TMUX over SSH
-# if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && [ -n "$SSH_CONNECTION" ]; then
-  ##tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
-#  tmux new-session -A -s ssh_tmux
-    #  tmux attach-session -t ssh_tmux || \
-    # tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux
+#if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && [ -n "$SSH_CONNECTION" ]; then
+  #tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
+  #tmux new-session -A -s ssh_tmux
+  #  tmux attach-session -t ssh_tmux || \
+  #tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux
   #  tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
 #fi

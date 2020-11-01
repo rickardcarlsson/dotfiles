@@ -1,3 +1,4 @@
+# vim: syntax=zsh
 # Set the XDG specification directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -40,3 +41,4 @@ PYGMENTIZE_STYLE="base16-material-darker"
 export PATH="$HOME/code/bin:$PATH"
 
 [[ $HOST == "server" ]] && [[ -f $ZDOTDIR/ff_hwacc ]] && . $ZDOTDIR/ff_hwacc
+
