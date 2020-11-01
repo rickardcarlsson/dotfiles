@@ -1,7 +1,7 @@
 # Styles
 # zstyle ':autocomplete:tab:*' completion select 
-zstyle ':autocomplete:list-choices:*' min-input 3
-zstyle ':autocomplete:list-choices:*' max-lines 100
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' max-lines 100
 zstyle ':completion::complete:*' use-cache on
 
 zstyle ':completion::complete:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zcompcache"

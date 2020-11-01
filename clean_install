@@ -1,5 +1,8 @@
 #!/bin/sh
 chsh -s $(which zsh)
+sudo chsh -s $(which zsh) # Make root shell zsh
+sudo ln -s /home/sickan/.config/zsh /root/.config/zsh # Use user config for root zsh
+
 sudo mkdir /var/cache/pacman/custom -m 777
 sudo pacman-mirrors --api --set-branch testing
 sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
