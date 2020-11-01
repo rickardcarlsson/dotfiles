@@ -1,0 +1,44 @@
+#
+# Environment values
+#
+## Your timezone, https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# TZ=Europe/Stockholm
+## UNIX PUID and PGID, find with: id $USER
+# PUID=1000
+# PGID=1000
+## The directory where data and configuration will be stored.
+# ROOT=/data/0/home-automation
+#
+
+version: "2.4"
+services:
+  home-assistant:
+    container_name: home-assistant
+    hostname: home-assistant
+    image: homeassistant/home-assistant:stable
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - PUID=${PUID} # default user id, defined in .env
+      - PGID=${PGID} # default group id, defined in .env
+      - TZ=${TZ} # timezone, defined in .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${ROOT}/config/home-assistant:/config # config files
+    ports:
+      - 8123:8123
+      
+  lirc:
+    container_name: lirc
+    hostname: lirc
+    image: kmlucy/docker-lirc:latest
+    restart: unless-stopped
+    network_mode: host # change?
+    volumes:
+      - /opt/lirc:/etc/lirc
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    ports:
+      - 8765:8765
+
+      

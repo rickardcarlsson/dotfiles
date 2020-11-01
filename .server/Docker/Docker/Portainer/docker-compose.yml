@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    ports:
+      #- 443:9000
+      - 9000:9000
+    volumes:
+      - ~/local-certs:/certs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/appdata/portainer:/data
+    restart: always
+    command: 
+      -H unix:///var/run/docker.sock 
+      --ssl 
+      --sslcert /certs/portainer.crt 
+      --sslkey /certs/portainer.key
+  
+  portainer_agent:
+    image: portainer/agent
+    container_name: agent
+    ports:
+      - 9001:9001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+    restart: always

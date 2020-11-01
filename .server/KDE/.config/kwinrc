@@ -6,6 +6,11 @@ Id_1=d2bb58fb-18fb-44cd-8571-e7a49134d7e1
 Id_2=3b6399a8-4d28-4ce9-a28e-180203ba92d2
 Rows=2
 
+[NightColor]
+Active=true
+LatitudeAuto=57.7072
+LongitudeAuto=11.9668
+
 [TabBox]
 DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop

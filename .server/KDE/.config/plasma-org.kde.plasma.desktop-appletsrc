@@ -39,12 +39,13 @@ immutability=1
 plugin=org.kde.plasma.taskmanager
 
 [Containments][1][Applets][22][Configuration][ConfigDialog]
-DialogHeight=1140
+DialogHeight=1047
 DialogWidth=1520
 
 [Containments][1][Applets][22][Configuration][General]
 groupingStrategy=0
 launchers=preferred://browser
+maxStripes=1
 onlyGroupWhenFull=false
 separateLaunchers=false
 sortingStrategy=4
@@ -96,9 +97,16 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
+[Containments][36][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][36][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=741
+
+[Containments][36][Wallpaper][org.kde.image][General]
+Image=file:///home/sickan/.dotfiles/.server/KDE/Documents/bg.png
 
 [Containments][8]
 activityId=
@@ -153,6 +161,9 @@ PreloadWeight=55
 [Containments][8][Applets][19]
 immutability=1
 plugin=org.kde.plasma.bluetooth
+
+[Containments][8][Applets][19][Configuration]
+PreloadWeight=17
 
 [Containments][8][Applets][20]
 immutability=1
