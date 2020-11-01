@@ -8,13 +8,6 @@ fi
 # Applications/environment variables
 [[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
-# TMUX over SSH
- 
-#if [[ -z "$TMUX" ]] && [ -n "$SSH_CONNECTION" ]; then
-  ##tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
-  #tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux
-#  tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
-#fi
 
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
@@ -120,3 +113,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
+# TMUX over SSH
+# if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && [ -n "$SSH_CONNECTION" ]; then
+  ##tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
+#  tmux new-session -A -s ssh_tmux
+    #  tmux attach-session -t ssh_tmux || \
+    # tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux
+  #  tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
+#fi
