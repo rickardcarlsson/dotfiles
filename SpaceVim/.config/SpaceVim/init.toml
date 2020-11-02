@@ -52,3 +52,7 @@ name = "lang#c"
 repo = "kaicataldo/material.vim"
 merged = false
 
+[[custom_plugins]]
+repo = "MikeDacre/tmux-zsh-vim-titles"
+merged = false
+

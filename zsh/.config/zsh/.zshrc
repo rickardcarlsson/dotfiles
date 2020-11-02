@@ -8,7 +8,6 @@ fi
 # Applications/environment variables
 [[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
-
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
@@ -28,13 +27,15 @@ antigen bundle RobSis/zsh-completion-generator # Generate completions with: genc
 antigen bundle rickardcarlsson/colorize # Colorize the output of various programs (including man), requires grc
 antigen bundle djui/alias-tips # Help remembering shell aliases
 
+antigen bundle MikeDacre/tmux-zsh-vim-titles
+
 antigen theme romkatv/powerlevel10k  
 
 antigen apply
 
 bindkey -v                       # vim keymap
 
-# Import secrets if they exist
+# Import secrets
 [[ -s $DOCS/.secrets ]] && . $DOCS/.secrets 
 
 # Activate fuzzy finder
@@ -43,11 +44,12 @@ bindkey -v                       # vim keymap
 # fzf material darker theme
 [ -f $ZDOTDIR/fzf-material-darker-theme.config ] && source $ZDOTDIR/fzf-material-darker-theme.config 
 
-
-# Load aliases and shortcuts if existent.
+# Load aliases and shortcuts
 [ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc
 [ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
 
+# tmux-zsh-vim-titles plugin config
+# [[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history
@@ -113,11 +115,3 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-# TMUX over SSH
-#if [[ $- == *i* ]] && [[ -z "$TMUX" ]] && [ -n "$SSH_CONNECTION" ]; then
-  #tmux attach-session -t ssh_tmux || tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
-  #tmux new-session -A -s ssh_tmux
-  #  tmux attach-session -t ssh_tmux || \
-  #tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux
-  #  tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf new-session -s ssh_tmux -d
-#fi
