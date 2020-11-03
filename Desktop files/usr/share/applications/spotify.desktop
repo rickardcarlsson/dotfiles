@@ -1,12 +1,22 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
-Type=Application
-Name=Spotify
+Categories=Audio;Music;Player;AudioVideo;
+Comment[en_US]=
+Comment=
+Exec=spotify %U --force-device-scale-factor=2.3
+GenericName[en_US]=Music Player
 GenericName=Music Player
 Icon=spotify-client
-TryExec=spotify
-Exec=spotify %U --force-device-scale-factor=2
-Terminal=false
-MimeType=x-scheme-handler/spotify;
-Categories=Audio;Music;Player;AudioVideo;
+MimeType=
+Name[en_US]=Spotify
+Name=Spotify
+Path=
+StartupNotify=true
 StartupWMClass=spotify
+Terminal=false
+TerminalOptions=
+TryExec=spotify
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

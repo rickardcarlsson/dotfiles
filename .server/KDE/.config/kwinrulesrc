@@ -1,2 +1,12 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum
+
+[1]
+Description=Spotify
+noborder=true
+noborderrule=2
+wmclass=spotify
+wmclassmatch=1
+
+[General]
+count=1

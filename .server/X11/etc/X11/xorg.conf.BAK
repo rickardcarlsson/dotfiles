@@ -12,6 +12,22 @@ EndSection
 Section "Files"
 EndSection
 
+Section "InputDevice"
+    # generated from default
+    Identifier     "Mouse0"
+    Driver         "mouse"
+    Option         "Protocol" "auto"
+    Option         "Device" "/dev/mouse"
+    Option         "Emulate3Buttons" "no"
+    Option         "ZAxisMapping" "4 5"
+EndSection
+
+Section "InputDevice"
+    # generated from default
+    Identifier     "Keyboard0"
+    Driver         "kbd"
+EndSection
+
 Section "Monitor"
     # HorizSync source: edid, VertRefresh source: edid
     Identifier     "Monitor0"
