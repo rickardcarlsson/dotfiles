@@ -1,2 +1,15 @@
-base16-pygments
+# vim:set syntax=sh
 grc # for zsh colorize
+
+## AUR
+# Lägg i build_list istället
+ruby-fusuma
+
+bat-extras-git
+anydesk-bin
+base16-pygments # Syntax highlighting
+
+ttf-google-sans # Spotify theme
+ttf-raleway # Spotify theme
+spicetify-cli
+

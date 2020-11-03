@@ -56,3 +56,8 @@ merged = false
 repo = "MikeDacre/tmux-zsh-vim-titles"
 merged = false
 
+
+[[custom_plugins]]
+repo = "tpope/vim-eunuch"
+merged = false
+

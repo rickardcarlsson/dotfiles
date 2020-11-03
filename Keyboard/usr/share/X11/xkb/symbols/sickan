@@ -22,6 +22,16 @@ xkb_symbols "rebinds" {
 
      key <AE12> { [ grave, acute, plusminus, notsign ] }; // Acute & grave switched
 
+    // Lägg dessa på alt+shift istället?
+     key <AC10> { [ odiaeresis, Odiaeresis, semicolon, colon ]};
+     key <AC11> { [ adiaeresis, Adiaeresis, apostrophe, quotedbl ]};
+
+     key <AD11> { [ aring, Aring, bracketleft, braceleft ]};
+     key <AD12> { [ diaeresis, asciicirum , bracketright, braceright ]};
+     key <AD11> { [ aring, Aring, bracketleft, braceleft ]};
+
+     key <AB10> { [ minus, underscore, slash, question ]}; 
+
  };
 
 partial modifier_keys
