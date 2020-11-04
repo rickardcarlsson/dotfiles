@@ -52,6 +52,9 @@ user_pref("sidebar.position_start", false);
 // Dont remember my passwords.
 user_pref("signon.rememberSignons", false);
 
+// Disable password viewer in login forms
+user_pref("signon.showAutoCompleteFooter", false);
+
 // Disable spellcheck.
 user_pref("layout.spellcheckDefault", 0);
 

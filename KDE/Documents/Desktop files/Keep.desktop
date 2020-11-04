@@ -8,6 +8,7 @@ Icon=/home/sickan/Documents/Icons/Keep.svg
 MimeType=
 Name[en_US]=Google Keep
 Name=Google Keep
+StartupWMClass=Keep
 Path=
 StartupNotify=true
 Terminal=false

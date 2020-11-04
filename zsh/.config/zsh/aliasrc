@@ -90,6 +90,3 @@ function code() {
 }
 
 alias rymden="ssh -p 50000 sickan@rymden.space"
-
-[[ $HOST == "server" ]] && alias reset_screen="xrandr --output HDMI-0 --auto && xrandr --output HDMI-0 --mode 3840x2160"
-[[ $HOST == "envy" ]] && alias reset_screen="xrandr --output eDP-1-1 --auto && xrandr --output eDP-1-1 --mode 3840x2160"
