@@ -217,4 +217,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=
+screenMapping=desktop:/Old Firefox Data,0
