@@ -91,7 +91,8 @@ X11UseLocalhost no
 PrintMotd no # pam does that
 #PrintLastLog yes
 #TCPKeepAlive yes
-#PermitUserEnvironment no
+PermitUserEnvironment yes
+PermitUserRC yes
 #Compression delayed
 #ClientAliveInterval 0
 #ClientAliveCountMax 3

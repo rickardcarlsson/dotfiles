@@ -117,6 +117,25 @@ LookAndFeelPackage=com.github.vinceliuice.ChromeOS-dark
 contrast=4
 widgetStyle=kvantum
 
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=138
+View Style=DetailTree
+
 [KScreen]
 ScaleFactor=2
 ScreenScaleFactors=DVI-D-0=2;HDMI-0=2;DP-0=2;DP-1=2;

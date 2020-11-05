@@ -30,12 +30,12 @@ _k_friendly_name=KDE Daemon
 display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
-_k_friendly_name=KDE Daemon
+_k_friendly_name=System Settings Module
 {2aaa0b3c-b675-462b-999b-e64c3a04f4c7}=Shift+Volume Up,none,Increase
 {37fcda51-d0bc-4ed0-88b1-6a80e961ae17}=Shift+Volume Down,none,Decrease
-{5525fb3a-b350-48d4-85a7-13a247a537cb}=Meta+J,none,Down
 {7ef73278-1749-432c-a3e4-743f9efb03a1}=Ctrl+Alt+T,none,Launch Kitty
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
+{e15f0e49-947a-4495-ac96-dbb26d56c878}=Meta+Ctrl+Esc,none,Reset Screen
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -67,7 +67,7 @@ ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All 
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
 Increase Opacity=none,none,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,none,Invert Screen Colors
-Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window
+Kill Window=none,Ctrl+Alt+Esc,Kill Window
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,none,Move Zoomed Area Downwards

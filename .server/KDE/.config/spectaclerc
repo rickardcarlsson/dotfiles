@@ -7,9 +7,8 @@ printKeyActionRunning=StartNewInstance
 
 [GuiConfig]
 captureMode=5
-cropRegion=1894,982,1157,1135
-window-position=544,431
+window-position=540,371
 
 [Save]
-lastSaveLocation=file:///home/sickan/Pictures/Screenshot_20201102_222213.png
+lastSaveLocation=file:///home/sickan/Pictures/Screenshot_20201104_000143.png
 lastUsedSaveMode=Save
