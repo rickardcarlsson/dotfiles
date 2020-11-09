@@ -1,0 +1,14 @@
+[Unit]
+Description=Fusuma multitouch gesture recognizer
+
+[Service]
+Type=simple
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/home/sickan/code/bin"
+Environment="XAUTHORITY=/home/sickan/.Xauthority"
+Environment="DISPLAY=:0"
+ExecStart=/usr/bin/fusuma
+KillMode=process
+Restart=on-failure
+    
+[Install]
+WantedBy=default.target

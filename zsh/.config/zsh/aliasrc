@@ -68,11 +68,10 @@ alias HDDr="cd /data && ranger"
 alias BIN="cd ~/code/bin"
 
 alias server="ssh -Y sickan@server tmux -u attach"
+alias serverc="ssh -Y sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
 alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
 alias SHDDr="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0 && ranger"
-
-alias D0="DISPLAY=:0"
 
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"

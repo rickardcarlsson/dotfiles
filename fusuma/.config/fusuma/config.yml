@@ -2,7 +2,9 @@ swipe:
   3:
     left:
       command: 'xdotool key ctrl+Page_Up'
+      threshold: 0.7
     right:
+      threshold: 0.7
       command: 'xdotool key ctrl+Page_Down'
     up:
       command: 'xdotool key Home'
