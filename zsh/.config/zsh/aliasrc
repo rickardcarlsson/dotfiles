@@ -67,6 +67,8 @@ alias HDD="cd /data"
 alias HDDr="cd /data && ranger"
 alias BIN="cd ~/code/bin"
 
+alias scaleup="QT_AUTO_SCREEN_SCALE_FACTOR=1"
+
 alias server="ssh -Y sickan@server tmux -u attach"
 alias serverc="ssh -Y sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"

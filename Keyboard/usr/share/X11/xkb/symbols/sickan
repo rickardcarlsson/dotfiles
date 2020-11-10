@@ -30,6 +30,9 @@ xkb_symbols "rebinds" {
 
     key <AB10> { [ minus, underscore, slash, question ]};               // -
 
+    key <AB01> { [ z, Z, less, guillemotleft ] };               // « < switched
+    key <AB02> { [ x, X, greater, guillemotright] };            // » > switched
+    key <AB03> { [ c, C, bar, copyright ] };                    // Added pipe
 };
 
 partial modifier_keys
