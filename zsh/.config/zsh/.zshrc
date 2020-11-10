@@ -49,7 +49,7 @@ bindkey -v                       # vim keymap
 [ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
 
 # tmux-zsh-vim-titles plugin config
-# [[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
+[[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history
