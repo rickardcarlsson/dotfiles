@@ -8,6 +8,10 @@ fi
 # Applications/environment variables
 [[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
+
+# tmux-zsh-vim-titles plugin config
+[[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
+
 # Plugins
 source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
@@ -47,9 +51,6 @@ bindkey -v                       # vim keymap
 # Load aliases and shortcuts
 [ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc
 [ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
-
-# tmux-zsh-vim-titles plugin config
-[[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history
