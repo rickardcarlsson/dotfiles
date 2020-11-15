@@ -56,7 +56,7 @@ bindkey -M viins '^[[1;2C' vi-forward-char # Shift+Alt-L
 bindkey -s '^[[1;2Q' 'la^M' # AltGr-Tilde - List all
 bindkey -s '^[OP'    'cd $HOME^M' # F1 - Home
 bindkey -s '^[OQ'    'cd $DOT^M' # F2 - Dotfiles
-bindkey -s '^[OR'    'cd $CODE^M' # F3 - ~/code
-# bindkey -s '^[OS'    'cd $GIT^M' # F4 - ~/git
-bindkey -s '^[[15~'    'cd $GIT^M' # F5 - ~/git
+bindkey -s '^[OR'    'cd $XDG_CONFIG_HOME^M' # F3 - ~/.config
+bindkey -s '^[[15~'    'cd $CODE^M' # F5 - ~/code
+bindkey -s '^[[17~'    'cd $GIT^M' # F6 - ~/git
 
