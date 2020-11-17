@@ -102,7 +102,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][8][Configuration]
-PreloadWeight=25
+PreloadWeight=30
 
 [Containments][1][Applets][8][Configuration][Appearance]
 dateFormat=custom
@@ -152,6 +152,9 @@ wallpaperplugin=org.kde.image
 [Containments][8][Applets][10]
 immutability=1
 plugin=org.kde.plasma.clipboard
+
+[Containments][8][Applets][10][Configuration]
+PreloadWeight=55
 
 [Containments][8][Applets][11]
 immutability=1
@@ -239,4 +242,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=
+screenMapping=desktop:/339432537.desktop,0
