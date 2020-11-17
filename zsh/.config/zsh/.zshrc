@@ -111,7 +111,7 @@ _comp_options+=(globdots)		# Include hidden files.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5' 
 
 # Kitty specific settings
-[[ -n $SSH_CONNECTION ]] && [[ $TERM == "xterm-kitty" ]] && [ -f $ZDOTDIR/kitty ] && . $ZDOTDIR/kitty
+[[ -z $SSH_CONNECTION ]] && [[ $TERM == "xterm-kitty" ]] && [ -f $ZDOTDIR/kitty ] && . $ZDOTDIR/kitty
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
