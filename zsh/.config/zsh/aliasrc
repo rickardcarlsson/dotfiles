@@ -73,9 +73,12 @@ alias server="ssh -Y sickan@server tmux -u attach"
 alias serverc="ssh -Y sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
 alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
-alias SHDDr="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0 && ranger"
+alias SHDDr="SHDD && ranger"
 
 alias desktop="ssh -p 2222 sickan@Desktop tmux -u attach"
+alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"
+alias DHDD="cd ~/desktop-fs/ || mnt-server-fs && cd ~/desktop-fs/"
+alias DHDDr="DHDD && ranger"
 
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"
