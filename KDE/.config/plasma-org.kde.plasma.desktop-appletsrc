@@ -85,6 +85,14 @@ plugin=org.kde.plasma.icon
 localPath=/home/sickan/.local/share/plasma_icons/Keep.desktop
 url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Keep.desktop
 
+[Containments][1][Applets][37]
+immutability=1
+plugin=org.kde.plasma.icon
+
+[Containments][1][Applets][37][Configuration]
+localPath=/home/sickan/.local/share/plasma_icons/AnyDeskDesktop.desktop
+url=file:///home/sickan/Documents/Desktop files/AnyDeskDesktop.desktop
+
 [Containments][1][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -102,7 +110,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][8][Configuration]
-PreloadWeight=30
+PreloadWeight=40
 
 [Containments][1][Applets][8][Configuration][Appearance]
 dateFormat=custom
@@ -117,7 +125,7 @@ DialogHeight=129
 DialogWidth=3840
 
 [Containments][1][General]
-AppletOrder=2;27;31;34;32;22;7;3;8
+AppletOrder=2;27;31;34;32;37;22;7;3;8
 
 [Containments][17]
 ItemGeometriesHorizontal=
@@ -242,4 +250,4 @@ knownItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/339432537.desktop,0
+screenMapping=

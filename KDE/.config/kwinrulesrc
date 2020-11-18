@@ -1,2 +1,15 @@
 [$Version]
 update_info=kwinrules.upd:replace-placement-string-to-enum
+
+[1]
+Description=AnyDesk
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=anydesk anydesk
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=1

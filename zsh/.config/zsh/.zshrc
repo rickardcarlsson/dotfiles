@@ -21,8 +21,10 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle marlonrichert/zsh-autocomplete # Find-as-you-type completion
 
+# oh-my-zsh bundles
 antigen bundle command-not-found
 antigen bundle extract
+antigen bundle sudo
 antigen bundle npm                # support for NodeJS package manager
 antigen bundle pip                # support for Python Package Manager
 
@@ -30,13 +32,12 @@ antigen bundle chrissicool/zsh-256color # Enhance the terminal environment with 
 antigen bundle RobSis/zsh-completion-generator # Generate completions with: gencomp program
 antigen bundle rickardcarlsson/colorize # Colorize the output of various programs (including man), requires grc
 antigen bundle djui/alias-tips # Help remembering shell aliases
-
-antigen bundle MikeDacre/tmux-zsh-vim-titles
+antigen bundle MichaelAquilina/zsh-auto-notify # Automatically sends out a notification when a long running task has completed.
+antigen bundle MikeDacre/tmux-zsh-vim-titles # Intelligent terminal titles in tmux, zsh, and vim
 
 antigen theme romkatv/powerlevel10k  
 
 antigen apply
-
 bindkey -v                       # vim keymap
 
 # Import secrets
@@ -48,9 +49,10 @@ bindkey -v                       # vim keymap
 # fzf material darker theme
 [ -f $ZDOTDIR/fzf-material-darker-theme.config ] && source $ZDOTDIR/fzf-material-darker-theme.config 
 
-# Load aliases and shortcuts
+# Load aliases, functions and shortcuts
 [ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc
 [ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
+[ -f $ZDOTDIR/functionrc ] && . $ZDOTDIR/functionrc
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history
@@ -70,20 +72,28 @@ else
 fi
 unset __conda_setup
 
-setopt extended_history        # record timestamp of command in HISTFILE
-setopt hist_expire_dups_first  # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups        # ignore duplicated commands history list
-setopt hist_ignore_space       # ignore commands that start with space
-setopt hist_verify             # show command with history expansion to user before running it
-setopt inc_append_history_time # add commands to HISTFILE in order of execution
-setopt share_history           # share command history data
-
-setopt globdots                # Allow matching of dotfiles
-setopt complete_in_word        # Complete from both ends of a word.
-setopt always_to_end           # Move cursor to the end of a completed word.
-setopt path_dirs               # Perform path search even on command names with slashes.
-setopt auto_param_slash        # If completed parameter is a directory, add a trailing slash.
-
+# http://zsh.sourceforge.net/Doc/Release/Options.html
+setopt EXTENDED_HISTORY        # record timestamp of command in HISTFILE
+setopt HIST_EXPIRE_DUPS_FIRST  # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt HIST_IGNORE_DUPS        # ignore duplicated commands history list
+setopt HIST_IGNORE_SPACE       # ignore commands that start with space
+setopt HIST_VERIFY             # show command with history expansion to user before running it
+setopt INC_APPEND_HISTORY_TIME # add commands to HISTFILE in order of execution
+setopt SHARE_HISTORY           # share command history data
+setopt GLOBDOTS                # Allow matching of dotfiles
+setopt COMPLETE_IN_WORD        # Complete from both ends of a word.
+setopt ALWAYS_TO_END           # Move cursor to the end of a completed word.
+setopt PATH_DIRS               # Perform path search even on command names with slashes.
+setopt AUTO_PARAM_SLASH        # If completed parameter is a directory, add a trailing slash.
+setopt INTERACTIVE_COMMENTS    # Allow comments starting with `#` in the interactive shell.
+setopt NO_CASE_GLOB            # Make globbing case insensitive.
+setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
+setopt AUTO_PARAM_SLASH    # If completed parameter is a directory, add a trailing slash.
+setopt EXTENDED_GLOB       # Needed for file modification glob modifiers with compinit
+setopt CORRECT             # Try to correct the spelling of commands. 
+#setopt CORRECT_ALL         # Try to correct the spelling of all arguments in a line. 
+unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
+unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
 
 # https://github.com/sorin-ionescu/prezto/blob/master/modules/completion/init.zsh
 
@@ -94,7 +104,7 @@ setopt auto_param_slash        # If completed parameter is a directory, add a tr
 # cache time of 20 hours, so it should almost always regenerate the first time a
 # shell is opened each day.
 autoload -Uz compinit
-_comp_path="${XDG_CACHE_HOME:-$HOME/.cache}/prezto/zcompdump"
+_comp_path="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 # #q expands globs in conditional expressions
 if [[ $_comp_path(#qNmh-20) ]]; then
     # -C (skip function check) implies -i (skip security check).

@@ -5,6 +5,8 @@
 # this alias removes leading dollar sign (useful when copying code from Stackoverflow)
 alias '$'=''
 
+alias sudo='sudo ' # Sudo retains aliases
+
 alias vim="nvim"
 alias svim="sudo nvim -u $HOME/git/SpaceVim/config/main.vim"
 alias ranger="source ranger"
@@ -24,10 +26,16 @@ alias ..="cd .."
 alias mv="mv -iv"
 alias cp="cp -iv"
 alias mkdir="mkdir -vp"
-alias rm="rm -iv"
 
-alias chmod="chmod -v"
-alias chown="chown -v"
+#alias rm="rm -iv"
+# not aliasing rm -i, but if safe-rm is available, use condom.
+# if safe-rmdir is available, the OS is suse which has its own terrible 'safe-rm' which is not what we want
+if (( ${+commands[safe-rm]} && ! ${+commands[safe-rmdir]} )); then
+  alias rm='safe-rm -iv'
+fi
+
+alias chmod='chmod --preserve-root -v'
+alias chown='chown --preserve-root -v'
 alias addx="chmod u+x"
 
 alias dud="du -d 1 -h"
@@ -61,6 +69,7 @@ alias DOT="cd ~/.dotfiles"
 alias DOTs="cd ~/.dotfiles/.server"
 alias DOCS="cd ~/Documents"
 alias CONFIG="cd $XDG_CONFIG_HOME"
+alias ZSH="cd $XDG_CONFIG_HOME/zsh"
 alias GIT="cd $GIT"
 alias CODE="cd ~/code"
 alias HDD="cd /data"
@@ -83,18 +92,9 @@ alias DHDDr="DHDD && ranger"
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"
 
-function code() {
-  # reference to the original `code` command
-  local _code=$(whence -p code)
-  # if incoming stdin via a pipe...
-  if [[ -p /dev/stdin ]] ; then
-    tmpFile=$(mktemp -p "$TMPDIR" stdin.XXXXXX)
-    tee "$tmpFile" > /dev/null
-    $_code -w "$tmpFile" &
-  else
-    # otherwise, pass along any arguments to the original `code`
-    $_code "$@"
-  fi
-}
-
 alias rymden="ssh -p 50000 sickan@rymden.space"
+
+# Global aliases
+# alias -g 
+#
+

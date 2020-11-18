@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Desktop
+GenericName=AnyDesk
+X-GNOME-FullName=AnyDesk
+Exec=anydesk 339432537
+Icon=/usr/share/pixmaps/anydesk.svg
+Terminal=false
+TryExec=anydesk
+Type=Application
+Categories=Network;GTK;
