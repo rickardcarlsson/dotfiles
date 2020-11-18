@@ -38,6 +38,10 @@ antigen bundle MikeDacre/tmux-zsh-vim-titles # Intelligent terminal titles in tm
 antigen theme romkatv/powerlevel10k  
 
 antigen apply
+
+# Ignore commands in zsh-auto-notify
+AUTO_NOTIFY_IGNORE+=("server" "desktop")
+
 bindkey -v                       # vim keymap
 
 # Import secrets
