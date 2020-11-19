@@ -45,6 +45,7 @@ bindkey -M menuselect '^l' vi-forward-char
 bindkey -M menuselect '^j' vi-down-line-or-history
 
 # Insert mode bindings
+bindkey -M viins '\t' forward-word # Tab to move one word forward in autosuggestion
 bindkey -M viins '^E' autosuggest-accept # Ctrl-E to accept autosuggestion
 bindkey -M viins '^J' menu-select # Ctrl-J to open completion menu 
 

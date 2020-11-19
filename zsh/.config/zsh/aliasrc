@@ -83,6 +83,7 @@ alias serverc="ssh -Y sickan@server"
 alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
 alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
 alias SHDDr="SHDD && ranger"
+alias sresets="serverc reset_screen"
 
 alias desktop="ssh -p 2222 sickan@Desktop tmux -u attach"
 alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"
