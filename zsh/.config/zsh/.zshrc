@@ -119,10 +119,17 @@ else
 fi
 unset _comp_path
 
-# zmodload zsh/complist
+zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5' 
+# zsh-autosuggestions config
+#zmodload zsh/zpty # Needed for competion
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=245' 
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+#ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=( "${ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[@]:#*forward-word}" )
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=( fzf-completion )
 
 # Kitty specific settings
 [[ -z $SSH_CONNECTION ]] && [[ $TERM == "xterm-kitty" ]] && [ -f $ZDOTDIR/kitty ] && . $ZDOTDIR/kitty

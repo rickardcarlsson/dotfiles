@@ -6,10 +6,15 @@ zstyle ':completion:*' rehash true # Automatically find new executables in the $
 # Problem just nu: 
 # Färglägg autocomplete output.
 # Kolla tex fzf-tab
-# Byt färg på autosuggest?
 # zsh-auto-notify ger notifications på ignorerade command.
+# Tmux ser konstigt ut efter resize. Bara över ssh?
+# %{^[[02;39m%}(partial list; press %{^[[22;39m%}Control+Space%{^[[02;39m%} to expand)%{^[[0m%}
 #
+#
+zstyle ':autocomplete:tab:*' insert-unambiguous yes 
 zstyle ':autocomplete:tab:*' fzf-completion yes
+zstyle ':autocomplete:tab:*' widget-style menu-complete
+
 zstyle ':autocomplete:*' min-input 3
 zstyle ':autocomplete:*' max-lines 50%
 
