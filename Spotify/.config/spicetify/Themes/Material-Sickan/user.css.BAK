@@ -1,0 +1,30 @@
+.tl-explicit .label, .tl-premium .label {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+
+.tl-row.selected .tl-cell, .tl-row .TableRow--is-selected {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell, .TableRow--is-hover-forced, .TableRow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.TableCell {
+  border-color: #131313;
+}
+
+.TableRow--is-hover-forced, .TableRow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.TableCellSong__label, .TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label {
+  color: white;
+}
+
+.TableRow:hover .TableCellSong__label, TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label {
+  border-color: white;
+}
+
+/*# sourceMappingURL=user.css.map */

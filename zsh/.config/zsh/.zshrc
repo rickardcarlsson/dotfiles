@@ -129,7 +129,8 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 #ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=( "${ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[@]:#*forward-word}" )
-ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=( fzf-completion )
+# Tab completes with autosuggestion or cycles through menu items
+zSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=( fzf-completion ) 
 
 # Kitty specific settings
 [[ -z $SSH_CONNECTION ]] && [[ $TERM == "xterm-kitty" ]] && [ -f $ZDOTDIR/kitty ] && . $ZDOTDIR/kitty
