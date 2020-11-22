@@ -32,7 +32,7 @@ antigen bundle chrissicool/zsh-256color # Enhance the terminal environment with 
 antigen bundle RobSis/zsh-completion-generator # Generate completions with: gencomp program
 antigen bundle rickardcarlsson/colorize # Colorize the output of various programs (including man), requires grc
 antigen bundle djui/alias-tips # Help remembering shell aliases
-antigen bundle MichaelAquilina/zsh-auto-notify # Automatically sends out a notification when a long running task has completed.
+#antigen bundle MichaelAquilina/zsh-auto-notify # Automatically sends out a notification when a long running task has completed.
 antigen bundle MikeDacre/tmux-zsh-vim-titles # Intelligent terminal titles in tmux, zsh, and vim
 
 antigen theme romkatv/powerlevel10k  
