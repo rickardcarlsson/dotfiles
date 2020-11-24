@@ -1,3 +1,9 @@
-
 [Default Applications]
 x-scheme-handler/bitwarden=Electron.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-4YRYS0.desktop
+message/rfc822=userapp-Thunderbird-4YRYS0.desktop
+
+[Added Associations]
+application/x-xpinstall=thunderbird.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-4YRYS0.desktop;
+message/rfc822=userapp-Thunderbird-4YRYS0.desktop;
