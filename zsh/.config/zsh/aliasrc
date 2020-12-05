@@ -91,6 +91,14 @@ alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"
 alias DHDD="cd ~/desktop-fs/ || mnt-desktop-fs && cd ~/desktop-fs/"
 alias DHDDr="DHDD && ranger"
 
+if [[ $HOST == "Desktop" ]]; then
+  alias C="cd /mnt/c/"
+  alias D="cd /mnt/d/"
+  alias E="cd /mnt/e/"
+  alias F="cd /mnt/f/"
+  alias G="cd /mnt/g/"
+fi
+
 # Docker
 alias portainer="docker-compose -f ~/Docker/Portainer/docker-compose.yml up -d"
 

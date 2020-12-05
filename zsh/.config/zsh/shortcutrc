@@ -62,3 +62,13 @@ bindkey -s '^[OR'    'cd $XDG_CONFIG_HOME^M' # F3 - ~/.config
 bindkey -s '^[[15~'    'cd $CODE^M' # F5 - ~/code
 bindkey -s '^[[17~'    'cd $GIT^M' # F6 - ~/git
 
+if [[ $HOST == "Desktop" ]]; then
+  bindkey -s '^[[1;2P'  'C^M' # Shift-F1 - Cd to C:
+  bindkey -s '^[[1;2Q'  'D^M' # Shift-F2 - Cd to D:
+  bindkey -s '^[[1;2R'  'E^M' # Shift-F3 - Cd to E:
+  bindkey -s '^[[1;2S'  'F^M' # Shift-F4 - Cd to F:
+  bindkey -s '^[[15;2~' 'G^M' # Shift-F5 - Cd to G:
+fi
+
+
+
