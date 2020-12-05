@@ -25,6 +25,7 @@ antigen bundle marlonrichert/zsh-autocomplete # Find-as-you-type completion
 antigen bundle command-not-found
 antigen bundle extract
 antigen bundle sudo
+#antigen bundle thefuck
 antigen bundle npm                # support for NodeJS package manager
 antigen bundle pip                # support for Python Package Manager
 
@@ -39,8 +40,12 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
+# The Fuck plugin
+[[ -f $ZDOTDIR/thefuck.plugin.zsh ]] && . $ZDOTDIR/thefuck.plugin.zsh 
+
+
 # Ignore commands in zsh-auto-notify
-AUTO_NOTIFY_IGNORE+=("server" "desktop")
+#AUTO_NOTIFY_IGNORE+=("server" "desktop")
 
 bindkey -v                       # vim keymap
 
@@ -94,7 +99,7 @@ setopt NO_CASE_GLOB            # Make globbing case insensitive.
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 setopt AUTO_PARAM_SLASH    # If completed parameter is a directory, add a trailing slash.
 setopt EXTENDED_GLOB       # Needed for file modification glob modifiers with compinit
-setopt CORRECT             # Try to correct the spelling of commands. 
+#setopt CORRECT             # Try to correct the spelling of commands. 
 #setopt CORRECT_ALL         # Try to correct the spelling of all arguments in a line. 
 unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
 unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
