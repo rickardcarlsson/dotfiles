@@ -97,6 +97,7 @@ if [[ $HOST == "Desktop" ]]; then
   alias E="cd /mnt/e/"
   alias F="cd /mnt/f/"
   alias G="cd /mnt/g/"
+  alias APPDATA="cd /mnt/c/Users/Sickan/AppData/Roaming"
 fi
 
 # Docker
