@@ -22,10 +22,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle marlonrichert/zsh-autocomplete # Find-as-you-type completion
 
 # oh-my-zsh bundles
-antigen bundle command-not-found
+#antigen bundle command-not-found
 antigen bundle extract
 antigen bundle sudo
-#antigen bundle thefuck
 antigen bundle npm                # support for NodeJS package manager
 antigen bundle pip                # support for Python Package Manager
 
@@ -42,7 +41,6 @@ antigen apply
 
 # The Fuck plugin
 [[ -f $ZDOTDIR/thefuck.plugin.zsh ]] && . $ZDOTDIR/thefuck.plugin.zsh 
-
 
 # Ignore commands in zsh-auto-notify
 #AUTO_NOTIFY_IGNORE+=("server" "desktop")

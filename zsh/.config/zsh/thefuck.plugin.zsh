@@ -6,6 +6,7 @@ fi
 
 # Register alias
 eval "$(thefuck --alias)"
+#eval $(thefuck --alias --enable-experimental-instant-mode)
 
 command_not_found_handler () {
     TF_SHELL_ALIASES=$(alias);
