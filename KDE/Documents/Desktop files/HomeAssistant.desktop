@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Home Assistant
+GenericName=Dashboard
+Icon=/home/sickan/Documents/Icons/HomeAssistant.png
+Type=Application
+Exec=~/code/bin/firefox_ssb http://server:8123/ "Home Assistant"
+#StartupWMClass=keep
+Terminal=false
+

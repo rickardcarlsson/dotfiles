@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/home/sickan/code/bin/reenable_opengl
+GenericName[en_US]=Reenable OpenGL & Restart KWin
+GenericName=Reenable OpenGL & Restart KWin
+Icon=/home/sickan/Documents/Icons/kwin_replace.png
+MimeType=
+Name[en_US]=Desktop
+Name=Desktop
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

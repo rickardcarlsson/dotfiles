@@ -39,7 +39,7 @@ immutability=1
 plugin=org.kde.plasma.taskmanager
 
 [Containments][1][Applets][22][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][1][Applets][22][Configuration][ConfigDialog]
 DialogHeight=1140
@@ -57,7 +57,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][1][Applets][27][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 localPath=/home/sickan/.local/share/plasma_icons/caprine.desktop
 url=file:///usr/share/applications/caprine.desktop
 
@@ -66,14 +66,14 @@ immutability=1
 plugin=org.kde.plasma.pager
 
 [Containments][1][Applets][3][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][1][Applets][31]
 immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][1][Applets][31][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 localPath=/home/sickan/.local/share/plasma_icons/Organizr.desktop
 url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Organizr.desktop
 
@@ -82,7 +82,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][1][Applets][32][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 localPath=/home/sickan/.local/share/plasma_icons/visual-studio-code.desktop
 url=file:///usr/share/applications/visual-studio-code.desktop
 
@@ -91,7 +91,7 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][1][Applets][34][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 localPath=/home/sickan/.local/share/plasma_icons/Keep.desktop
 url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Keep.desktop
 
@@ -100,16 +100,25 @@ immutability=1
 plugin=org.kde.plasma.icon
 
 [Containments][1][Applets][37][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 localPath=/home/sickan/.local/share/plasma_icons/AnyDeskDesktop.desktop
 url=file:///home/sickan/Documents/Desktop files/AnyDeskDesktop.desktop
+
+[Containments][1][Applets][38]
+immutability=1
+plugin=org.kde.plasma.icon
+
+[Containments][1][Applets][38][Configuration]
+PreloadWeight=0
+localPath=/home/sickan/.local/share/plasma_icons/Restart Kwin.desktop
+url=file:///home/sickan/.dotfiles/KDE/Documents/Desktop files/Restart Kwin.desktop
 
 [Containments][1][Applets][7]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][7][Configuration]
-PreloadWeight=92
+PreloadWeight=70
 SystrayContainmentId=8
 
 [Containments][1][Applets][7][Configuration][Containments][8]
@@ -121,7 +130,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][8][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][1][Applets][8][Configuration][Appearance]
 dateFormat=custom
@@ -136,10 +145,10 @@ DialogHeight=129
 DialogWidth=3840
 
 [Containments][1][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][1][General]
-AppletOrder=2;27;31;34;32;37;22;7;3;8
+AppletOrder=2;27;31;34;32;37;38;22;7;3;8
 
 [Containments][17]
 ItemGeometriesHorizontal=
@@ -156,7 +165,7 @@ DialogHeight=2020
 DialogWidth=3840
 
 [Containments][17][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][17][General]
 ToolBoxButtonState=top
@@ -179,70 +188,70 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][10][Configuration]
-PreloadWeight=47
+PreloadWeight=0
 
 [Containments][8][Applets][11]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=57
+PreloadWeight=0
 
 [Containments][8][Applets][12]
 immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][12][Configuration]
-PreloadWeight=47
+PreloadWeight=0
 
 [Containments][8][Applets][13]
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
 [Containments][8][Applets][13][Configuration]
-PreloadWeight=52
+PreloadWeight=0
 
 [Containments][8][Applets][14]
 immutability=1
 plugin=org.kde.plasma.nightcolorcontrol
 
 [Containments][8][Applets][14][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][15]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][16]
 immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][8][Applets][16][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][18]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][18][Configuration]
-PreloadWeight=47
+PreloadWeight=0
 
 [Containments][8][Applets][19]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][19][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][20]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=87
+PreloadWeight=35
 
 [Containments][8][Applets][23]
 immutability=1
@@ -256,9 +265,10 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][25][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][25][Configuration][General]
+globalMute=true
 volumeStep=2
 
 [Containments][8][Applets][26]
@@ -266,7 +276,7 @@ immutability=1
 plugin=org.kde.plasma.diskquota
 
 [Containments][8][Applets][26][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][Applets][27][Configuration]
 PreloadWeight=42
@@ -279,7 +289,7 @@ DialogHeight=1907
 DialogWidth=2785
 
 [Containments][8][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][8][General]
 extraItems=org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.kdeconnect,KDE Daemon,Yakuake,org.kde.plasma.diskquota,org.kde.plasma.volume,Caprine1,MSM Notifier for Plasma5
