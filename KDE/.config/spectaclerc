@@ -6,10 +6,11 @@ copyImageToClipboard=true
 printKeyActionRunning=StartNewInstance
 
 [GuiConfig]
+captureDelay=1
 captureMode=5
-cropRegion=613,454,775,705
-window-position=0,0
+cropRegion=749,717,1249,736
+window-position=1872,0
 
 [Save]
-lastSaveLocation=file:///home/sickan/Pictures/Screenshot_20201103_012111.png
+lastSaveLocation=file:///home/sickan/Pictures/Screenshot_20210120_200648.png
 lastUsedSaveMode=Save

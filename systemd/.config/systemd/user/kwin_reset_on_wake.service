@@ -1,0 +1,12 @@
+[Unit]
+Description=Reset Kwin compositor on wake
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+
+[Service]
+ExecStart=kwin_x11 --replace
+#User=my_user_name
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target

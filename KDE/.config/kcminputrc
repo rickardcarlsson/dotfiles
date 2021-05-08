@@ -1,8 +1,8 @@
 [$Version]
-update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize
+update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize,kcminputrc_fix_botched_5_21_0.upd:kcminputrc_fix_botched_5_21_0_pre,kcminputrc_fix_botched_5_21_0.upd:kcminputrc_fix_botched_5_21_0,kcminputrc_repeat.upd:kcminputrc_migrate_key_repeat
 
 [Keyboard]
-KeyboardRepeating=0
+KeyRepeat=repeat
 NumLock=0
 RepeatDelay=300
 RepeatRate=45
@@ -10,3 +10,6 @@ RepeatRate=45
 [Mouse]
 cursorSize=48
 cursorTheme=vimix-cursors
+
+[Tmp]
+update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize

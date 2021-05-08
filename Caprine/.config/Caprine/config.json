@@ -4,12 +4,12 @@
 	"privateMode": false,
 	"showPrivateModePrompt": true,
 	"vibrancy": "none",
-	"zoomFactor": 1,
+	"zoomFactor": 1.1,
 	"lastWindowState": {
-		"x": 962,
+		"x": 0,
 		"y": 30,
-		"width": 956,
-		"height": 1007,
+		"width": 1920,
+		"height": 1010,
 		"isMaximized": true
 	},
 	"menuBarMode": false,
