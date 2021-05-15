@@ -13,7 +13,9 @@ fi
 [[ -f $ZDOTDIR/tzvt.conf ]] && . $ZDOTDIR/tzvt.conf
 
 # Plugins
-source /usr/share/zsh/share/antigen.zsh
+[[ -f /usr/share/zsh/share/antigen.zsh ]] && . /usr/share/zsh/share/antigen.zsh
+[[ -f /usr/share/zsh-antigen/antigen.zsh ]] && . /usr/share/zsh-antigen/antigen.zsh
+
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
 
 # antigen bundle zdharma/fast-syntax-highlighting 

@@ -118,7 +118,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][7][Configuration]
-PreloadWeight=80
+PreloadWeight=87
 SystrayContainmentId=8
 
 [Containments][1][Applets][7][Configuration][Containments][8]
@@ -130,7 +130,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][8][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][1][Applets][8][Configuration][Appearance]
 dateFormat=custom
@@ -195,7 +195,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=10
+PreloadWeight=2
 
 [Containments][8][Applets][12]
 immutability=1
@@ -251,7 +251,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=40
+PreloadWeight=42
 
 [Containments][8][Applets][23]
 immutability=1
@@ -269,6 +269,7 @@ PreloadWeight=0
 
 [Containments][8][Applets][25][Configuration][General]
 globalMute=true
+globalMuteDevices=alsa_output.pci-0000_00_1f.3.analog-stereo.0,PulseEffects_apps.4294967295
 volumeStep=2
 
 [Containments][8][Applets][26]
