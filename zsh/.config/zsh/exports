@@ -18,6 +18,18 @@ export LESSHISTFILE="$XDG_CACHE_HOME/lesshst"
 # Removes ~/.bash_history
 export HISTFILE="$XDG_CACHE_HOME/bash_history"
 
+# Locale
+export LC_ADDRESS="sv_SE.UTF-8"
+export LC_IDENTIFICATION="sv_SE.UTF-8"
+export LC_MEASUREMENT="sv_SE.UTF-8"
+export LC_MONETARY="sv_SE.UTF-8"
+export LC_NAME="sv_SE.UTF-8"
+export LC_NUMERIC="sv_SE.UTF-8"
+export LC_PAPER="sv_SE.UTF-8"
+export LC_TELEPHONE="sv_SE.UTF-8"
+export LC_TIME="sv_SE.UTF-8"
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
 # Applications/environment variables
 export BROWSER=/usr/bin/firefox
 export VISUAL=/usr/bin/code
