@@ -16,8 +16,11 @@ reboot
 adduser username
 usermod -aG sudo username
 
+# Install Nix package manager
+curl -L https://nixos.org/nix/install | sh
+
 #Install packages
-apt-get install sudo zsh zsh-antigen neovim ranger fzf alsa-utils pulseaudio ripgrep locate git stow exa unzip
+apt-get install sudo zsh zsh-antigen neovim ranger fzf alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
 
 # Change shell to zsh
 chsh -s /usr/bin/zsh
