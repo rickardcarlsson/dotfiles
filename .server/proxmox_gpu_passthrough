@@ -1,11 +1,18 @@
 ### Proxmox GPU Passthrough
 # https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/
 
-## Configure grub
+## Configure bootloader
+# grub (LVM/EXT4 install)
   /etc/default/grub
 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt video=efifb:off"
 sudo update-grub
+
+# systemd-boot (zfs install)
+  /etc/kernel/cmdline
+intel_iommu=on iommu=pt video=efifb:off # Append this to end of line
+# Example:
+root=ZFS=rpool/ROOT/pve-1 boot=zfs intel_iommu=on iommu=pt video=efifb:off
 
 ## VFIO Modules
   /etc/modules

@@ -1,0 +1,26 @@
+# Enable ssh
+systemctl enable sshd
+systemctl start sshd
+
+# Change branch to testing
+sudo pacman-mirrors --api --set-branch testing
+sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
+# May need renewed database
+sudo rm /var/lib/pacman/db.lck
+
+# Graphics drivers
+# Remove modesetting
+sudo mhwd -r pci video-modesetting
+# Install nvidia
+sudo mhwd -i pci video-nvidia
+reboot
+# Generate xorg.conf
+sudo Xorg :2 -configure
+sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
+
+
+# Enable xterm.js
+serial0: socket # Add to /etc/pve/qemu-server/vmID.conf
+console=tty0 console=ttyS0,115200 # Append to GRUB_CMDLINE_LINUX_DEFAULT in /etc/default/grub 
+systemctl enable serial-getty@ttyS0.service
+systemctl start serial-getty@ttyS0.service

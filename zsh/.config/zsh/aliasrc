@@ -17,6 +17,12 @@ alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 
+
+if [[ $HOST == "proxmox" ]]; then
+alias ls="exa --color-scale"
+alias la="exa -laF  --color-scale" # --group-directories-first ?
+fi
+
 alias brg="batgrep"
 alias bman="batman"
 #alias sshfs="sshfs -o reconnect,nosuid,nodev,allow_other,uid=1000,gid=100"

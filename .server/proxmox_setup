@@ -12,13 +12,12 @@ deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 apt update && apt -y full-upgrade
 reboot
 
-
 # Create new sudo user
 adduser username
 usermod -aG sudo username
 
 #Install packages
-apt-get install sudo zsh zsh-antigen neovim ranger fzf alsa-utils pulseaudio ripgrep locate git stow exa
+apt-get install sudo zsh zsh-antigen neovim ranger fzf alsa-utils pulseaudio ripgrep locate git stow exa unzip
 
 # Change shell to zsh
 chsh -s /usr/bin/zsh
