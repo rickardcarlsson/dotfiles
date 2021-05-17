@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Applications/environment variables
-[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
+#[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
 
 # tmux-zsh-vim-titles plugin config
@@ -53,8 +53,8 @@ bindkey -v                       # vim keymap
 [[ -s $DOCS/.secrets ]] && . $DOCS/.secrets 
 
 # Activate fuzzy finder
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f $ZDOTDIR/fzf-key-bindings.zsh ] && source $ZDOTDIR/fzf-key-bindings.zsh
+[ -f $ZDOTDIR/fzf-completion.zsh ] && source $ZDOTDIR/fzf-completion.zsh
 # fzf material darker theme
 [ -f $ZDOTDIR/fzf-material-darker-theme.config ] && source $ZDOTDIR/fzf-material-darker-theme.config 
 

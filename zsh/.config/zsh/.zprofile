@@ -25,4 +25,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-if [ -e /home/sickan/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sickan/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
+
+#if [ -e /home/sickan/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sickan/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $NIX_CONFIG_HOME/nix.sh ]; then . $NIX_CONFIG_HOME/nix.sh; fi # Modified Nix loader

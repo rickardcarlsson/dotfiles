@@ -26,6 +26,7 @@ export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen
 export SPACEVIMDIR=$XDG_CONFIG_HOME/SpaceVim/
+export NIX_CONFIG_HOME=$XDG_CONFIG_HOME/nix
 
 export GIT=$HOME/git
 export DOCS=$HOME/Documents
