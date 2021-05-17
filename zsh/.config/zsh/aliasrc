@@ -17,6 +17,22 @@ alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 
+function ranger {
+    local IFS=$'\t\n'
+    local tempfile="$(mktemp -t tmp.XXXXXX)"
+    local ranger_cmd=(
+        command
+        ranger
+        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
+    )
+
+    ${ranger_cmd[@]} "$@"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$PWD" ]]; then
+        cd -- "$(cat "$tempfile")" || return
+    fi
+    command /usr/bin/rm -f -- "$tempfile" 2>/dev/null
+}
+
 
 if [[ $HOST == "proxmox" ]]; then
 alias ls="exa --color-scale"

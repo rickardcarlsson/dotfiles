@@ -16,11 +16,21 @@ reboot
 adduser username
 usermod -aG sudo username
 
+# Fix locale
+sudo localedef -f UTF-8 -i sv_SE sv_SE.UTF-8
+
 # Install Nix package manager
-curl -L https://nixos.org/nix/install | sh
+sh <(curl -L https://nixos.org/nix/install) --daemon
+# Add Nix packages to (root) PATH
+sudo sudoers
+/nix/var/nix/profiles/per-user/USERNAME/profile/bin # Append to end of Defaults secure_path=
+# Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/nix/var/nix/profiles/per-user/sickan/profile/bin"
+
 
 #Install packages
-apt-get install sudo zsh zsh-antigen neovim ranger fzf alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
+apt-get install sudo zsh zsh-antigen neovim alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
+nix-env -iA nixpkgs.ripgrep nixpkgs.fzf nixpkgs.ranger 
+nix-env -i glibc-locales
 
 # Change shell to zsh
 chsh -s /usr/bin/zsh
