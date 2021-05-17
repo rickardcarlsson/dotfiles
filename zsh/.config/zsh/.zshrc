@@ -42,7 +42,7 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 # The Fuck plugin
-[[ -f $ZDOTDIR/thefuck.plugin.zsh ]] && . $ZDOTDIR/thefuck.plugin.zsh 
+#[[ -f $ZDOTDIR/thefuck.plugin.zsh ]] && . $ZDOTDIR/thefuck.plugin.zsh 
 
 # Ignore commands in zsh-auto-notify
 #AUTO_NOTIFY_IGNORE+=("server" "desktop")
