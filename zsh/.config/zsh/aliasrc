@@ -56,8 +56,8 @@ alias addx="chmod u+x"
 alias dud="du -d 1 -h"
 alias duf="du -sh"
 
-alias fd="find . -type d -name"
-alias ff="find . -type f -name"
+#alias fd="find . -type d -name"
+#alias ff="find . -type f -name"
 
 alias p="ps -f"
 
@@ -72,6 +72,9 @@ alias pas="pamac search"
 alias par="pamac remove"
 alias pai="pamac install"
 alias pab="pamac build"
+
+alias nixs="nix search"
+alias nixi="nix-env -iA"
 
 # Stow
 alias ustow="$DOT/ustow.sh"

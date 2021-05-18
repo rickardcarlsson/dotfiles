@@ -33,7 +33,7 @@ export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 # Applications/environment variables
 export BROWSER=/usr/bin/firefox
 export VISUAL=/usr/bin/code
-export EDITOR=/usr/bin/nvim
+export EDITOR=nvim
 export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen
@@ -45,6 +45,7 @@ export DOCS=$HOME/Documents
 export DL=$HOME/Downloads
 export DOT=$HOME/.dotfiles
 export CODE=$HOME/code
+export NIX_USER_PROFILE=$HOME/.nix-profile
 
 PYGMENTIZE_THEME="base16-material-darker"
 PYGMENTIZE_STYLE="base16-material-darker"

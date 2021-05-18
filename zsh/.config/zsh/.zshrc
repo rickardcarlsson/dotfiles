@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Applications/environment variables
-[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
+#[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
 
 # tmux-zsh-vim-titles plugin config
@@ -14,7 +14,7 @@ fi
 
 # Plugins
 [[ -f /usr/share/zsh/share/antigen.zsh ]] && . /usr/share/zsh/share/antigen.zsh
-[[ -f /usr/share/zsh-antigen/antigen.zsh ]] && . /usr/share/zsh-antigen/antigen.zsh
+[[ -f $NIX_USER_PROFILE/share/antigen/antigen.zsh ]] && . $NIX_USER_PROFILE/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh             # Load the oh-my-zsh's library.
 
@@ -57,11 +57,6 @@ bindkey -v                       # vim keymap
 [ -f $ZDOTDIR/fzf-completion.zsh ] && source $ZDOTDIR/fzf-completion.zsh
 # fzf material darker theme
 [ -f $ZDOTDIR/fzf-material-darker-theme.config ] && source $ZDOTDIR/fzf-material-darker-theme.config 
-
-# Load aliases, functions and shortcuts
-[ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc
-[ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
-[ -f $ZDOTDIR/functionrc ] && . $ZDOTDIR/functionrc
 
 # Command history
 HISTFILE=$ZDOTDIR/.zsh_history
@@ -126,6 +121,11 @@ unset _comp_path
 
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
+
+# Load aliases, functions and shortcuts
+[ -f $ZDOTDIR/aliasrc ] && . $ZDOTDIR/aliasrc
+[ -f $ZDOTDIR/shortcutrc ] && . $ZDOTDIR/shortcutrc
+[ -f $ZDOTDIR/functionrc ] && . $ZDOTDIR/functionrc
 
 # zsh-autosuggestions config
 #zmodload zsh/zpty # Needed for competion
