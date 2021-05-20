@@ -98,6 +98,7 @@ alias scaleup="QT_AUTO_SCREEN_SCALE_FACTOR=1"
 alias D0="DISPLAY=:0"
 
 alias proxmox="ssh sickan@192.168.1.2"
+alias freenas="TERM=xterm /usr/bin/ssh sickan@freenas.local"
 
 alias server="ssh -Y sickan@server tmux -u attach"
 alias serverc="ssh -Y sickan@server"
