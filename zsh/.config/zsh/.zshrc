@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Applications/environment variables
-#[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
+[[ -f $HOME/.config/zsh/exports ]] && . $HOME/.config/zsh/exports
 
 
 # tmux-zsh-vim-titles plugin config

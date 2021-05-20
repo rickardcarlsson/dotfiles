@@ -28,9 +28,21 @@ sudo sudoers
 
 
 #Install packages
-apt-get install sudo zsh zsh-antigen neovim alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
-nix-env -iA nixpkgs.ripgrep nixpkgs.fzf nixpkgs.ranger 
-nix-env -i glibc-locales
+apt-get install sudo zsh alsa-utils pulseaudio
+#apt-get install sudo zsh zsh-antigen neovim alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
+packages=(ripgrep fzf ranger antigen bat bat-extras.batman bat-extras.batgrep git neovim mlocate stow unzip fd)
+nix-env -iA nixpkgs.$^packages
+#nix-env -iA nixpkgs.{ripgrep,fzf,ranger,antigen,bat,bat-extras.batman,bat-extras.batgrep,git,neovim}
+### Fixa mlocate!
+nix-env -i glibc-locales # Needed for ranger?
+
+# Flytta
+alsa-utils?
+pulseaudio?
+zsh # Klurig
+sudo?
+
+
 
 # Change shell to zsh
 chsh -s /usr/bin/zsh
@@ -51,3 +63,13 @@ git clone git@github.com:username/dotfiles.git
 mv dotfiles .dotfiles
 ln -s source dest
 
+## Pulse
+# Allow user to configure Pulse
+sudo usermod -G audio -a username
+# Enable Pulse over LAN
+  /etc/pulse/default.pa
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.0.0/16 auth-anonymous=1
+
+# On VM
+  /etc/pulse/default.pa
+load-module module-tunnel-sink-new server=192.168.1.2 sink_name=Remote channels=2 rate=44100

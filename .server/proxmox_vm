@@ -24,3 +24,18 @@ serial0: socket # Add to /etc/pve/qemu-server/vmID.conf
 console=tty0 console=ttyS0,115200 # Append to GRUB_CMDLINE_LINUX_DEFAULT in /etc/default/grub 
 systemctl enable serial-getty@ttyS0.service
 systemctl start serial-getty@ttyS0.service
+
+# Anydesk
+# install
+systemctl enable anydesk --now 
+
+# Pulse
+  /etc/pulse/default.pa
+load-module module-tunnel-sink-new server=192.168.1.2 sink_name=Remote channels=2 rate=44100
+
+# Pacman
+Tillåt AUR, och andra settings
+
+# Enable QEMU Guest Agent in VM Options
+pamac install qemu-guest-agent
+systemctl start qemu-guest-agent

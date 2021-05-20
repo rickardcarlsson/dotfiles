@@ -1,1 +1,1 @@
-execute 'source' "~/git/SpaceVim/config/main.vim"
+execute 'source' "~/git/SpaceVim/main.vim"
