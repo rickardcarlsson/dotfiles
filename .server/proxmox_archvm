@@ -1,0 +1,140 @@
+# https://wiki.archlinux.org/title/Installation_guide
+
+# Set the keyboard layout
+ls /usr/share/kbd/keymaps/**/*.map.gz
+loadkeys sv-latin1
+
+# Update the system clock
+timedatectl set-ntp true
+timedatectl set-timezone Europe/Stockholm
+timedatectl status [verify]
+
+# Partition the disks
+fdisk -l
+# fdisk /dev/the_disk_to_be_partitioned
+fdisk /dev/sda
+# Boot partition
+g [create a new empty GPT partition table]
+n [add a new partition]
+[default partition number]
++1M
+t [change a partition type]
+1 [partition number]
+4 [BIOS boot]
+
+
+# Storage partition
+n
+[default partition number]
+[default partition size]
+
+p [print the partition table]
+w [write table to disk and exit]
+
+# Format the partitions
+# mkfs.ext4 /dev/root_partition
+mkfs.ext4 /dev/sda2
+lsblk -f [verify]
+# mount /dev/root_partition /mnt
+mount /dev/sda2 /mnt
+lsblk -f [verify]
+
+# Select the mirrors
+reflector --country Sweden --country Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
+# Install essential packages
+pacstrap /mnt base linux linux-firmware
+
+## Configure the system
+# Fstab
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# Chroot
+arch-chroot /mnt
+
+# Time zone
+ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
+hwclock --systohc
+
+# Install packages
+pacman -S neovim sudo grub nfs-utils networkmanager openssh git zsh qemu-guest-agent man-db tmux ranger antigen exa fzf ripgrep bat-extras-git fd unzip docker docker-compose
+
+## Localization
+# Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed locales. 
+#en_US.UTF-8 UTF-8
+#sv_SE.UTF-8 UTF-8
+locale-gen
+
+# Create the locale.conf(5) file, and set the LANG variable accordingly: 
+  /etc/locale.conf
+LANG=en_US.UTF-8
+
+#If you set the keyboard layout, make the changes persistent in vconsole.conf(5):
+  /etc/vconsole.conf
+KEYMAP=sv-latin1
+
+## Network configuration
+  /etc/hostname
+#myhostname
+docker
+
+  /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+#127.0.1.1	myhostname.localdomain	myhostname
+192.168.1.3	docker.sickan.local docker
+
+systemctl enable NetworkManager
+
+# Initramfs
+mkinitcpio -P
+
+# Root password
+passwd
+
+# Add user + privileges
+useradd -m username
+passwd username
+usermod -aG sys,network,power,input,wheel username
+EDITOR=nvim visudo
+# Uncomment # %wheel ALL=(ALL) ALL
+
+# GRUB installation
+# grub-install --target=i386-pc /dev/sdX
+# where /dev/sdX is the disk (not a partition) where GRUB is to be installed. For example /dev/sda or /dev/nvme0n1, or /dev/mmcblk0.
+grub-install --target=i386-pc /dev/sda
+
+# Generate the main configuration file
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Reboot
+exit
+umount -R /mnt
+
+reboot
+
+
+# Enable SSH
+systemctl enable sshd --now
+
+# Install paru (AUR Helper, https://github.com/Morganamilo/paru)
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+# Enable qemu-guest-agent
+systemctl enable qemu-guest-agent --now
+
+## ZSH
+chsh -s $(which zsh)
+# Symlink dotfiles
+
+
+# Dotfiles
+git clone git@github.com:username/dotfiles.git .dotfiles
+
+# Tmux
+git clone https://github.com/tmux-plugins/tpm $HOME/git/tpm
+
+

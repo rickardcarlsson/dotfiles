@@ -97,15 +97,20 @@ alias BIN="cd ~/code/bin"
 alias scaleup="QT_AUTO_SCREEN_SCALE_FACTOR=1"
 alias D0="DISPLAY=:0"
 
-alias proxmox="ssh sickan@192.168.1.2"
-alias freenas="TERM=xterm /usr/bin/ssh sickan@freenas.local"
+alias PROXMOX="ssh sickan@proxmox"
+alias FREENAS="TERM=xterm /usr/bin/ssh sickan@freenas.local"
 
-alias server="ssh -Y sickan@server tmux -u attach"
-alias serverc="ssh -Y sickan@server"
-alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
-alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
-alias SHDDr="SHDD && ranger"
-alias sresets="serverc reset_screen"
+alias DOCKER="ssh sickan@docker tmux -u attach"
+
+if [[ $HOST == "proxmox" ]]; then
+  alias startarch="sudo qm start 102"
+fi
+#alias server="ssh -Y sickan@server tmux -u attach"
+#alias serverc="ssh -Y sickan@server"
+#alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
+#alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
+#alias SHDDr="SHDD && ranger"
+#alias sresets="serverc reset_screen"
 
 alias desktop="ssh -p 2222 sickan@Desktop tmux -u attach"
 alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"

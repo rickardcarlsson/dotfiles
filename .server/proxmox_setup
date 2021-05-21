@@ -59,8 +59,7 @@ ssh-copy-id username@proxmox/ip
 
 # Dotfiles
 cd
-git clone git@github.com:username/dotfiles.git
-mv dotfiles .dotfiles
+git clone git@github.com:username/dotfiles.git .dotfiles
 ln -s source dest
 
 ## Pulse
