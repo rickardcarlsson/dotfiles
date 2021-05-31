@@ -1,0 +1,5 @@
+# QEMU Guest Agent
+Install os-qemu-guest-agent in System > Firmware > Plugins 
+
+# Backup to Google Drive
+https://docs.opnsense.org/manual/how-tos/cloud_backup.html

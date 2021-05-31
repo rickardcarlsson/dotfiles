@@ -15,6 +15,7 @@ alias lam="la -s modified"
 alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
+alias -g _toclip="| xclip -sel clip"
 
 function ranger {
   local tempfile="$(mktemp -t ranger.XXXXXX)"
@@ -65,6 +66,7 @@ alias zshrc="${=EDITOR} $ZDOTDIR/.zshrc"
 alias aliasrc="${=EDITOR} $ZDOTDIR/aliasrc"
 alias shortcutrc="${=EDITOR} $ZDOTDIR/shortcutrc"
 alias exports="${=EDITOR} $ZDOTDIR/exports"
+alias kittyrc="${=EDITOR} $XDG_CONFIG_HOME/kitty/kitty.conf"
 alias kblayout="${=EDITOR} $DOT/Keyboard/usr/share/X11/xkb/symbols/sickan"
 alias reload="exec zsh"
 
@@ -97,10 +99,12 @@ alias BIN="cd ~/code/bin"
 alias scaleup="QT_AUTO_SCREEN_SCALE_FACTOR=1"
 alias D0="DISPLAY=:0"
 
-alias PROXMOX="ssh sickan@proxmox"
-alias FREENAS="TERM=xterm /usr/bin/ssh sickan@freenas.local"
+alias PROXMOX="ssh sickan@proxmox.local.sickan.se"
+alias OPNSENSE="TERM=xterm /usr/bin/ssh sickan@opnsense.local.sickan.se"
+alias TRUENAS="TERM=xterm /usr/bin/ssh sickan@truenas.local.sickan.se"
+alias HTPC="ssh sickan@htpc"
+alias DOCKER="ssh sickan@docker.local.sickan.se tmux -u attach"
 
-alias DOCKER="ssh sickan@docker tmux -u attach"
 
 if [[ $HOST == "proxmox" ]]; then
   alias startarch="sudo qm start 102"
@@ -112,7 +116,7 @@ fi
 #alias SHDDr="SHDD && ranger"
 #alias sresets="serverc reset_screen"
 
-alias desktop="ssh -p 2222 sickan@Desktop tmux -u attach"
+alias DESKTOP="ssh -p 2222 sickan@Desktop tmux -u attach"
 alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"
 alias DHDD="cd ~/desktop-fs/ || mnt-desktop-fs && cd ~/desktop-fs/"
 alias DHDDr="DHDD && ranger"

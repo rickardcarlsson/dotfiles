@@ -28,9 +28,9 @@ sudo sudoers
 
 
 #Install packages
-apt-get install sudo zsh alsa-utils pulseaudio
+apt-get install sudo zsh alsa-utils pulseaudio ifupdown2
 #apt-get install sudo zsh zsh-antigen neovim alsa-utils pulseaudio ripgrep locate git stow exa unzip fd-find
-packages=(ripgrep fzf ranger antigen bat bat-extras.batman bat-extras.batgrep git neovim mlocate stow unzip fd)
+packages=(procs ripgrep fzf ranger antigen bat bat-extras.batman bat-extras.batgrep git neovim mlocate stow unzip fd)
 nix-env -iA nixpkgs.$^packages
 #nix-env -iA nixpkgs.{ripgrep,fzf,ranger,antigen,bat,bat-extras.batman,bat-extras.batgrep,git,neovim}
 ### Fixa mlocate!

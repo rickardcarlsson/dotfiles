@@ -17,16 +17,18 @@ fdisk /dev/sda
 g [create a new empty GPT partition table]
 n [add a new partition]
 [default partition number]
+[default first sector]
 +1M
 t [change a partition type]
-1 [partition number]
+# 1 [partition number]
 4 [BIOS boot]
 
 
 # Storage partition
 n
 [default partition number]
-[default partition size]
+[default first sector]
+[default last sector]
 
 p [print the partition table]
 w [write table to disk and exit]
@@ -57,7 +59,8 @@ ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 hwclock --systohc
 
 # Install packages
-pacman -S neovim sudo grub nfs-utils networkmanager openssh git zsh qemu-guest-agent man-db tmux ranger antigen exa fzf ripgrep bat-extras-git fd unzip docker docker-compose
+pacman -S neovim sudo grub nfs-utils networkmanager openssh git
+
 
 ## Localization
 # Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed locales. 
@@ -82,7 +85,7 @@ docker
 127.0.0.1	localhost
 ::1		localhost
 #127.0.1.1	myhostname.localdomain	myhostname
-192.168.1.3	docker.sickan.local docker
+192.168.1.4	docker.local.sickan.se docker
 
 systemctl enable NetworkManager
 
@@ -116,6 +119,8 @@ reboot
 
 # Enable SSH
 systemctl enable sshd --now
+# Generate ssh keys
+
 
 # Install paru (AUR Helper, https://github.com/Morganamilo/paru)
 sudo pacman -S --needed base-devel
@@ -123,18 +128,30 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
+# Install packages
+paru -S zsh stow qemu-guest-agent man-db tmux ranger exa fzf ripgrep fd unzip docker docker-compose antigen bat-extras-git
+
 # Enable qemu-guest-agent
 systemctl enable qemu-guest-agent --now
 
 ## ZSH
 chsh -s $(which zsh)
-# Symlink dotfiles
-
 
 # Dotfiles
-git clone git@github.com:username/dotfiles.git .dotfiles
+git clone git@github.com:username/dotfiles.git $HOME/.dotfiles
 
 # Tmux
 git clone https://github.com/tmux-plugins/tpm $HOME/git/tpm
 
+## Symlink dotfiles
+zsh, ssh, ranger
+
+## Docker
+systemctl enable docker --now
+
+# Traefik
+# https://techno-tim.github.io/posts/traefik-portainer-ssl/
+CF_API_KEY: Global API Key from https://dash.cloudflare.com/profile/api-tokens 
+Write CF_API_KEY to /docker/traefik/data/.secrets/API_KEY
+Write CF_API_EMAIL to /docker/traefik/data/.secrets/API_EMAIL
 

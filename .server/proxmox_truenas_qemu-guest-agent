@@ -1,0 +1,18 @@
+## QEMU Guest Agent
+# https://www.truenas.com/community/resources/qemu-guest-agent.167/
+
+
+1. Place virtio_console.ko in /boot/modules.
+2. Run kldload virtio_console.ko. Make sure it is executable (chmod +x).
+3. Place qemu-ga in /usr/local/bin. Make sure it is executable (chmod +x).
+4. Place qemu-guest-agent in /usr/local/etc/rc.d.  Make sure it is executable (chmod +x).
+5. Place qemu-guest-agent in another location of your choice. This will be a copy that is re-added to the rc.d directory each time TrueNAS boots.
+6. Create Tunables in the TrueNAS web UI. System -> Tunables.
+   Variable=qemu_guest_agent_enable Value=YES Type=RC Enabled=yes
+   Variable=qemu_guest_agent_flags Value=-d -v -l /var/log/qemu-ga.log Type=RC Enabled=yes
+   Variable=virtio_console_load Value=YES Type=LOADER Enabled=yes
+7. Create Init/Shutdown Scripts in the TrueNAS web UI. Tasks -> Init/Shutdown Scripts.
+   Type=Command Command=service qemu-guest-agent start When=POSTINIT Enabled=yes Timeout=10
+   Type=Command Command=cp /[path to a local copy of qemu-guest-agent file] /usr/local/etc/rc.d When=PREINIT Enabled=yes Timeout=10
+8. Reboot TrueNAS.
+
