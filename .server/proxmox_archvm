@@ -129,7 +129,7 @@ cd paru
 makepkg -si
 
 # Install packages
-paru -S zsh stow qemu-guest-agent man-db tmux ranger exa fzf ripgrep fd unzip docker docker-compose antigen bat-extras-git
+paru -S zsh stow qemu-guest-agent man-db tmux ranger exa fzf ripgrep fd unzip docker docker-compose antigen bat-extras-git apache-tools
 
 # Enable qemu-guest-agent
 systemctl enable qemu-guest-agent --now
@@ -149,9 +149,14 @@ zsh, ssh, ranger
 ## Docker
 systemctl enable docker --now
 
+# Mount NFS
+
+
 # Traefik
 # https://techno-tim.github.io/posts/traefik-portainer-ssl/
 CF_API_KEY: Global API Key from https://dash.cloudflare.com/profile/api-tokens 
 Write CF_API_KEY to /docker/traefik/data/.secrets/API_KEY
 Write CF_API_EMAIL to /docker/traefik/data/.secrets/API_EMAIL
+Write Basic auth file: echo $(htpasswd -nb user password) >> /docker/traefik/data/.secrets/BASIC_AUTH
+# If basicauth.users is used (not file): echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g 
 

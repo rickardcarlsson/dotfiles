@@ -1,4 +1,3 @@
-#bindkey -s "^o" "ranger\n"
 bindkey -s "^o" "ranger^M"
 
 # create a zkbd compatible hash;
@@ -61,6 +60,8 @@ bindkey -s '^[OQ'    'cd $DOT^M' # F2 - Dotfiles
 bindkey -s '^[OR'    'cd $XDG_CONFIG_HOME^M' # F3 - ~/.config
 bindkey -s '^[[15~'    'cd $CODE^M' # F5 - ~/code
 bindkey -s '^[[17~'    'cd $GIT^M' # F6 - ~/git
+
+bindkey -M vicmd  ' ga' 'fzfalias'
 
 if [[ $HOST == "Desktop" ]]; then
   bindkey -s '^[[1;2P'  'C^M' # Shift-F1 - Cd to C:

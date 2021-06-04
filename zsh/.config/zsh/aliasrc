@@ -17,6 +17,30 @@ alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 alias -g _toclip="| xclip -sel clip"
 
+function fzfalias {
+  eval $(alias | sed 's/=/ /' | fzf --with-nth=1 --preview="echo {2..} | tr -d \'" | cut -d' ' -f1)
+#alias | sed 's/=/ /' | fzf --with-nth=1 --preview="echo {2..} | tr -d \'" | cut -d' ' -f1 | set -a | zsh
+}
+
+#function fzfalias { eval $(alias | awk -F= '{print $1}' | fzf) }
+function _fzfalias {
+  BUFFER="fzfalias"
+  zle accept-line
+  zle -K viins
+}
+zle -N fzfalias _fzfalias 
+
+#bindkey -M vicmd  ' ga' 'fzfalias'
+#
+#function _mymap {
+#  zle -K mymap
+#}
+#zle -N mymap _mymap
+#bindkey -N mymap
+#bindkey -M viins '^Z' 'mymap'
+#bindkey -M mymap 'ga' 'fzfalias'
+
+
 function ranger {
   local tempfile="$(mktemp -t ranger.XXXXXX)"
   command ranger --choosedir="$tempfile"

@@ -9,6 +9,10 @@
 # NOT recommended for production use
 deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 
+# Non-free component (e.g. broadcom-sta-dkms)
+deb http://ftp.se.debian.org/debian buster-backports main contrib non-free
+
+
 apt update && apt -y full-upgrade
 reboot
 

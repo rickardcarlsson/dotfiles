@@ -8,8 +8,8 @@ printKeyActionRunning=StartNewInstance
 [GuiConfig]
 captureDelay=4
 captureMode=5
-onClickChecked=true
-window-position=1836,0
+cropRegion=206,76,1534,857
+window-position=1828,0
 
 [Save]
 lastSaveLocation=file:///home/sickan/Pictures/Screenshot_20210120_200648.png

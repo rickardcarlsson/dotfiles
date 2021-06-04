@@ -1,6 +1,9 @@
+# SSL
+#https://www.truenas.com/community/resources/lets-encrypt-with-freenas-11-1-and-later.82/
+
+
 ## QEMU Guest Agent
 # https://www.truenas.com/community/resources/qemu-guest-agent.167/
-
 
 1. Place virtio_console.ko in /boot/modules.
 2. Run kldload virtio_console.ko. Make sure it is executable (chmod +x).
@@ -15,4 +18,3 @@
    Type=Command Command=service qemu-guest-agent start When=POSTINIT Enabled=yes Timeout=10
    Type=Command Command=cp /[path to a local copy of qemu-guest-agent file] /usr/local/etc/rc.d When=PREINIT Enabled=yes Timeout=10
 8. Reboot TrueNAS.
-
