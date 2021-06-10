@@ -1,5 +1,104 @@
+# Allow DNS Rebinding
+System > Settings > Administration
+Alternative Hostnames: router.local.domain
+
 # QEMU Guest Agent
 Install os-qemu-guest-agent in System > Firmware > Plugins 
 
 # Backup to Google Drive
 https://docs.opnsense.org/manual/how-tos/cloud_backup.html
+
+
+## Wireguard
+# https://homenetworkguy.com/how-to/configure-wireguard-opnsense/
+# https://www.youtube.com/watch?v=FglE8aQua5o
+# https://docs.opnsense.org/manual/how-tos/wireguard-client.html
+
+# Ensure that Pihole is listening on all interfaces and permitting all origins, to enable DNS
+
+# Cloudflare DNS
+  https://dash.cloudflare.com/
+domain > DNS > Add record
+Type: A
+Name: vpn
+IPv4 address: WAN address
+Proxy status: DNS only (click orange cloud to turn gray)
+
+# Install
+OPNsense > System > Firmware > Plugins > os-wireguard
+# Configure Wireguard server
+VPN > WireGuard > Local > +
+Enabled: Checked
+Name: wireguardname
+Listen port: 51820 # Default
+DNS Server: piholeip, routerip # For Pihole and OPNsense unbound overrides
+Tunnel Address: 192.168.2.1/24 # New subnet
+# Copy Public key after server is created, use this when connecting clients
+
+# Add Android client
+WireGuard app > + > Create from scratch
+Name: name
+Private key: # Auto generated
+Addresses: 192.168.2.2/32 # Manually assign local IP of Wireguard tunnel subnet
+Listen port: 51820
+DNS servers: piholeip, routerip
+
+WireGuard app > vpninterface > Add peer
+Public key: Public key from WireGuard server
+Endpoint: WAN IP/domain:51820 # vpn.sickan.se:51820
+Allowed IPs: 0.0.0.0/0 # All traffic
+# Copy public key from Wireguard vpninterface
+
+# Configure WireGuard client endpoint
+OPNsense > VPN > WireGuard > Endpoints > +
+Name: clientname
+Public key: Public key from WireGuard app
+Allowed IPs: 192.168.2.2/32 # Same as assigned IP in WireGuard-app
+Endpoint port: 51820
+
+# Enable WireGuard
+OPNsense > VPN > WireGuard > General > Enable WireGuard
+
+# Add WireGuard interface
+OPNsense > Interfaces > Assignments
+Select wg0 interface and click +
+Enable: Checked
+Lock: Prevent interface removal
+Description: WG
+
+# Add WAN Firewall rule
+Firewall > Rules > WAN > +
+Action: Pass
+Quick: Apply the action immediately on match
+Interface: WAN
+Protocol: UDP
+Source: any
+Destination: WAN address
+Destination port range: from (other) 51820 to 51820
+Description: Allow remote access to the WireGuard VPN
+
+# Add WG Firewall rule
+Firewall > Rules > WG > +
+Action: Pass
+Quick: Apply the action immediately on match
+Interface: WG
+Protocol: any
+Source: Single host or Network - 192.168.2.1 / 24
+Destination: any
+Destination port range: any
+Description: Allow Wireguard traffic
+
+# Add Outbound NAT Rule
+Firewall > NAT > Outbound
+Mode: Hybrid outbound NAT rune generation
+Add new rule
+Interface: WAN
+Protocol: any
+Source address: WireGuard net
+Source port: any
+Destination address: any
+Destination port: any
+Translation / target: Interface address
+
+Create Unbound Override for VPN clients to enable hostnames.
+

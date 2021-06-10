@@ -150,6 +150,9 @@ zsh, ssh, ranger
 systemctl enable docker --now
 
 # Mount NFS
+  /etc/fstab
+servername:/server_nfs-path   /mountpoint/on/client   nfs   defaults,timeo=900,retrans=5,_netdev	0 0
+# truenas.local.sickan.se:/mnt/Media5TB/htpc/     /docker/htpc/data       nfs   defaults,timeo=900,retrans=5,_netdev      0 0
 
 
 # Traefik

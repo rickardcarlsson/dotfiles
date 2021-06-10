@@ -1,0 +1,94 @@
+# https://www.reddit.com/r/pihole/comments/fy8zmu/pihole_traefik_dnsovertls/
+# https://blog.ktz.me/using-pihole-with-pfsense-or-opnsense/
+# https://www.smarthomebeginner.com/run-pihole-in-docker-on-ubuntu-with-reverse-proxy/#Step_2a_Run_PiHole_in_Docker_with_Reverse_Proxy
+# https://dev.to/fredlab/make-docker-containers-available-both-on-your-local-network-with-macvlan-and-on-the-web-with-traefik-2hj1
+
+# Create docker macvlan network 
+docker network create -d macvlan \
+  --subnet=192.168.1.0/24 \
+  --ip-range=192.168.1.16/28 \
+  --gateway=192.168.1.1 \
+  -o parent=ens18 macvlan
+
+# Pihole
+Settings > DNS
+Upstream DNS Servers > Custom 1 (IPv4): 192.168.1.1
+
+Interface listening behavior: Listen on all interfaces, permit all origins # Allows VPN to access DNS
+
+Use Conditional Forwarding
+Local network in CIDR notation: 192.168.1.0/24
+IP address of your DHCP server (router): 192.168.1.1
+Local domain name (optional): local.sickan.se
+
+# OPNsense
+System > General
+DNS Servers:
+  pihole_ip
+  1.1.1.1
+  1.0.0.1
+  8.8.8.8
+  8.8.4.4
+
+Firewall > Rules > LAN
+# Pass DNS only to firewall
+Action: Pass
+Interface: LAN
+TCP/IP Version: IPv4
+Protocol: TCP/UDP
+Source: any
+Destination: This Firewall
+Destination port range: from DNS to DNS
+Log: Check
+Description: Pass DNS only to firewall
+
+# Block DNS traffic trying to get around PiHole
+Action: Block
+Interface: LAN
+TCP/IP Version: IPv4
+Protocol: TCP/UDP
+Source: any
+Destination: any
+Destination port range: from DNS to DNS
+Log: Check
+Description: Block DNS traffic trying to get around PiHole
+
+Services > DHCPv4 > [LAN]
+DNS servers:
+  piholeip
+  1.1.1.1
+  1.0.0.1
+  8.8.8.8
+  8.8.4.4
+
+Services > Dnsmasq DNS > Settings
+Enable: Unchecked
+
+Services > Unbound DNS > General
+Enable: Checked
+Network Interfaces: All
+DNSSEC: Enable
+DHCP Registration: Checked
+DHCP Static Mappings: Checked
+IPv6 Link-local: Checked
+DNS Query Forwarding: Unchecked
+
+Custom options:
+server:
+do-tcp: yes
+# Speed and privacy
+minimal-responses: yes
+prefetch: yes
+qname-minimisation: yes
+rrset-roundrobin: yes
+forward-zone:
+ name: "."
+ # To keep local overrides and avoid slow downs
+ forward-ssl-upstream: yes
+ # Below addresses are Cloudflare DNS
+ forward-addr: 1.1.1.1@853
+ forward-addr: 1.0.0.1@853
+ forward-addr: 2606:4700:4700::1111@853
+ forward-addr: 2606:4700:4700::1001@853
+
+Outgoing Network Interfaces: All
