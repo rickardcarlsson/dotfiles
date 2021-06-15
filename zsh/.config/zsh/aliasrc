@@ -23,7 +23,7 @@ function vim {
   if [ -w $FILE ] || [ ! -f $FILE ]; then
     nvim $FILE
   else
-    read -re "$FILE not writable as $USER, edit as sudo? "$'\n' -n 1 -r
+    read "?$FILE not writable as $USER, edit as sudo? (y/n)"$'\n'
     [[ $REPLY =~ ^[Yy]$ ]] && VISUAL=nvim sudoedit $FILE
   fi
 }
