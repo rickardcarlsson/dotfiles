@@ -2,6 +2,10 @@
 System > Settings > Administration
 Alternative Hostnames: router.local.domain
 
+# Allow authelia authentication
+System > Settings > Administration
+HTTP_REFERER enforcement: Disable HTTP_REFERER enforcement check 
+
 # QEMU Guest Agent
 Install os-qemu-guest-agent in System > Firmware > Plugins 
 
@@ -102,3 +106,36 @@ Translation / target: Interface address
 
 Create Unbound Override for VPN clients to enable hostnames.
 
+## External webserver access
+# Aliases
+Click Firewall > Aliases > View
+Click the "Add a new alias" button
+Enter the following info:
+   Type: Host(s)
+   Name: Webserver
+   Description: Webserver host
+   Host(s): 192.168.1.4
+Click Save
+Click the "Add a new alias" button again
+Enter the following info:
+   Type: Port(s)
+   Name: Websrv_Ports
+   Description: Webserver Ports
+   Port(s): 80 & 443
+Click Save and Apply Settings
+
+# Port forwarding
+Firewall > NAT > Port Forward
+Click the Add button to add a new Port Forward rule
+Select the following information
+   Interface: WAN
+   TCP/IP version: IPv4
+   Protocol: TCP
+   Destination: WAN Address
+   Port range: From: Websrv_Ports To: Websrv_Ports
+  (You can select that from the dropdown because you created the alias)
+   Redirect target IP: Webserver (again, you can delect that because you created the alias)
+   Redirect target ports: Websrv_Ports
+   NAT reflection: Enable (Pure NAT)
+   Filter rule association: Add associated filter rule
+Click Save and Apply Settings.

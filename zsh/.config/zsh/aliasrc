@@ -7,7 +7,7 @@ alias '$'=''
 
 alias sudo='sudo ' # Sudo retains aliases
 
-alias vim="nvim"
+#alias vim="nvim"
 alias svim="sudo nvim -u $HOME/git/SpaceVim/main.vim"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
@@ -16,6 +16,17 @@ alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
 alias bat="bat --color=always"
 alias -g _toclip="| xclip -sel clip"
+
+function vim {
+# Ensure sudoers flag: Defaults  !sudoedit_checkdir
+  FILE=$1
+  if [ -w $FILE ] || [ ! -f $FILE ]; then
+    nvim $FILE
+  else
+    read -re "$FILE not writable as $USER, edit as sudo? "$'\n' -n 1 -r
+    [[ $REPLY =~ ^[Yy]$ ]] && VISUAL=nvim sudoedit $FILE
+  fi
+}
 
 function fzfalias {
   eval $(alias | sed 's/=/ /' | fzf --with-nth=1 --preview="echo {2..} | tr -d \'" | cut -d' ' -f1)

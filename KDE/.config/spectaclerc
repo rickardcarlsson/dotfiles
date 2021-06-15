@@ -8,7 +8,7 @@ printKeyActionRunning=StartNewInstance
 [GuiConfig]
 captureDelay=4
 captureMode=5
-cropRegion=496,655,1481,827
+cropRegion=1927,214,1533,750
 window-position=1816,0
 
 [Save]

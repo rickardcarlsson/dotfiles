@@ -116,6 +116,9 @@ umount -R /mnt
 
 reboot
 
+# Sudoedit
+  /etc/sudoers
+Defaults  !sudoedit_checkdir
 
 # Enable SSH
 systemctl enable sshd --now
@@ -149,10 +152,12 @@ zsh, ssh, ranger
 ## Docker
 systemctl enable docker --now
 
-# Mount NFS
+# Mount NFS with systemd
   /etc/fstab
-servername:/server_nfs-path   /mountpoint/on/client   nfs   defaults,timeo=900,retrans=5,_netdev	0 0
-# truenas.local.sickan.se:/mnt/Media5TB/htpc/     /docker/htpc/data       nfs   defaults,timeo=900,retrans=5,_netdev      0 0
+servername:/server_nfs-path   /mountpoint/on/client nfs  _netdev,noauto,x-systemd.automount,x-systemd.mount-timeout=10,timeo=14,x-systemd.idle-timeout=1min 0 0
+# truenas.local.sickan.se:/mnt/Media5TB/htpc/     /docker/htpc/data   nfs  _netdev,noauto,x-systemd.automount,x-systemd.mount-timeout=10,timeo=14,x-systemd.idle-timeout=1min 0 0
+sudo systemctl daemon-reload
+sudo systemctl restart remote-fs.target
 
 
 # Traefik
