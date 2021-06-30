@@ -81,3 +81,7 @@ user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.theme", dark);
+
+// Revert Photon to Proton design
+user_pref("browser.proton.enabled", false);
+

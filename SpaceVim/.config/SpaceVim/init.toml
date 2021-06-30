@@ -60,4 +60,3 @@ merged = false
 [[custom_plugins]]
 repo = "tpope/vim-eunuch"
 merged = false
-

@@ -130,7 +130,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][1][Applets][8][Configuration]
-PreloadWeight=99
+PreloadWeight=100
 
 [Containments][1][Applets][8][Configuration][Appearance]
 dateFormat=custom
@@ -168,8 +168,8 @@ DialogWidth=3840
 PreloadWeight=0
 
 [Containments][17][General]
-ToolBoxButtonState=top
-ToolBoxButtonX=1299
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=1301
 
 [Containments][17][Wallpaper][org.kde.image][General]
 Image=file:///home/sickan/.dotfiles/KDE/Documents/bg.png
@@ -251,7 +251,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=89
+PreloadWeight=100
 
 [Containments][8][Applets][23]
 immutability=1
@@ -268,6 +268,7 @@ plugin=org.kde.plasma.volume
 PreloadWeight=0
 
 [Containments][8][Applets][25][Configuration][General]
+globalMute=true
 volumeStep=2
 
 [Containments][8][Applets][26]

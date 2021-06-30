@@ -132,7 +132,10 @@ cd paru
 makepkg -si
 
 # Install packages
-paru -S zsh stow qemu-guest-agent man-db tmux ranger exa fzf ripgrep fd unzip docker docker-compose antigen bat-extras-git apache-tools
+paru -S zsh stow qemu-guest-agent man-db tmux ranger exa fzf ripgrep fd unzip docker docker-compose antigen bat-extras-git apache-tools nerd-fonts-fira-code pacback bind
+
+# Enable pacback pacman hook
+sudo pacback --install_hook
 
 # Enable qemu-guest-agent
 systemctl enable qemu-guest-agent --now
@@ -151,6 +154,8 @@ zsh, ssh, ranger
 
 ## Docker
 systemctl enable docker --now
+docker network create traefik
+docker network create socket_proxy
 
 # Mount NFS with systemd
   /etc/fstab
@@ -163,8 +168,12 @@ sudo systemctl restart remote-fs.target
 # Traefik
 # https://techno-tim.github.io/posts/traefik-portainer-ssl/
 CF_API_KEY: Global API Key from https://dash.cloudflare.com/profile/api-tokens 
-Write CF_API_KEY to /docker/traefik/data/.secrets/API_KEY
-Write CF_API_EMAIL to /docker/traefik/data/.secrets/API_EMAIL
+Write CF_API_KEY to /docker/security/.secrets/CLOUDFLARE_API_KEY
+Write CF_API_EMAIL to /docker/security/.secrets/CLOUDFLARE_API_EMAIL
 Write Basic auth file: echo $(htpasswd -nb user password) >> /docker/traefik/data/.secrets/BASIC_AUTH
 # If basicauth.users is used (not file): echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g 
 
+# Guacamole
+# SSH-key (PEM format)
+ssh-keygen -m PEM -t rsa -b 4096 -C "admin@sickan.se" -f $(pwd)/id_rsa
+Add public key to ssh-hosts (authorized_keys)

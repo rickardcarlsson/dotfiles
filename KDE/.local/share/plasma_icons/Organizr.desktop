@@ -1,9 +1,19 @@
 [Desktop Entry]
-Name=Organizr
+Comment[en_US]=
+Comment=
+Exec=firefox --new-tab http://org.local.sickan.se
+GenericName[en_US]=Dashboard
 GenericName=Dashboard
 Icon=/home/sickan/Documents/Icons/Organizr.png
-Type=Application
-Exec=firefox --new-tab http://server:9983/
-#StartupWMClass=keep
+MimeType=
+Name[en_US]=Organizr
+Name=Organizr
+Path=
+StartupNotify=true
 Terminal=false
-
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
