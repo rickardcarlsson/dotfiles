@@ -104,6 +104,7 @@ alias exports="${=EDITOR} $ZDOTDIR/exports"
 alias kittyrc="${=EDITOR} $XDG_CONFIG_HOME/kitty/kitty.conf"
 alias kblayout="${=EDITOR} $DOT/Keyboard/usr/share/X11/xkb/symbols/sickan"
 alias reload="exec zsh"
+alias kbdrld="setxkbmap -layout se && setxkbmap -layout sickan"
 
 alias pas="pamac search"
 alias par="pamac remove"

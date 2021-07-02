@@ -1,10 +1,15 @@
+# Ensure plugins are installed:
+# gem install fusuma-plugin-keypress
+# gem install fusuma-plugin-tap
+# gem install fusuma-plugin-appmatcher
+
 swipe:
   3:
     left:
       command: 'xdotool key ctrl+Page_Up'
-      threshold: 10
+      threshold: 1.5
     right:
-      threshold: 10
+      threshold: 1.5
       command: 'xdotool key ctrl+Page_Down'
     up:
       command: 'xdotool key Home'
@@ -12,20 +17,22 @@ swipe:
       command: 'xdotool key End'
   4:
     left:
-      command: 'xdotool key XF86AudioLowerVolume'
-      interval: 0.02
-      keypress:
-        LEFTSHIFT:
-          command: 'change_brightness subtract 30'
-          interval: 0.1
+      update:
+        command: 'xdotool key XF86AudioLowerVolume'
+        interval: 0.1
+        keypress:
+          LEFTSHIFT:
+            command: 'change_brightness dec'
+            interval: 0.5
 
     right:
-      command: 'xdotool key XF86AudioRaiseVolume'
-      interval: 0.02
-      keypress:
-        LEFTSHIFT:
-          command: 'change_brightness add 30'
-          interval: 0.1
+      update:
+        command: 'xdotool key XF86AudioRaiseVolume'
+        interval: 0.1
+        keypress:
+          LEFTSHIFT:
+            command: 'change_brightness inc'
+            interval: 0.5
 
     up:
       command: 'xdotool key XF86AudioMute'
@@ -44,6 +51,14 @@ pinch:
     out:
       command: ''
 
+---
+context:
+  application: firefox
+tap:
+  3:
+    command: 'xdotool keydown ctrl click 1 keyup ctrl'
+---
+
 threshold:
   swipe: 0.5
   pinch: 0.5
@@ -56,3 +71,6 @@ plugin:
   inputs:
     libinput_command_input:
       show-keycodes: true
+      # fusuma-plugin-tap
+      enable-tap: true
+      verbose: true

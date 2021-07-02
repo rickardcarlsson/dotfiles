@@ -85,3 +85,5 @@ user_pref("devtools.theme", dark);
 // Revert Photon to Proton design
 user_pref("browser.proton.enabled", false);
 
+// Disable kinetic scroll
+user_pref("apz.gtk.kinetic_scroll.enabled", false);
