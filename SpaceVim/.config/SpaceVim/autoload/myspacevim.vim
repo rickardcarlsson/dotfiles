@@ -8,7 +8,12 @@ function! myspacevim#before() abort
   autocmd BufRead,BufNewFile ~/.dotfiles/Keyboard/usr/share/X11/xkb/* set syntax=xkb
   
   let g:mapleader = "'" " ' as leaader
-  let g:material_theme_style = 'darker'
+
+  if $LIGHTMODE == 'true'
+    let g:material_theme_style = 'lighter'
+  else
+    let g:material_theme_style = 'darker'
+  endif
 
   set timeoutlen=500 " Guide buffer delay
 

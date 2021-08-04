@@ -55,3 +55,4 @@ export PATH="$PATH:$HOME/code/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 [[ $HOST == "server" ]] && [[ -f $ZDOTDIR/ff_hwacc ]] && . $ZDOTDIR/ff_hwacc
 
+export LIGHTMODE=${LIGHTMODE:-false}

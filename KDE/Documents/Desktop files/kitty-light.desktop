@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=kitty (light mode)
+GenericName=Terminal emulator
+Comment=Fast, feature-rich, GPU based terminal
+Exec=kitty -c /home/sickan/.dotfiles/kitty/.config/kitty/kitty-light.conf
+Icon=kitty
+Categories=System;TerminalEmulator;

@@ -21,7 +21,7 @@ sudo mhwd-kernel -i kernelname
   /etc/pamac.conf
 Uncomment #EnableAUR
 
-packages=(neovim anydesk-bin qemu-guest-agent)
+packages=(neovim anydesk-bin qemu-guest-agent exa)
 pamac install $packages
 
 # Anydesk

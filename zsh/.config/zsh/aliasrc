@@ -114,6 +114,11 @@ alias pab="pamac build"
 alias nixs="nix search"
 alias nixi="nix-env -iA"
 
+
+#if [[ "$LIGHTMODE" = true ]]; then
+#  alias kitty="/usr/bin/kitty -c /home/sickan/.dotfiles/kitty/.config/kitty/kitty-light.conf"
+#fi
+
 # Stow
 alias ustow="$DOT/ustow.sh"
 alias sstow="$DOT/sstow.sh"
@@ -136,10 +141,11 @@ alias scaleup="QT_AUTO_SCREEN_SCALE_FACTOR=1"
 alias D0="DISPLAY=:0"
 
 alias PROXMOX="ssh sickan@proxmox.local.sickan.se"
-alias OPNSENSE="TERM=xterm /usr/bin/ssh sickan@opnsense.local.sickan.se"
-alias TRUENAS="TERM=xterm /usr/bin/ssh sickan@truenas.local.sickan.se"
+alias OPNSENSE="ssh sickan@opnsense.local.sickan.se"
+alias TRUENAS="ssh sickan@truenas.local.sickan.se"
 alias HTPC="ssh sickan@htpc"
-alias DOCKER="ssh sickan@docker.local.sickan.se tmux -u attach"
+#alias DOCKER="ssh -t sickan@docker.local.sickan.se tmux -u attach"
+alias DOCKER="mosh sickan@docker.local.sickan.se -- tmux -u attach"
 
 
 if [[ $HOST == "proxmox" ]]; then

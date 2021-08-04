@@ -41,7 +41,7 @@ default_height = 30
 [[layers]]
   name = "colorscheme"
 
-# Leader y/p for system clipboard
+# Leader y/p for system clipboar
 [[layers]]
 name = "default"
 

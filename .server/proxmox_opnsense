@@ -8,6 +8,11 @@ HTTP_REFERER enforcement: Disable HTTP_REFERER enforcement check
 
 # QEMU Guest Agent
 Install os-qemu-guest-agent in System > Firmware > Plugins 
+System > Settings > Tunables > Add # Autoload 
+Tunable: virtio_console_load
+Description: Autoload QEMU Guest Agent
+Value: YES
+
 
 # Backup to Google Drive
 https://docs.opnsense.org/manual/how-tos/cloud_backup.html
