@@ -21,7 +21,7 @@ sudo mhwd-kernel -i kernelname
   /etc/pamac.conf
 Uncomment #EnableAUR
 
-packages=(neovim anydesk-bin qemu-guest-agent exa)
+packages=(neovim anydesk-bin qemu-guest-agent exa stow antigen)
 pamac install $packages
 
 # Anydesk
@@ -43,5 +43,6 @@ sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
 
 # Pulse
   /etc/pulse/default.pa
+Uncomment load-module module-native-protocol-tcp
 load-module module-tunnel-sink-new server=192.168.1.2 sink_name=Remote channels=2 rate=44100
 

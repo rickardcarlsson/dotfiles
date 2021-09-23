@@ -115,6 +115,12 @@ alias nixs="nix search"
 alias nixi="nix-env -iA"
 
 
+function torrent {
+  FILE=$1
+  if [ -f "$FILE" ]; then
+      rsync -aP $FILE sickan@docker.local.sickan.se:/docker/media-server/data/downloads/torrent-blackhole
+  fi 
+}
 #if [[ "$LIGHTMODE" = true ]]; then
 #  alias kitty="/usr/bin/kitty -c /home/sickan/.dotfiles/kitty/.config/kitty/kitty-light.conf"
 #fi
@@ -143,22 +149,21 @@ alias D0="DISPLAY=:0"
 alias PROXMOX="ssh sickan@proxmox.local.sickan.se"
 alias OPNSENSE="ssh sickan@opnsense.local.sickan.se"
 alias TRUENAS="ssh sickan@truenas.local.sickan.se"
-alias HTPC="ssh sickan@htpc"
 #alias DOCKER="ssh -t sickan@docker.local.sickan.se tmux -u attach"
 alias DOCKER="mosh sickan@docker.local.sickan.se -- tmux -u attach"
+alias HTPC="mosh sickan@htpc -- tmux -u attach"
+alias htpcrs="ssh sickan@htpc DISPLAY=:0 reset_screen"
 
 
 if [[ $HOST == "proxmox" ]]; then
   alias startarch="sudo qm start 102"
 fi
-#alias server="ssh -Y sickan@server tmux -u attach"
-#alias serverc="ssh -Y sickan@server"
-#alias mnt-server-fs="sshfs sickan@server:/data/ ~/server-fs"
-#alias SHDD="cd ~/server-fs/0 || mnt-server-fs && cd ~/server-fs/0"
-#alias SHDDr="SHDD && ranger"
-#alias sresets="serverc reset_screen"
 
-alias DESKTOP="ssh -p 2222 sickan@Desktop tmux -u attach"
+if [[ $HOST == "docker" ]]; then
+  alias TRAEFIKLOG="bat /docker/security/traefik/traefik.log"
+fi
+
+alias DESKTOP="ssh -t -p 2222 sickan@Desktop tmux -u attach"
 alias mnt-desktop-fs="sshfs -p 2222 sickan@Desktop:/mnt/ ~/desktop-fs"
 alias DHDD="cd ~/desktop-fs/ || mnt-desktop-fs && cd ~/desktop-fs/"
 alias DHDDr="DHDD && ranger"
