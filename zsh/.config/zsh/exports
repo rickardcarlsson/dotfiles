@@ -1,4 +1,4 @@
-# vim: syntax=zsh
+# vim: syntax=bash
 # Set the XDG specification directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -53,6 +53,13 @@ PYGMENTIZE_STYLE="base16-material-darker"
 # Paths
 export PATH="$PATH:$HOME/code/bin:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
-[[ $HOST == "server" ]] && [[ -f $ZDOTDIR/ff_hwacc ]] && . $ZDOTDIR/ff_hwacc
+#[[ $HOST == "server" ]] && [[ -f $ZDOTDIR/ff_hwacc ]] && . $ZDOTDIR/ff_hwacc
+if [[ $HOST == "htpc" ]]; then
+  export X_RESOLUTION=3840x2160
+fi
+
+if [[ $HOST == "envy" ]]; then
+  export X_RESOLUTION=3840x2160
+fi
 
 export LIGHTMODE=${LIGHTMODE:-false}
