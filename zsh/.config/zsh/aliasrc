@@ -152,7 +152,7 @@ alias TRUENAS="ssh sickan@truenas.local.sickan.se"
 #alias DOCKER="ssh -t sickan@docker.local.sickan.se tmux -u attach"
 alias DOCKER="mosh sickan@docker.local.sickan.se -- tmux -u attach"
 alias HTPC="mosh sickan@htpc -- tmux -u attach"
-alias htpcrs="ssh sickan@htpc DISPLAY=:0 reset_screen"
+alias htpcrs="ssh sickan@htpc X_RESOLUTION=3840x2160 reset_screen"
 
 
 if [[ $HOST == "proxmox" ]]; then
