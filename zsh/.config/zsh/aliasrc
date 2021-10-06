@@ -7,6 +7,7 @@ alias '$'=''
 
 alias sudo='sudo ' # Sudo retains aliases
 
+alias unbuffer='unbuffer '
 #alias vim="nvim"
 alias svim="sudo nvim -u $HOME/git/SpaceVim/main.vim"
 alias ls="exa --color-scale --icons"
@@ -110,6 +111,7 @@ alias pas="pamac search"
 alias par="pamac remove"
 alias pai="pamac install"
 alias pab="pamac build"
+alias painf="pamac info"
 
 alias nixs="nix search"
 alias nixi="nix-env -iA"
