@@ -163,6 +163,32 @@ fi
 
 if [[ $HOST == "docker" ]]; then
   alias TRAEFIKLOG="bat /docker/security/traefik/traefik.log"
+  alias HA="cd /docker/home-automation"
+  alias MS="cd /docker/media-server"
+  alias SEC="cd /docker/security"
+  alias MGMT="cd /docker/management"
+  alias CLOUD="cd /docker/cloud"
+  alias FS="cd /docker/fileserver"
+
+  alias dkk='docker kill'
+  alias dkrm='docker rm'
+  alias dki='docker inspect'
+  alias dkims='docker images'
+  alias dkimp='docker image prune'
+  alias dkl='docker logs' 
+  alias dklf='docker logs --follow' 
+  alias dke='docker exec'
+  alias dkeit='docker exec -it'
+
+  alias dcup='docker-compose up'
+  alias dcupd='docker-compose up -d'
+  alias dcfrc='docker-compose up -d --force-recreate'
+  alias dcb='docker-compose build'
+  alias dcrm='docker-compose rm'
+  alias dcps='docker-compose ps'
+  alias dcstop='docker-compose stop'
+  alias dcrestart='docker-compose restart'
+
 fi
 
 alias DESKTOP="ssh -t -p 2222 sickan@Desktop tmux -u attach"
