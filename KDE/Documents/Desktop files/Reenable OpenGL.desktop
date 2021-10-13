@@ -2,7 +2,7 @@
 [Desktop Entry]
 Name=Desktop
 GenericName=Restart KWin
-Exec=kwin_x11 --replace
+Exec=reenable_opengl
 Terminal=false
 Icon=/home/sickan/Documents/Icons/kwin_replace.png
 Type=Application

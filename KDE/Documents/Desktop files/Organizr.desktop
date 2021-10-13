@@ -3,7 +3,7 @@ Name=Organizr
 GenericName=Dashboard
 Icon=/home/sickan/Documents/Icons/Organizr.png
 Type=Application
-Exec=firefox --new-tab http://server:9983/
+Exec=firefox --new-tab http://org.local.sickan.se
 #StartupWMClass=keep
 Terminal=false
 

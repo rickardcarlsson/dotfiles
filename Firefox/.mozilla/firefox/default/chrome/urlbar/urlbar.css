@@ -161,7 +161,7 @@
 #urlbar,
 #searchbar
 {
-	font-size: 14px !important;
+	font-size: var(--toolbar-field-fontsize) !important;
 	border-radius: 99px !important;
 	background-color: var(--toolbar-field-background-color) !important;
 	border: 0 !important;
@@ -172,7 +172,8 @@
 	-moz-box-align: center !important;
 	display: block !important;
 	margin: 0 !important;
-	position: relative !important; /* 74+ */
+	top: 0 !important;
+	color: inherit !important;
 	
 	--urlbar-height: 28px !important;
 	
@@ -202,9 +203,18 @@
 #urlbar[focused],
 #searchbar[focused]
 {
-	border: 2px solid var(--toolbar-field-focus-border-color) !important;
+	/* -moz-accent-color won't work in a var... */
+	border: 2px solid -moz-accent-color !important;
 	padding: 0 !important;
 	margin: 0 !important;
+}
+
+/* if only focused, don't break out the urlbar */
+#urlbar[focused]:not([open])
+{
+	width: 100% !important;
+	left: 0 !important;
+	right: 0 !important;
 }
 
 #urlbar[open],
@@ -214,12 +224,11 @@
 	padding: 0 !important;
 	border-radius: 8px !important;
 	min-height: 37px !important;
-	margin: 0 -5px -1px !important;
+	margin: -4px 0 -1px !important;
 	box-shadow:
 		0 5px 5px -3px rgba(0,0,0,.2),
 		0 8px 10px 1px rgba(0,0,0,.14),
 		0 3px 14px 2px rgba(0,0,0,.12) !important;
-	position: relative !important;
 	z-index: 99999 !important;
 }
 
@@ -330,46 +339,56 @@
 	position: relative !important;
 }
 
-#urlbar-label-box
+.identity-box-button,
+#tracking-protection-icon-container
+{
+	background: none !important;
+}
+
+#identity-icon-box
 {
 	border: 0 !important;
 	padding: 0 !important;
 }
 
 /* separator */
-#identity-icon-labels::after
+#urlbar[pageproxystate=valid] #identity-box:-moz-any(.chromeUI, .extensionPage, .notSecureText) #identity-icon-box::after
 {
 	content: "" !important;
 	display: block !important;
 	position: absolute !important;
 	height: 16px !important;
+	top: calc(50% - 8px) !important;
 	right: 0 !important;
 	background: #9d9e9f !important;
 	width: 1px !important;
 	transition: opacity .2s var(--ease-basic) !important;
 }
 
-#urlbar[pageproxystate=valid]:not([open]) #identity-box:-moz-any(.notSecureText, .verifiedIdentity, .chromeUI, .extensionPage, .certUserOverridden),
-#urlbar-label-box
+
+#urlbar[pageproxystate=valid] #identity-box:-moz-any(.chromeUI, .extensionPage, .notSecureText)
 {
 	margin-inline-end: 8px !important;
 }
 
-#urlbar[pageproxystate=valid]:not([open]) #identity-box:-moz-any(.notSecureText, .verifiedIdentity, .chromeUI, .extensionPage, .certUserOverridden) #identity-icon-labels
-{
-	display: flex !important;
-}
 
-
-#urlbar[pageproxystate=valid] #identity-box:-moz-any(.notSecureText, .verifiedIdentity, .chromeUI, .extensionPage, .certUserOverridden):not(.no-hover):-moz-any([open], :hover) #identity-icon-labels::after
+#urlbar[pageproxystate=valid] #identity-box:hover  #identity-icon-box::after
 {
 	opacity: 0 !important;
 }
 
-#identity-box.extensionPage > #identity-icon
+#urlbar[pageproxystate=valid] #identity-box.extensionPage > #identity-icon
 {
 	list-style-image: none !important;
 	margin-inline-end: -16px !important;
+}
+
+#identity-icon-label
+{
+	margin: 0 !important;
+	padding-inline-start: 8px !important;
+	transform: translateY(-1px) !important;
+	
 }
 
 /* no longer used as a connection icon */
@@ -549,6 +568,15 @@
 #contextual-feature-recommendation
 {
 	width: auto !important;
+}
+
+.urlbar-page-action
+{
+	padding: 0 !important;
+	background: 0 !important;
+	border-radius: 0 !important;
+	height: 24px !important;
+	width: 32px !important;
 }
 
 .urlbar-page-action:-moz-any(
@@ -731,19 +759,21 @@
 }
 
 /* lock (secure) */
-#identity-box[pageproxystate="valid"]:-moz-any(.verifiedDomain, .verifiedIdentity, .mixedActiveBlocked) > #identity-icon
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon
 {
 	list-style-image: var(--lock-icon) !important;
 }
 
-/* info (not secure) */
-#identity-box[pageproxystate="valid"]:-moz-any(.mixedDisplayContent, .mixedDisplayContentLoadedActiveBlocked, .unknownIdentity) > #identity-icon
-{
-    list-style-image: var(--info-icon) !important;
-}
-
 /* warning (dangerous) */
-#identity-box[pageproxystate="valid"]:-moz-any(.notSecure, .weakCipher, .certUserOverridden, .certErrorPage, .insecureLoginForms, .mixedActiveContent) > #identity-icon
+#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon,
+#identity-box[pageproxystate="valid"].weakCipher #identity-icon,
+#identity-box[pageproxystate="valid"].mixedDisplayContent #identity-icon,
+#identity-box[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked #identity-icon,
+#identity-box[pageproxystate="valid"].certUserOverridden #identity-icon,
+#identity-box[pageproxystate="valid"].certErrorPage #identity-icon
 {
     list-style-image: var(--warning-icon) !important;
 }

@@ -78,6 +78,7 @@
 
 /* vertically center buttons in tab bar */
 #TabsToolbar toolbarbutton,
+#TabsToolbar .toolbar-items toolbarbutton.toolbarbutton-1,
 /* >= 72 */
 #TabsToolbar .tabbrowser-arrowscrollbox::part(scrollbutton-up),
 #TabsToolbar .tabbrowser-arrowscrollbox::part(scrollbutton-down),
@@ -85,8 +86,8 @@
 #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part="scrollbutton-down"]:not(.menupopup-scrollbutton)
 {
-	margin-top: calc((var(--tab-min-height) - var(--button-size)) / 2) !important;
-	margin-bottom: calc((var(--tab-min-height) - var(--button-size)) / 2) !important;
+	margin-top: calc(var(--tab-shadow-max-size)) !important;
+	margin-bottom: 4px !important;
 }
 
 .tabbrowser-tab
@@ -96,6 +97,7 @@
 	font-size: 12px !important;
 	background: 0 !important;
 	border: 0 !important;
+	padding: 0 !important;
 }
 
 .tabbrowser-tab[visuallyselected]
@@ -122,9 +124,21 @@
 	margin-inline-start: -.5px !important;
 }
 
+.tab-stack
+{
+	margin-top: 4px !important;
+	margin-bottom: -4px !important;
+}
+
 #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] .tab-background
 {
 	margin: 0 -1px !important;
+}
+
+#tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] .tab-stack
+{
+	margin-top: 8px !important;
+	margin-bottom: 0 !important;
 }
 
 .tab-content
@@ -221,6 +235,7 @@
 		background-color 0s var(--tab-transition-duration) var(--ease-basic) !important;
 	opacity: var(--tab-opacity) !important;
 	visibility: visible !important;
+	box-shadow: none !important;
 }
 
 /* rounded bottom corners */
@@ -354,6 +369,11 @@
 	margin-inline-start: -16px !important;
 }
 
+.tab-sharing-icon-overlay
+{
+	margin-inline-start: -16px !important;
+}
+
 @keyframes rotate-360
 {
 	0% { transform: rotate(0); }
@@ -431,7 +451,8 @@
 } 
 
 /* close button / favicon is centered within 36px tab */
-@supports -moz-bool-pref("materialFox.reduceTabOverflow")
+/* disabled for now because it's broken in recent version of Firefox */
+@supports -moz-bool-pref("materialFox.reduceTabOverflow disabled")
 {
 	#main-window
 	{
@@ -491,7 +512,7 @@
 
 #tabbrowser-tabs[overflow] .tabbrowser-tab[last-visible-tab]:not([pinned])
 {
-	margin-inline-end: 8px !important;
+	margin-inline-end: 7px !important;
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack::after
