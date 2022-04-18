@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Standard picture mode
+Icon=/home/sickan/.dotfiles/KDE/Documents/Icons/brightness_6.ico
+Type=Application
+Exec=mosquitto_pub -h 192.168.1.4 -p 1883 -m on -t ha/philipstv/picture_mode/standard
+Terminal=false
+

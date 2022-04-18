@@ -30,10 +30,15 @@ user_pref('gfx.webrender.enabled', true);
 user_pref("layers.acceleration.force-enabled", true); 
 
 // VA-API
-user_pref("media.ffmpeg.dmabuf-textures.enabled", true); // Can lead to rendering issues
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("media.ffvpx.enabled", false);
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+user_pref("media.rdd-vpx.enabled", false);
+user_pref("media.ffmpeg.dmabuf-textures.enabled", true); // Can lead to rendering issues
 
+// https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration
+// user_pref("gfx.x11-egl.force-enabled", true); 
+// user_pref("gfx.x11-egl.force-disabled", false); 
 
 // disable alt key toggling the menu bar [RESTART]
 user_pref("ui.key.menuAccessKey", 0); 
