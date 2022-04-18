@@ -5,6 +5,9 @@ SkinInstalledWithKns=true
 [Desktop Entry]
 DefaultProfile=Sickan.profile
 
+[Dialogs]
+FirstRun=false
+
 [DownloadDialog Settings]
 Height 2160=1138
 Width 3840=1812

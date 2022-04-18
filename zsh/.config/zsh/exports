@@ -63,3 +63,4 @@ if [[ $HOST == "envy" ]]; then
 fi
 
 export LIGHTMODE=${LIGHTMODE:-false}
+export RACK_SYSTEM_DIR=/home/sickan/.local/share/Rack2Pro

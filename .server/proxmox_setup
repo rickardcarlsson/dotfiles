@@ -40,13 +40,6 @@ nix-env -iA nixpkgs.$^packages
 ### Fixa mlocate!
 nix-env -i glibc-locales # Needed for ranger?
 
-# Flytta
-alsa-utils?
-pulseaudio?
-zsh # Klurig
-sudo?
-
-
 
 # Change shell to zsh
 chsh -s /usr/bin/zsh
@@ -84,4 +77,13 @@ sudo bash PVEDiscordDark.sh install
 
 # Remove no subscription notice
   https://johnscs.com/remove-proxmox51-subscription-notice/
-
+cd /usr/share/javascript/proxmox-widget-toolkit
+cp proxmoxlib.js proxmoxlib.js.bak
+vim proxmoxlib.js
+change:
+  Ext.Msg.show({
+  title: gettext('No valid subscription'),
+to:
+  void({ //Ext.Msg.show({
+  title: gettext('No valid subscription'),
+systemctl restart pveproxy.service

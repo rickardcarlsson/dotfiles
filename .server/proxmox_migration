@@ -1,0 +1,57 @@
+# I highly recommend testing it in a VM first (nested PVE with ZFS does not work
+# with virtio controllers for the vdevs, but with e.g. sata it does), but in
+# principle it should work. You have to take care to replicate the boot/grub
+# partitions and MBR to the new devices as well, otherwise you will probably
+# end up with an unbootable system.
+
+
+
+rsync -aAXHvuP -e 'ssh -p 2222' src dst
+
+
+# Upgrading a ZFS Raid-1 Root Drive in Proxmox
+https://www.cleverness.tech/proxmox-zfs-raid1-boot/
+
+# Expand and Replace disk ZFS on Proxmox (Obs dålig engelska)
+https://thyspir.wordpress.com/2019/06/08/expand-and-replace-disk-zfs-on-proxmox/
+
+
+# replacing working boot SSDs in ZFS Mirror
+https://www.reddit.com/r/Proxmox/comments/ir3o8w/replacing_working_boot_ssds_in_zfs_mirror/
+
+# Boot-Device Replacement - Proxmox ZFS Mirror Disk austauschen
+https://www.thomas-krenn.com/de/wiki/Boot-Device_Replacement_-_Proxmox_ZFS_Mirror_Disk_austauschen#
+
+https://pve.proxmox.com/pve-docs/chapter-sysadmin.html#_zfs_administration
+
+# ZFS mirror: replace bad disk
+https://forum.proxmox.com/threads/zfs-mirror-replace-bad-disk.99469/
+
+# ZFS Device Replacement Enhancements
+# autoexpand
+https://docs.oracle.com/cd/E19253-01/819-5461/githb/index.html
+
+
+# autoexpand
+# Ideally, this should have been set=on before resilvering the last 6TB drive.
+# You may get away with doing a zpool export/zpool import to trigger the resize
+
+# om autoexpand inte funkar: gör zpool online -e <pool> <vdev>
+
+# I'm not sure why, but it is sometimes necessary to run partprobe and/or
+# zpool online -e pool vdb twice in order to make the changes effective.
+
+# Using zpool set autoexpand=off followed by zpool online -e was required
+# to get the zpool to expand for me, using ZFS on linux (in kernel, not using FUSE)
+
+# This is a tricky one... In the past, a rescan of the LUN would work to get the OS
+# to recognize the new device size. My formula used to be:
+zpool set autoexpand=on vol1
+# Then expand SAN or underlying disk array
+echo 1 > /sys/class/scsi_disk/2\:0\:0\:1/device/rescan
+zpool online -e vol1 /dev/sdb
+
+# The zpool online -e devicename used to work, but in newer versions of zfsonlinux,
+# this action has been moved from userspace to the module load or a zpool export/import.
+# It may not be able to be done online anymore. I reboot half the time or end up having
+# to export/import the pool.

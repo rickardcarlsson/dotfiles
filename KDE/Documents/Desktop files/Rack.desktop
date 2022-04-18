@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=VCV Rack 2 Pro
+Icon=/home/sickan/.local/share/Rack2Pro/res/icon.png
+Type=Application
+Exec=env LD_LIBRARY_PATH=/home/sickan/.local/share/Rack2Pro/ RACK_SYSTEM_DIR=/home/sickan/.local/share/Rack2Pro/ /usr/bin/Rack
+Terminal=false
+
