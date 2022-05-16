@@ -1,12 +1,42 @@
-# I highly recommend testing it in a VM first (nested PVE with ZFS does not work
-# with virtio controllers for the vdevs, but with e.g. sata it does), but in
-# principle it should work. You have to take care to replicate the boot/grub
-# partitions and MBR to the new devices as well, otherwise you will probably
-# end up with an unbootable system.
-
-
-
 rsync -aAXHvuP -e 'ssh -p 2222' src dst
+
+# Install parted:
+apt install parted
+
+# Copy partition table:
+sgdisk -R </dev/new_device> </dev/old_device>
+
+# Enlarge new partition:
+parted </dev/new_device>
+print
+resizepart
+> Partition number?
+3
+> End? [size]? 
+100%
+
+# Update GUIDs:
+sgdisk --randomize-guids </dev/new_device>
+
+# Copy boot (1) & EFI (2) partitions:
+dd if=</dev/old_device1> of=</dev/new_device1> status=progress
+dd if=</dev/old_device2> of=</dev/new_device2> status=progress
+
+# Replace drives:
+# Get old drive name from zpool status -v, get new drive name from ls -la /dev/disk/<name_type> 
+zpool replace <pool> <old_device> <new_device>
+
+# Check resilvering status:
+zpool status -v
+
+# Expand pool:
+zpool set autoexpand=on rpool
+zpool online -e <pool> <new_device>
+zpool status -v
+
+# zpool status -L = real path
+# zpool status -g = GUID
+# fdisk -l
 
 
 # Upgrading a ZFS Raid-1 Root Drive in Proxmox
@@ -32,26 +62,3 @@ https://forum.proxmox.com/threads/zfs-mirror-replace-bad-disk.99469/
 https://docs.oracle.com/cd/E19253-01/819-5461/githb/index.html
 
 
-# autoexpand
-# Ideally, this should have been set=on before resilvering the last 6TB drive.
-# You may get away with doing a zpool export/zpool import to trigger the resize
-
-# om autoexpand inte funkar: gör zpool online -e <pool> <vdev>
-
-# I'm not sure why, but it is sometimes necessary to run partprobe and/or
-# zpool online -e pool vdb twice in order to make the changes effective.
-
-# Using zpool set autoexpand=off followed by zpool online -e was required
-# to get the zpool to expand for me, using ZFS on linux (in kernel, not using FUSE)
-
-# This is a tricky one... In the past, a rescan of the LUN would work to get the OS
-# to recognize the new device size. My formula used to be:
-zpool set autoexpand=on vol1
-# Then expand SAN or underlying disk array
-echo 1 > /sys/class/scsi_disk/2\:0\:0\:1/device/rescan
-zpool online -e vol1 /dev/sdb
-
-# The zpool online -e devicename used to work, but in newer versions of zfsonlinux,
-# this action has been moved from userspace to the module load or a zpool export/import.
-# It may not be able to be done online anymore. I reboot half the time or end up having
-# to export/import the pool.

@@ -1,0 +1,13 @@
+[Unit]
+Description=Kopia local server
+
+[Service]
+Type=simple
+Environment="PATH=/usr/bin"
+Environment="KOPIA_CONFIG_PATH=/home/sickan/.config/kopia/repository.config"
+ExecStart=kopia server start --insecure --without-password --disable-csrf-token-checks
+KillMode=process
+Restart=on-failure
+    
+[Install]
+WantedBy=default.target
