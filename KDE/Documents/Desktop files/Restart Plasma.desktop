@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Desktop
+GenericName=Restart Plasma
+Exec=plasmashell --replace
+Terminal=false
+Icon=/home/sickan/.local/share/icons/Tela-blue/scalable/apps/preferences-desktop-plasma.svg
+Type=Application
