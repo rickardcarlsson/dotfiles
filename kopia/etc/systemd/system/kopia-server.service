@@ -4,6 +4,7 @@ Description=Kopia local server
 [Service]
 Type=simple
 Environment="PATH=/usr/bin"
+Environment="XDG_CACHE_HOME=/home/sickan/.cache"
 Environment="KOPIA_CONFIG_PATH=/home/sickan/.config/kopia/repository.config"
 ExecStart=kopia server start --insecure --without-password --disable-csrf-token-checks
 KillMode=process
