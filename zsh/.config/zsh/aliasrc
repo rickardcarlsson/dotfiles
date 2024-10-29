@@ -10,8 +10,8 @@ alias sudo='sudo ' # Sudo retains aliases
 alias unbuffer='unbuffer '
 #alias vim="nvim"
 #alias svim="sudo nvim -u $HOME/git/SpaceVim/main.vim"
-alias ls="exa --color-scale --icons"
-alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
+alias ls="exa"
+alias la="exa -laF" # --group-directories-first ?
 alias lam="la -s modified"
 alias las="la -s size"
 alias ldot="exa -ldF .* --icons"
@@ -187,6 +187,7 @@ if [[ $HOST == "docker" ]]; then
   alias dcb='docker-compose build'
   alias dcrm='docker-compose rm'
   alias dcps='docker-compose ps'
+  alias dcpu='docker-compose pull'
   alias dcstop='docker-compose stop'
   alias dcrestart='docker-compose restart'
 
