@@ -33,7 +33,7 @@ export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 # Applications/environment variables
 export BROWSER=/usr/bin/firefox
 #export VISUAL=/usr/bin/code
-export EDITOR=nvim
+export EDITOR=lvim
 export TERMINFO=/usr/lib/terminfo
 export TMPDIR=/tmp
 export ADOTDIR=$ZDOTDIR/.antigen

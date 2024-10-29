@@ -9,7 +9,7 @@ alias sudo='sudo ' # Sudo retains aliases
 
 alias unbuffer='unbuffer '
 #alias vim="nvim"
-alias svim="sudo nvim -u $HOME/git/SpaceVim/main.vim"
+#alias svim="sudo nvim -u $HOME/git/SpaceVim/main.vim"
 alias ls="exa --color-scale --icons"
 alias la="exa -laF  --color-scale --icons" # --group-directories-first ?
 alias lam="la -s modified"
@@ -22,10 +22,10 @@ function vim {
 # Ensure sudoers flag: Defaults  !sudoedit_checkdir
   FILE=$1
   if [ -w $FILE ] || [ ! -f $FILE ]; then
-    nvim $FILE
+    lvim $FILE
   else
     read "?$FILE not writable as $USER, edit as sudo? (y/n)"$'\n'
-    [[ $REPLY =~ ^[Yy]$ ]] && VISUAL=nvim sudoedit $FILE
+    [[ $REPLY =~ ^[Yy]$ ]] && VISUAL=lvim sudoedit $FILE
   fi
 }
 
@@ -156,6 +156,7 @@ alias DOCKER="mosh sickan@docker.local.sickan.se -- tmux -u attach"
 alias HTPC="mosh sickan@htpc -- tmux -u attach"
 alias htpcrs="ssh sickan@htpc X_RESOLUTION=3840x2160 reset_screen"
 
+alias remotepw="pactl load-module module-tunnel-sink server=192.168.1.130 sink_name=Remote channels=2 rate=48000"
 
 if [[ $HOST == "proxmox" ]]; then
   alias startarch="sudo qm start 102"
